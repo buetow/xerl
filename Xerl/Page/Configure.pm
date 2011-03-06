@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2009, Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, Dipl.-Inform. (FH) Paul C. Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -127,6 +127,8 @@ sub defaults($) {
     $self->set_templatespath( $self->get_hostpath() . 'templates/' );
 
     $self->set_contentpath( $self->get_hostpath() . 'content/' );
+
+    $self->set_ipv6( $ENV{REMOTE_ADDR} =~ /:/ ? 1 : 0 );
 
     return undef;
 }

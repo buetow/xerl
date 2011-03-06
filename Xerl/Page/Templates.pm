@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2009, Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, Dipl.-Inform. (FH) Paul C. Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
