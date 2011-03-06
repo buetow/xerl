@@ -1,0 +1,24 @@
+# TODO: Allow comments behind the options! 
+# defaultproto will be used if not ENV(HTTPS)==on
+#nocache=defined
+#nocache=1
+cacheroot=/var/www/xerlcache/
+cookievals=nocache,plain,devel,style,template
+ctype.asc=text/plain
+ctype.css=text/css
+ctype.jpg=image/jpg 
+ctype.pdf=application/pdf 
+ctype.png=image/png 
+ctype.txt=text/plain
+ctype.xml=text/plain
+defaultcontent=home
+defaulthost=default
+defaultoutputformat=xhtml
+defaultproto=http
+defaultstyle=default.css
+defaulttemplate=xhtml
+dslvpnrouter.buetow.org=vpndslrouter.buetow.org
+hidesubhome=1
+hostroot=/var/www/svn/xerlhosts/branches/stable/hosts/
+statsroot=/var/www/xerlstats/
+404=http://www.buetow.org
