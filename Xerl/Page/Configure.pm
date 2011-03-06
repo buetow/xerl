@@ -128,7 +128,7 @@ sub defaults($) {
 
     $self->set_contentpath( $self->get_hostpath() . 'content/' );
 
-    $self->set_ipv6( $ENV{REMOTE_ADDR} =~ /:/ ? 1 : 0 );
+    # $self->set_ipv6( $ENV{REMOTE_ADDR} =~ /:/ ? 1 : 0 );
 
     return undef;
 }
