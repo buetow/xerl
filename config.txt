@@ -2,7 +2,7 @@
 # defaultproto will be used if not ENV(HTTPS)==on
 #nocache=defined
 #nocache=1
-cacheroot=/var/www/xerlcache/
+cacheroot=/usr/local/www/xerlcache/
 cookievals=nocache,plain,devel,style,template
 ctype.asc=text/plain
 ctype.css=text/css
@@ -19,6 +19,8 @@ defaultstyle=default.css
 defaulttemplate=xhtml
 dslvpnrouter.buetow.org=vpndslrouter.buetow.org
 hidesubhome=1
-hostroot=/var/www/svn/xerlhosts/branches/stable/hosts/
-statsroot=/var/www/xerlstats/
+hostroot=/usr/local/www/xerlhosts/branches/stable/hosts/
+statsroot=/usr/local/www/xerlstats/
+hyperion.buetow.org=ssl.buetow.org
 404=http://www.buetow.org
+scifi.buetow.org=books.buetow.org
