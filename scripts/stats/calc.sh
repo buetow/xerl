@@ -17,17 +17,21 @@ perl='
 
 ls=`ls *.log`
 cat << STATS | less
-Weekly top 15:
+Weekly top list:
 
 `echo "$ls" | tail -n 7 | xargs cat | perl -e "$perl"`
 
-Monthly top ten:
+Monthly top list:
 
 `echo "$ls" | tail -n 28 | xargs cat | perl -e "$perl"`
 
-Yearly top ten:
+Yearly top list:
 
 `echo "$ls" | tail -n 356 | xargs cat | perl -e "$perl"`
+
+Forever top list:
+
+`echo "$ls" | xargs cat | perl -e "$perl"`
 
 This stats are powered by Perl, GNU AWK and Bourne Shell
 STATS
