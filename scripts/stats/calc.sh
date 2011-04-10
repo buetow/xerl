@@ -29,21 +29,6 @@ Yearly top ten:
 
 `echo "$ls" | tail -n 356 | xargs cat | perl -e "$perl"`
 
-STATS
-ftp://ftp.buetow.org download top ten:
-
-exit 0
-`gawk '
-  $9 ~ /^\/data\/ftp\// { ++dl[\$9] }
-  END {  
-    for (k in dl) 
-      d[k] = sprintf("%3d %s", dl[k], k)
-    n = asort(d)
-    rank = 1
-    for (i = n; i > 0 && rank < 11; --i) 
-      printf "%2.d%s\n", rank++, d[i]
-  }' /var/log/proftpdtransfer.log | sed s,/data/ftp/,,`
-
 This stats are powered by Perl, GNU AWK and Bourne Shell
 STATS
 
