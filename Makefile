@@ -4,7 +4,7 @@ clean:
 stats:	clean
 	perl scripts/stats.pl
 replace:
-	for i in index.pl Xerl.pm conf.txt; \
+	for i in index.pl Xerl.pm config.txt; \
 	do \
 		sed -n "s/$(FROM)/$(INTO)/g; \
 		w .tmp" $$i && mv -f .tmp $$i; \
