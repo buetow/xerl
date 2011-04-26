@@ -44,7 +44,7 @@ sub open($) {
     return -1 if -1 == $xmlfile->fslurp();
     $self->set_array( $xmlfile->get_array() );
 
-    return undef;
+    return 0;
 }
 
 sub parse($) {
