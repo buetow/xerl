@@ -75,7 +75,11 @@ sub parse($) {
         my Xerl::Tools::FileIO $io =
           Xerl::Tools::FileIO->new( path => $cachepath . $cachefile );
 
-        $io->fslurp();
+        if (-1 == $io->fslurp()) {
+		$config->set_shutdown(1);
+		return undef;
+	}
+
         $self->set_array( $io->get_array() );
 
     }
@@ -89,7 +93,10 @@ sub parse($) {
         my Xerl::XML::Reader $xmlconfigreader =
           Xerl::XML::Reader->new( path => $xmlconfigpath, config => $config );
 
-        $xmlconfigreader->open();
+        if (-1 == $xmlconfigreader->open()) {
+		$config->set_shutdown(1);
+		return undef;
+	}
         $xmlconfigreader->parse();
         $config->set_xmlconfigrootobj( $xmlconfigreader->get_root() );
 

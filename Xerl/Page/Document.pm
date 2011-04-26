@@ -62,8 +62,11 @@ sub parse($) {
 
     my Xerl::Tools::FileIO $io = Xerl::Tools::FileIO->new( path => $path );
 
-    $io->fslurp();
-    $io->print();
+    if (-1 == $io->fslurp()) {
+	$config->set_shutdown(1);
+    } else {
+    	$io->print();
+    }
 
     return undef;
 }

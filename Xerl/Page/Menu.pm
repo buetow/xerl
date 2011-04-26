@@ -75,7 +75,10 @@ sub get_menu($$$$) {
         basename => 1,
     );
  
-    Xerl::Main::Global::REDIRECT( $config->get_404() ) unless $io->exists();
+    unless ($io->exists()) {
+    	Xerl::Main::Global::REDIRECT( $config->get_404() );
+	$config->set_shutdown(1);
+    }
     
     $io->dslurp();
     my $dir = $io->get_array();

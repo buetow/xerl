@@ -60,8 +60,10 @@ sub fslurp($) {
     my Xerl::Tools::FileIO $self = $_[0];
     my $path = SECUREPATH( $self->get_path() );
 
-    Xerl::Main::Global::HTTP( 404, "Not found: $path" )
-      unless -f $path;
+    unless (-f $path) {
+    	Xerl::Main::Global::HTTP( 404, "Not found: $path" );
+	return -1;
+    }
 
     open my $file, $path or Xerl::Main::Global::ERROR( $!, $path, caller() );
     flock $file, 2;

@@ -48,7 +48,11 @@ sub parse($) {
         config => $config
     );
 
-    $xmlcontent->open();
+    if (-1 == $xmlcontent->open()) {
+	$config->set_shutdown(1);
+	return undef;
+    }
+
     $xmlcontent->parse();
 
     my Xerl::Page::Rules $rules = Xerl::Page::Rules->new( config => $config );

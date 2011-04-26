@@ -42,7 +42,10 @@ sub parse($) {
     my Xerl::Tools::FileIO $file =
       Xerl::Tools::FileIO->new( 'path' => $self->get_config() );
 
-    $file->fslurp();
+    if (-1 == $file->fslurp()) {
+    	$self->set_shutdown(1);
+	return undef;
+    }
 
     my $re = qr/^(.+?) *=(.+?) *\n?$/;
 
@@ -84,7 +87,8 @@ sub defaults($) {
               Xerl::Tools::FileIO->new( 'path' => $redirect );
             $file->fslurp();
             my $location = $file->shift();
-            Xerl::Main::Global::REDIRECT($location);
+	    Xerl::Main::Global::REDIRECT( $location );
+	    $self->set_shutdown(1);
         }
         my $alias = $self->get_hostroot() . 'alias:' . $self->get_host();
         if ( -f $alias ) {

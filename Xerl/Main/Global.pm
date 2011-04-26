@@ -64,9 +64,6 @@ sub REDIRECT ($) {
     my $location = shift;
     print "Status: 301 Moved Permanantly\n";
     print "Location: $location\n\n";
-
-    Xerl::Main::Global::SHUTDOWN();
-
     return undef;
 }
 

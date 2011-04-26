@@ -41,11 +41,7 @@ sub open($) {
     my Xerl::Tools::FileIO $xmlfile =
       Xerl::Tools::FileIO->new( path => $self->get_path() );
 
-    $xmlfile->fslurp();
-
-    #  Xerl::Main::Global::PLAIN($self->get_path());
-    #  Xerl::Main::Global::DEBUG(@{$xmlfile->get_array()});
-
+    return -1 if -1 == $xmlfile->fslurp();
     $self->set_array( $xmlfile->get_array() );
 
     return undef;
@@ -143,7 +139,10 @@ sub parse($) {
                         config => $config
                     );
 
-                    $reader->open();
+                    if (-1 == $reader->open()) {
+			$config->set_shutdown(1);
+			return undef;
+		    }
                     $reader->parse();
 
                     my Xerl::XML::Element $starttag =
