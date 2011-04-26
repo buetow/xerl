@@ -48,9 +48,9 @@ sub parse($) {
         config => $config
     );
 
-    if (-1 == $xmlcontent->open()) {
-	$config->set_shutdown(1);
-	return undef;
+    if ( -1 == $xmlcontent->open() ) {
+        $config->set_shutdown(1);
+        return undef;
     }
 
     $xmlcontent->parse();
@@ -144,8 +144,7 @@ sub _insertrules($$$) {
                 $name =~ s/^=//o;    # Remove the leading =
                 if ( $succ->get_single() ) {
                     push @content,
-                      "<$name"
-                      . ( $succ->params_str() || '' ) . " />\n"
+                      "<$name" . ( $succ->params_str() || '' ) . " />\n"
 
                 }
                 else {

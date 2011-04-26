@@ -139,10 +139,10 @@ sub parse($) {
                         config => $config
                     );
 
-                    if (-1 == $reader->open()) {
-			$config->set_shutdown(1);
-			return undef;
-		    }
+                    if ( -1 == $reader->open() ) {
+                        $config->set_shutdown(1);
+                        return undef;
+                    }
                     $reader->parse();
 
                     my Xerl::XML::Element $starttag =

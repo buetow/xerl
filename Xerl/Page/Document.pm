@@ -45,7 +45,7 @@ sub parse($) {
 
     my $document = $config->get_document();
     my ($filename) = $document =~ m#([^/]+)$#;
-    my ($postfix) = $document =~ /\.(.+)$/;
+    my ($postfix)  = $document =~ /\.(.+)$/;
     my $path;
 
     print 'Content-Type: ';
@@ -62,10 +62,11 @@ sub parse($) {
 
     my Xerl::Tools::FileIO $io = Xerl::Tools::FileIO->new( path => $path );
 
-    if (-1 == $io->fslurp()) {
-	$config->set_shutdown(1);
-    } else {
-    	$io->print();
+    if ( -1 == $io->fslurp() ) {
+        $config->set_shutdown(1);
+    }
+    else {
+        $io->print();
     }
 
     return undef;

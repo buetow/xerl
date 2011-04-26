@@ -78,7 +78,7 @@ sub run($) {
           Xerl::Page::Document->new( config => $config );
 
         $document->parse();
-    	return undef if $config->shutdown_exists();
+        return undef if $config->shutdown_exists();
 
     }
     else {
@@ -86,7 +86,7 @@ sub run($) {
           Xerl::Page::Templates->new( config => $config );
 
         $templates->parse();
-    	return undef if $config->shutdown_exists();
+        return undef if $config->shutdown_exists();
         $templates->print($time);
     }
 

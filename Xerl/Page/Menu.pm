@@ -74,12 +74,12 @@ sub get_menu($$$$) {
         path     => $config->get_hostpath() . $content,
         basename => 1,
     );
- 
-    unless ($io->exists()) {
-    	Xerl::Main::Global::REDIRECT( $config->get_404() );
-	$config->set_shutdown(1);
+
+    unless ( $io->exists() ) {
+        Xerl::Main::Global::REDIRECT( $config->get_404() );
+        $config->set_shutdown(1);
     }
-    
+
     $io->dslurp();
     my $dir = $io->get_array();
 
