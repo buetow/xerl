@@ -75,7 +75,7 @@ sub fslurp($) {
 
     $self->set_array( \@slurp );
 
-    return undef;
+    return 0;
 }
 
 sub exists($) {
