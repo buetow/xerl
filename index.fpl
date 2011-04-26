@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Xerl;
+use FCGI;
+
+while (FCGI::accept >= 0) {
+	my Xerl $xerl = Xerl->new( config => 'config.txt' );
+	$xerl->run();
+}
+
