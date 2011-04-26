@@ -46,12 +46,12 @@ sub parse($) {
 
     if ( $config->href_exists() ) {
         print "Location: ", $config->get_href(), "\n\n";
-        config->set_shutdown(1);
+        $config->set_shutdown(1);
     }
     elsif ( $config->env_exists() ) {
         print "Content-Type: text/plain\n\n";
         print "$_=", $ENV{$_}, "\n" for keys %ENV;
-        config->set_shutdown(1);
+        $config->set_shutdown(1);
     }
 
     if ( $config->devel_exists() ) {
@@ -62,7 +62,7 @@ sub parse($) {
     if ( $config->conf_exists() ) {
         print "Content-Type: text/plain\n\n";
         print "$_=", $config->{$_}, "\n" for keys %$config;
-        config->set_shutdown(1);
+        $config->set_shutdown(1);
     }
 
     return $self;

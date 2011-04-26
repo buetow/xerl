@@ -56,6 +56,7 @@ sub run($) {
       Xerl::Page::Configure->new( config => $self->get_config(), %$request );
 
     $config->parse();
+    return undef if $config->shutdown_exists();
 
     # TODO: Plugin API
     unless ( $config->sessionsdisable_exists() ) {
@@ -70,12 +71,14 @@ sub run($) {
       Xerl::Page::Parameter->new( config => $config );
 
     $parameter->parse();
+    return undef if $config->shutdown_exists();
 
     if ( $config->document_exists() ) {
         my Xerl::Page::Document $document =
           Xerl::Page::Document->new( config => $config );
 
         $document->parse();
+    	return undef if $config->shutdown_exists();
 
     }
     else {
@@ -83,15 +86,10 @@ sub run($) {
           Xerl::Page::Templates->new( config => $config );
 
         $templates->parse();
+    	return undef if $config->shutdown_exists();
         $templates->print($time);
     }
 
-
-    # This function gets always called if the scripts ends.
-    # The script may also end on another location.
-    Xerl::Main::Global::SHUTDOWN();
-
-    # Never reach this point
     return undef;
 }
 
