@@ -77,7 +77,7 @@ sub get_menu($$$$) {
 
     unless ( $io->exists() ) {
         Xerl::Main::Global::REDIRECT( $config->get_404() );
-        $config->set_shutdown(1);
+        $config->set_finish_request(1);
     }
 
     $io->dslurp();

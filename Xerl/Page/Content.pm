@@ -49,7 +49,7 @@ sub parse($) {
     );
 
     if ( -1 == $xmlcontent->open() ) {
-        $config->set_shutdown(1);
+        $config->set_finish_request(1);
         return undef;
     }
 

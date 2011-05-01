@@ -56,7 +56,7 @@ sub run($) {
       Xerl::Page::Configure->new( config => $self->get_config(), %$request );
 
     $config->parse();
-    return undef if $config->shutdown_exists();
+    return undef if $config->finish_request_exists();
 
     # TODO: Plugin API
     unless ( $config->sessionsdisable_exists() ) {
@@ -71,14 +71,14 @@ sub run($) {
       Xerl::Page::Parameter->new( config => $config );
 
     $parameter->parse();
-    return undef if $config->shutdown_exists();
+    return undef if $config->finish_request_exists();
 
     if ( $config->document_exists() ) {
         my Xerl::Page::Document $document =
           Xerl::Page::Document->new( config => $config );
 
         $document->parse();
-        return undef if $config->shutdown_exists();
+        return undef if $config->finish_request_exists();
 
     }
     else {
@@ -86,7 +86,7 @@ sub run($) {
           Xerl::Page::Templates->new( config => $config );
 
         $templates->parse();
-        return undef if $config->shutdown_exists();
+        return undef if $config->finish_request_exists();
         $templates->print($time);
     }
 

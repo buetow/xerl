@@ -43,7 +43,7 @@ sub parse($) {
       Xerl::Tools::FileIO->new( 'path' => $self->get_config() );
 
     if ( -1 == $file->fslurp() ) {
-        $self->set_shutdown(1);
+        $self->set_finish_request(1);
         return undef;
     }
 
@@ -88,7 +88,7 @@ sub defaults($) {
             $file->fslurp();
             my $location = $file->shift();
             Xerl::Main::Global::REDIRECT($location);
-            $self->set_shutdown(1);
+            $self->set_finish_request(1);
         }
         my $alias = $self->get_hostroot() . 'alias:' . $self->get_host();
         if ( -f $alias ) {

@@ -76,7 +76,7 @@ sub parse($) {
           Xerl::Tools::FileIO->new( path => $cachepath . $cachefile );
 
         if ( -1 == $io->fslurp() ) {
-            $config->set_shutdown(1);
+            $config->set_finish_request(1);
             return undef;
         }
 
@@ -94,7 +94,7 @@ sub parse($) {
           Xerl::XML::Reader->new( path => $xmlconfigpath, config => $config );
 
         if ( -1 == $xmlconfigreader->open() ) {
-            $config->set_shutdown(1);
+            $config->set_finish_request(1);
             return undef;
         }
         $xmlconfigreader->parse();
