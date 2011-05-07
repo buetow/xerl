@@ -23,4 +23,3 @@ hostroot=/usr/local/www/xerlhosts/branches/stable/hosts/
 statsroot=/usr/local/www/xerlstats/
 hyperion.buetow.org=ssl.buetow.org
 404=http://www.buetow.org
-scifi.buetow.org=books.buetow.org
