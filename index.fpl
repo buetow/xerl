@@ -4,10 +4,15 @@ use strict;
 use warnings;
 
 use Xerl;
+
 use FCGI;
+use Socket;
+use Sys::Hostname;
+
+my $host = hostname();
+my $config = -e "config-$host.txt" ?  "config-$host.txt" : 'config.txt';
 
 while (FCGI::accept >= 0) {
-	my Xerl $xerl = Xerl->new( config => 'config.txt' );
+	my Xerl $xerl = Xerl->new( config => $config );
 	$xerl->run();
 }
-
