@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Screenshot</pagetitle>
+  <text>
+    <noop>Here is a Screenshots of a NiduTerm session:</noop>
+    <newline /> <newline />
+    <img src="%%imagesurl%%niduterm.png" />
+  </text>  
+</content>

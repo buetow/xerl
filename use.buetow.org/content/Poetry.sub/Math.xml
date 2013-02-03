@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Learning math!</pagetitle>
+  <code>
+  <perl>
+ 	use LWP::Simple;
+	get("https://ssl.buetow.org/repos/playground/trunk/Perl/poetry/math.pl");
+  </perl>
+  </code>
+</content>

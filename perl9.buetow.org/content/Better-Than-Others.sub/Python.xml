@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Python users will love Perl 9!</pagetitle>
+  <text>Perl 9 can be programmed without using semicolons by just using indented tabs! The Perl AI engine will decide if you are using Python style oder old Perlish style for programming! Here is some sample code: (Btw.: Python is just a dialect of Perl)</code>
+  <code>
+for 0 .. @bar.elems -1 -&gt; $i
+	my $foo = @foo[$i]
+	my $bar = @bar[$i]
+	my $baz = @baz[$i]
+	for 0 .. $bar->elems -1 -&gt; $j
+		my $foo_ = $foo->[$j]
+		my $bar_ = $bar->[$j]
+		my $baz_ = $baz->[$j]
+		for 0 .. $bar_->elems -1 -&gt; $k
+			push @$baz_, $foo_->[$k] + $bar_-&gt;[$k]
+  </code>
+</content>

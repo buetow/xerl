@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Sourcecode Examples</pagetitle>
+  <perl>
+		use LWP::Simple;
+
+		my $site = get 'https://ssl.buetow.org/repos/fype/branches/experimental/build-009669/examples/';
+		my @sites = $site =~ /file name="(.*?\.fy)" .*/g;
+		my @return;
+
+		for my $site (sort @sites) {
+			push @return, "!!LT!!h2!!GT!!$site!!LT!!/h2!!GT!!";
+			push @return, '!!LT!!pre class="code"!!GT!!';
+			push @return, get "https://ssl.buetow.org/repos/fype/branches/experimental/build-009669/examples/$site";
+			push @return, '!!LT!!/pre!!GT!!';
+		}
+
+		return join '', @return;
+  </perl>
+</content>
+

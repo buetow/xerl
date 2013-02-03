@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>JSMSTrade</pagetitle>
+  <text>
+    <noop>JSMSTrade is a small and simple Java Application to use with </noop>
+    <namedlink href="http://www.smstrade.de">SMSTRADE</namedlink>
+    <noop> and can be downloaded for free.</noop>
+  <textheader>Sun Feb 8th 2009 - JSMSTrade v0.3 released</textheader>
+  <text>
+    <noop>This version only includes a major bugfix. Sadly, v0.2 was not able to deliver any SMS messages. This has been fixed by now :)</noop>
+  <textheader>Mon Feb 2nd 2009 - JSMSTrade v0.2 released</textheader>
+  <text>
+    <noop>The second version of JSMSTrade just has been released. The changes are as follows: The application is now using the english language and is not in german anymore. Also a small bugfix has been included: The input area will not freeze after typing more than 160 chars.</noop>
+  <textheader>Tue Jun 24th 2008 - JSMSTrade v0.1 released</textheader>
+  <text>
+    <noop>The first working version of JSMSTrade has been released. Have a lot of fun with it :-)</noop>
+</content>

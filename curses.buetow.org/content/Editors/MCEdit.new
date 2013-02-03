@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <textheader>mcedit</textheader> 
+  <namedlink href="%%documentsurl%%images/mcedit.gif">
+    <rimg href="%%documentsurl%%images/mcedit.jpg" />
+  </namedlink>
+ <text>mcedit is a link to mc, the main GNU Midnight Commander executable. Executing GNU Midnight Commander under this name requests staring the internal editor and opening the file specified on the command line. The editor is based on the terminal version of cooledit - standalone editor for X Window System.</text>
+   <text>
+    <noop>Homepage: </noop>
+    <link>http://www.gnu.org/directory/midnightcommander.html</link>
+  </text>
+</content>
+

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+	<pagetitle>Jump and run games</pagetitle>
+  	<includefiles separator="incsep" reldir="Jump_and_run" pattern="\.inc$" />
+</content>

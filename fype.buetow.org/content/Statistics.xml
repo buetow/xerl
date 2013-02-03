@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Sourcecode Statistics</pagetitle>
+  <text>Here are a few sourcecode statistics of the Fype compiler suite (trunk).</text>
+  <pretext>
+  <perl>
+ 	use LWP::Simple;
+	get("https://ssl.buetow.org/repos/fype/trunk/docs/stats.txt");
+  </perl>
+  </pretext>
+</content>
+

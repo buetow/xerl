@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Real random number generator!</pagetitle>
+  <text>Perl 9 now has got a REAL random number generator. No more psydo random generators. The perl process goes outside of your computer and looks for some random stuff to capture. Here is an example:</text>
+  <code>
+random(10).say; # Prints out a real random number >=0 and < 10
+  </code>
+</content>

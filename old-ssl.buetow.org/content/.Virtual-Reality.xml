@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <desc>
+   <header2>Virtual Reality</header2>
+   <text>
+    <noop>Der folgende Text wurde der VirCinity Webseite [ Jetzt </noop>
+    <namedlink href="http://www.visenso.com">VISENSO GmbH</namedlink>
+    <noop> ] entnommen. Ich war in dem dort beschriebenen Vorgang im Fraunhofer Institut  w&auml;hrend meines Studiums als Hiwi u.A. als Modulprogrammierer involviert. Die Lesemodule f&uuml;r AdvantEdge/Deform3D und viele Konfigurationsarbeiten sind mein Werk.</noop>
+   </text>
+  </desc>
+  <main>
+   <header3>Fraunhofer IPT setzt bei Zerspan- und Umformsimulationen auf COVISE</header3>
+   <text>Im Bereich der Prozesstechnologie arbeitet das Fraunhofer IPT an der Optimierung von Fertigungsprozessen. Hierzu werden Finite-Elemente (FE) basierte Fertigungssimulationen eingesetzt; ein Hilfsmittel, das sehr viele Details &uuml;ber einen Prozess preisgibt.  In der Massiv- und Blechumformung werden bereits seit mehreren Jahren erfolgreich Simulationen durchgef&uuml;hrt, um bspw. die Formf&uuml;llung oder Faltenbildung vorherzusagen. Im Bereich der Zerspanung ist der Fertigungsplaner an den max. Zerspankr&auml;ften, den max. Temperaturen und deren Orte und die max. verbrauchte Leistung bei vorgegebenen Schnittparametern interessiert. Diese Parameter k&ouml;nnen ausgereizt werden, um die Durchlaufzeiten von Bauteilen zu verk&uuml;rzen. Steht die Oberfl&auml;chenqualit&auml;t im Fokus der Optimierung wird der Einfluss des Zerspanprozesses auf die Randzone untersucht. Mit Hilfe der FE-Simulation l&auml;sst sich dar&uuml;ber hinaus die Form und Art der Sp&auml;ne berechnen, die einen massgeblichen Indikator f&uuml;r den Prozess darstellen. Die Ergebnisse von Zerspansimulationen sind sehr komplex und bed&uuml;rfen einer effizienten Auswertung.</text>
+   <rimg title="COVISE" href="%%documentsurl%%images/covise_vr_1.gif" />
+   <text>Als L&ouml;sung f&uuml;r eine effizientere Auswertung von Zerspan- und Umformsimulationen setzt das Fraunhofer IPT auf COVISE von VirCinity. "COVISE bietet uns die M&ouml;glichkeit ein Virtual Reality Post Processing durchzuf&uuml;hren und eigene auf die Fertigungssimulation angepasste Module zu entwickeln" so Andreas M. Straube, der VR-Verantwortliche beim Fraunhofer IPT in Aachen. So wurden bereits Lesemodule f&uuml;r AdvantEdge TM (FE-Zerspansimulationssoftware von Third Wave Systems) und DEFORM3D TM (FE-Umform- und FE-Zerspansimulationssoftware von SFTC) entwickelt (um den Datentransfer in COVISE zu realisieren) sowie Methoden zur komparativen Visualisierung. Durch ein Differenzbildungsmodul wird es m&ouml;glich die Unterschiede von zwei Simulationen zu ermitteln und zu visualisieren; und somit Auswirkungen von &auml;nderungen der Prozess-, Werkzeug- und Werkst&uuml;ckparameter auf das Bearbeitungsergebnis detailliert zu untersuchen.</text>
+   <text>Das Foto wurde ebenso der VirCinity Seite entnommen. Es stellt eine CAVE-Umgebung dar in der COVISE mit COVER l&auml;uft wie es u.A. auch im Fraunhofer IPT der Fall ist.</text>
+   <header3>Videos vom COVER im Fraunhofer IPT</header3>
+   <text>Aus technischen Gr&uuml;nden ist es leider nicht m&ouml;glich den richtigen 3D-Effekt von COVISE und dem 2-Seiten CAVE des IPT auf Video zu verbannen. Beachten Sie also dass es sich hier nur um 640x480 Mono-Aufzeichnungen von COVISE handelt und die Videos keinerlei Stereoinformationen beinhalten.</text>
+   <text>Den richtigen Eindruck bekommen Sie daher erst, wenn Sie uns im Institut besuchen kommen. Die Downloads wurden ebenso von der VirCinity Seite entnommen.</text>
+   <enumeration>
+     <enumitem>
+       <noop>Fraunhofer IPT Video 1 (6.4 MB) </noop>
+       <namedlink href="http://web.buetow.org/docs/virtualreality/covise_3rdwave_volume_logos.avi">Download</namedlink> 
+     </enumitem>
+     <enumitem>
+       <noop>Fraunhofer IPT Video 2 (4.5 MB) </noop>
+       <namedlink href="http://web.buetow.org/docs/virtualreality/covise_3rdwave_timesteps_logos.avi">Download</namedlink>
+     </enumitem>
+     <enumitem>
+       <noop>Fraunhofer IPT Video 3 (34 MB) </noop>
+       <namedlink href="http://web.buetow.org/docs/virtualreality/Covise_VC2002_Logos.avi">Download</namedlink>
+     </enumitem>
+   </enumeration>
+   <header3>Dazugeh&ouml;rige Links</header3>
+   <enumeration>
+     <enumitem>
+       <namedlink href="http://www.ipt.fhg.de">Fraunhofer Institut f&uuml;r Produktionstechnologie</namedlink>
+       </enumitem>
+     <enumitem>
+       <namedlink href="http://www.visenso.com">Visenso - Die COVISE Entwickler</namedlink>
+     </enumitem>
+   </enumeration>
+   
+  </main>
+</content>

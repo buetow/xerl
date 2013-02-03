@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <rimg href="?document=images/perl.jpg" title="Perl" /> 
+  <pagetitle>Welcome to the website of Perl 9!</pagetitle>
+  <text>Perl 9 is the next major release after Perl 6. Perl 8 has been left out because Perl 9 provides too much new features which would not fit into one major version number. Perl 9 combines all features of Perl 5 and Perl 6. This site only demonstrates some additional features over Perl 5 and Perl 6.</text>
+</content>

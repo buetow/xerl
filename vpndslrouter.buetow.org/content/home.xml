@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>VPN DSL Router</pagetitle>
+   <important>
+    <text>
+     <strong>Important notice:</strong>
+     <noop>There will be no more updates on this website. For current projects please visit </noop>
+     <link>http://dev.buetow.org</link>	
+	 <noop> and enjoy :)</noop>
+    </text>
+   </important>
+<text> Linux DSL Router f&uuml;r RWTH-VPN Howto - Version 0.8.5</text>
+<text>
+<noop>Wie richte ich einen auf Linux basierten DSL+VPN router f&uuml;r UniDSL Aachen</noop>
+<link>http://aachen.uni-dsl.de</link>
+<noop>ein?</noop>
+<newline />
+<newline />
+<noop>ACHTUNG: Laut Netzordnung der RWTH ist es untersagt, mehrere Leute ueber einen einzelnen VPN Zugang ins Netz zu lassen. Wenn Du den Router hingegen nur fuer Deine eigenen Rechner verwendest, sollte es in Ordnung sein.</noop>
+<newline />
+<newline />
+Zudem wird hier darauf hingewiesen, dass dieses Howto nicht perfekt ist und es keine Garantie auf Korrektheit gibt. Jdf. funktioniert die hier beschriebene Konfiguration bei mir. 
+<newline />
+<newline />
+<noop>Verwendet wird:</noop>
+<newline />
+<newline />
+<noop>Debian Linux 3.0 (Woody) [Die Routerinstallation (Woody standard) kommt mit 500MB Plattenspeicher gut aus] [Debian Woody ist derzeit etwas veraltet, das Howto sollte jedoch auch mit einer beliebigen anderen Linux-Distribution funktionieren. Es sollte nur ein aktuellerer Kernel verwendet werden und die RC-Skripte sollten je nach Distro anders eingerichtet werden]</noop>
+</text>
+<textheader>0. Netzwerkkarten:</textheader>
+<text>eth0 kommt ans DSL modem und eth1 kommt ans LAN.  Vorrausgesetzt wird, dass alle Einstellungen als "root" vorgenommen werden ;-)
+</text>
+<textheader>1. Kernel besorgen</textheader>
+<text>Am besten den aktuellsten Linux Kernel der 2.4er Serie von ftp://ftp.kernel.org> (bei mir ists der 2.4.25) herunterladen und nach /usr/src/linux entpacken. (Anmerkung: Seit dem Cisco VPN Client 4.0.4 wird auch ein Kernel der 2.6.x-Serie unterst&uuml;tzt. Da aber mein Router einen 2.4er Kernel nutzt, habe ich einen 2.6er noch nicht getestet.)
+</text>
+<textheader>2. Kernel Konfigurieren</textheader>
+<text><noop>Meine Konfiguration beinhaltet u. A. Treiber beider Netzwerkkarten sowie zus&auml;tzliche Optionen f&uuml;r PPP und iptables. Meine Kernel Config gibts hier:</noop>
+<link basename="yes">%%documentsurl%%kernel.config.txt</link>
+<noop>. Diese einfach herunterladen und nach /usr/src/linux/.config abspeichern. (Kernel beinhaltet schon alle ben&ouml;tigten iptables und PPP Optionen). Danach:</noop>
+</text>
+<pretext>cd /usr/src/linux
+make mrproper
+cp kernel.config.txt /usr/src/linux/.config
+make oldconfig</pretext>
+<text>(Hier mit "y" ggf. neu hinzugekommnden Kerneloptionen auf den Standard-Wert setzen falls Du einen neueren 2.4er Kernel verwendest als die von der meine .config-Datei ist)</text>
+<pretext>make menuconfig</pretext>
+<text>Nun ggf. Treiber im Kernel aktivieren, die Dein System noch zus&auml;tzlich brauchen k&ouml;nnte (SCSI? LVM?) und dann Kernel&auml;nderungen sichern und fortfahren:</text>
+<pretext>make dep
+make bzImage
+make modules
+make modules_install
+cp arch/i386/boot/bzImage /boot/routerkernel</pretext>
+<text>Als n&auml;chstes den Kernel in Deinem Boot-Manager einbinden (Lilo oder GRUB?)
+Danach den neuen Kernel rebooten.</text>
+<textheader>3. Ethernetkarten Konfigurieren</textheader>
+<text>Ich gehe hier davon aus, dass 2 Netzwerkkarten installiert sind. ifconfig sollte also sowohl eth0 als auch eth1 anzeigen. Schliessen wir also das DSL Modem an eth0 an.
+Nun stellen wir die IP Adressen f&uuml;r die Karten ein. Der ersten Karte, an welcher das DSL Modem h&auml;ngt geben wir die IP 192.168.255.254 Dies geschieht &uuml;ber
+</text>
+<pretext>ifconfig eth0 192.168.255.254 mask 255.255.255.255 up</pretext>
+<text>
+Die 2. Netzwerkkarte, also eth1 stellt die Verbindung mit dem LAN her und erh&ouml;lt die IP Adresse 192.168.0.1. Der ifconfig Befehl lautet wie folgt:
+</text>
+<pretext>ifconfig eth1 192.168.0.1 mask 255.255.255.0 up</pretext>
+<text>Hiermit w&auml;re die Konfiguration des Netzwerkes abgeschlossen. Um die Einstellungen nach Reboot beizubehalten sollten diese Netzwerkeinstellungen entweder in ein eigenes Start-Skript oder in die Debian-Netzwerkkonfigurationsdateien geschrieben werden. Wie das geht, erf&auml;hrt man aus der Dokumentation. </text>
+<textheader>4. DSL konfigurieren</textheader>
+<text>Hier wird die DSL-config per "pppoeconf" auf der Console durchgef&uuml;hrt. Auch hier werden wir nach Benutzername und Passwort gefragt.
+Die Daten sollten 100%ig korrekt sein. Die Frage  nach dem Device an welchem das Modem h&auml;ngt beantworten wir mit eth0. Zur Auswahl hast Du noch,
+ob die Verbindung beim booten gestartet werden soll oder nicht. Was Du dort w&auml;hlst liegt in Deiner Hand. Willst Du die Verbindung per Hand starten ,
+so funktioniert dies per "pon" auf der Console und mit "poff" kann die Verbindung wieder getrennt werden.
+</text>
+<text>
+Anschliessend kannst Du direkt testen, ob die DSL-Verbindung alleine schon funktioniert. Wenn ja, dann weiter zu Schritt 5:
+</text>
+<textheader>5. VPN konfigurieren</textheader>
+<text><noop>Hier sollte der neuste VPN Client von der RWTH Seite heruntergeladen werden.
+Aber ACHTUNG, installiert man den Client nach Anleitung, so belegt dieser nach Starten alle (!!) Netzwerkdevices. D.h. man kann vom LAN nicht mehr auf eth1 vom Router zugreifen, da VPN diese blockiert und das w&uuml;rde die Debian Kiste als Router unnutzbar machen! Um dies zu umgehen ist eine kleine Manipulation der VPN-Client Sourcen notwendig. Also zuerst den Cisco-VPN Client herunterladen, z.B. von</noop>
+<link>http://www.rz.rwth-aachen.de/</link>
+<noop>und diese in ein beliebiges Verzeichnis entpacken (bei mir: ~/src/vpnclient). Dann wie folgt vorgehen:
+</noop>
+</text>
+<pretext>
+cd ~/src/vpnclient
+vi interceptor.c
+</pretext>
+<text>
+Seit dem Versionssprung von 4.0.3 nach 4.0.4 hat sich der Sourcecode ein wenig ge&auml;ndert was wohl daran liegt dass die 4.0.4er
+Version auch vom 2.6.x Linux Kernel unterst&uuml;tzt wird. Ich habe einfach mal die Modifikation beider Versionen hier online gestellt. 
+</text>
+<textheader>F&uuml;r vpnclient-linux-4.0.4.B-k9</textheader>
+<text>
+Nun nach folgender Code-Stelle suchen
+</text>
+<pretext notrim="yes">static int
+inline supported_device(struct net_device* dev)
+{
+    int rc=0;
+
+    if(dev->type == ARPHRD_ETHER)
+    {
+        rc=1;
+    }
+    else if(dev->type == ARPHRD_PPP)
+    {
+        rc=1;
+    }
+
+    return rc;
+}</pretext>
+<text>Da der Debian Router mit ppp0 via DSL online geht, den obrigen Code durch folgenden ersetzen:</text>
+<pretext notrim="yes">static int
+inline supported_device(struct net_device* dev)
+{
+    int rc=0;
+
+    if(dev->type == ARPHRD_PPP)
+    {
+        rc=1;
+    }
+
+    return rc;
+}</pretext>
+<textheader>F&uuml;r vpnclient-linux-4.0.3.B-k9</textheader>
+<text>Nun nach folgender Code-Stelle suchen</text>
+<pretext notrim="yes">static int inline
+supported_device(struct net_device *dev)
+{
+    int rc = 0;
+                                                                                               
+    if (!dev->name)
+    {
+        goto exit_gracefully;
+    }
+                                                                                               
+    if (!strncmp(dev->name, "eth", 3)
+        && (dev->name[3] >= '0' && dev->name[3] <= '9'))
+    {
+        rc = 1;
+    }
+    else if (!strncmp(dev->name, "wlan", 4)
+             && (dev->name[4] >= '0' && dev->name[4] <= '9'))
+    {
+        rc = 1;
+    }
+    else if (!strncmp(dev->name, "ppp", 3) && (dev->name[3] >= '0' &&
+                                               dev->name[3] <= '9'))
+    {
+        rc = 1;
+    }
+    else if (ippp_dev(dev))
+    {
+        rc = 1;
+    }
+                                                                                               
+  exit_gracefully:
+    return rc;
+}</pretext>
+<text>Da der Debian Router mit ppp0 via DSL online geht, den obrigen Code durch folgenden ersetzen:</text>
+<pretext notrim="yes">static int inline
+supported_device(struct net_device *dev)
+{
+    int rc = 0;
+                                                                                               
+    if (!dev->name)
+    {
+        goto exit_gracefully;
+    }
+                                                                                               
+    if (!strncmp(dev->name, "ppp", 3) && (dev->name[3] >= '0' &&
+                                               dev->name[3] <= '9'))
+    {
+        rc = 1;
+    }
+    else if (ippp_dev(dev))
+    {
+        rc = 1;
+    }
+                                                                                               
+  exit_gracefully:
+    return rc;
+}</pretext>
+<text> Danach (Egal bei welcher VPN Client Version) </text>
+<pretext notrim="yes">./vpn_install</pretext>
+<text>
+aufrufen und alle Angaben korrekt beantworten und den VPN-Client wie auf der RWTH Seite beschrieben konfigurieren (achte darauf, Dich mittels "FullTunnel" in das RWTH VPN einzuwaehlen). Wenn Du z.Z. via DSL eingew&auml;hlt bist, kannst Du nun auch den VPN-Client zus&auml;tzlich starten und testen ob eine VPN-Verbindung korrekt aufgebaut wird (vpnclient connect DEINVPNALIAS). Klappt alles, dann den VPN-Client wieder beenden und weiter mit..
+</text>
+<textheader>6. Start-Skripte</textheader> 
+<text>Damit der Router automatisch bei jedem Reboot sich ins DSL + VPN einw&auml;hl und routing aktiviert, bitte folgendes Skript unter /etc/init.d/routing_and_vpnc anlegen (Das Skript aktiviert auch die ben&ouml;tigten Routing-Optionen via iptables und Co):</text>
+<pretext notrim="yes">#!/bin/sh
+# Configurable options:
+case "$1" in
+  start)
+        echo "Starting VPN"
+        echo 1 >/proc/sys/net/ipv4/ip_forward
+        /sbin/iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -d 0/0 -o \
+		ppp0 -j MASQUERADE
+        /bin/date > /var/log/rwthvpn.log
+        /usr/bin/nohup /usr/bin/perl /usr/local/sbin/vpnc >> \
+		/var/log/rwthvpn.log &
+        ;;
+  stop)
+        echo "Stopping VPN"
+        echo 0 >/proc/sys/net/ipv4/ip_forward
+        killall perl
+        ;;
+ 
+  *)
+        echo "Usage: /etc/init.d/routing_and_vpnc {start|stop}"
+        exit 1
+esac
+ 
+exit 0</pretext>
+<text>und anschliessend folgende Befehle ausf&uuml;hren:</text>
+<pretext notrim="yes">chmod 755 /etc/init.d/routing_and_vpnc
+for i in 3 4 5
+do
+ cd /etc/rc$i.d
+ ln -s ../init.d/routing_and_vpnc S86routing_and_vpnc
+done
+</pretext>
+<text>
+Nun muss noch ein Wrapper erstellt werden, der die l&auml;sstige "y"-Best&auml;tigung nach jedem VPN-Client start &uuml;bernimmt und den VPN-Client selbstst&auml;ndig neu startet wenn dieser sich von alleine verabschiedet bzw. wenn die VPN-Verbindung getrennt werden sollte. Den Wrapper in die Datei /usr/local/sbin/vpnc schreiben, und zwar mit folgendem Inhalt:
+</text>
+<pretext notrim="yes">#!/ust/bin/perl -w
+#
+# Daemon backend for  Cisco VPN Client
+# By Paul Buetow (paul at buetow dot org)
+#
+ 
+$|++; # Deaktiviert Ausgabepuffer (Aktiviert sofortige Anzeige)
+ 
+use strict;
+use FileHandle;
+use IPC::Open2;
+ 
+for (;;) {
+ if (`/sbin/ifconfig ppp0` =~ /ppp0/) {
+  open2 *READER,*WRITER, '/usr/local/bin/vpnclient connect rwthvpn'
+     or die "$!\n";
+ 
+  print WRITER "y\n";
+  print while &lt;READER>;
+
+ } else {
+   print "No ppp0 device up!\n";
+ }
+ sleep 10;
+}
+ 
+print "done\n";</pretext>
+<text>
+Hierbei solltest Du sicher gehen, dass hier der String "rwthvpn" mit Deinem VPN Profil &uuml;bereinstimmt. Du kannst das Skript hier ggf. anpassen.  </text>
+<text> Anschliessend fehlt noch ein </text>
+<pretext notrim="yes">chmod 755 /usr/local/sbin/vpnc </pretext>
+<text> Wenn Du nun alles korrekt gemacht hast, sollte sich Dein Rechner nach jedem Reboot versuchen sofort via VPN in das RWTH Netz einzuloggen (vorrausgesetzt, Du hast pppoeconf gesagt, dass die DSL-Verbdingung automatisch hergestellt werden soll).  </text>
+<text>Wenn etwas schief geht, kannst Du stets die Datei /var/log/rwthvpn.log einsehen, sie beinhaltet alle Ausgaben vom Cisco-VPN Client seit dem letzten Ausf&uuml;hren des routing_and_vpnc Skriptes.</text>
+<text>
+<noop>Nun ist Dein Debian Router perfekt. Wenn Dir noch ein DynDNS Dienst fehlt, dann verweise ich auf</noop>
+<link>http://www.DynDNS.org</link>
+<noop>.</noop>
+<textheader>7. Konfiguration der Rechner hinter dem Router</textheader>
+<text>Nun sollte jeder Rechner im LAN als Gateway die 192.168.0.1 und als Netmask die 255.255.255.0 verwenden, um ins VPN gerouted zu werden ;-P.</text>
+<text>
+F&uuml;r weitere Fragen stehe ich gerne bereit (paul at buetow dot org), kann jedoch nicht garantieren, dass ich helfen kann. Da ich kein Uni-DSL mehr nutze und auf dem Router laeuft schon laenger OpenBSD, kein Linux mehr.
+</text>
+<textheader>Referenzen</textheader>
+<text>
+<noop>UniDSL Aachen:</noop>
+<link>http://aachen.uni-dsl.de</link>
+<newline>Debian Linux:</newline>
+<link>http://www.debian.org</link>
+<newline>RWTH Einwahlberatung:</newline>
+<newline />
+<link>http://www.rz.rwth-aachen.de/kommunikation/betrieb/dialup/index.php</link>
+<newline>Excluded Linux DSL howto:</newline>
+<link>http://www.excluded.org/papers/Router.html</link>
+</text>
+</content>

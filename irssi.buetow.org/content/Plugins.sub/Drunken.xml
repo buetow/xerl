@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>drunken.pl</pagetitle>
+  <text>This plugin makes you write like a drunken man. Usage:</text>
+<code>/script load drunken.pl
+/beer Hello I am verry drunk at the moment!</code>
+	<text>This will write something like this into the current channel:</text>
+<code>Hlleo I am vrrey dunrk at the mnetmo!</code> 
+	<text>You may download it from the SVN section above. Have a lot of fun ;)</text>
+</content>

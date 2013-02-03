@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <desc>
+   <header2>Ver&ouml;ffentlichungen</header2>
+   <text>Auf dieser Unterseite werden einige von mir erstellten Dokumente ver&ouml;ffentlicht. Dies sind unter Anderem alte Vortr&auml;ge und Ausarbeitungen aus dem Studium. Neue Dokumente werden nach und nach hier online gebracht!</text>  
+  </desc>
+  <main>
+   <header3>2008 - Objektorientierte Entwicklung eines GUI-basierten Tools f&uuml;r die ereignisbasierte Simulation verteilter Systeme</header3>
+   <text>Diplomarbeit, die an der Fachhochschule Aachen im Fachbereich Elektrotechnik und Informationstechnik angefertigt wurde.</noop>
+   <enumeration>
+		<enumitem>
+				<namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/documents/vortrag.pdf">Vortragsfolien</namedlink>
+		</enumitem>
+		<enumitem>
+				<namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/documents/diplomarbeit.pdf">Ausarbeitung</namedlink>
+		</enumitem>
+		<enumitem>
+				<namedlink href="http://vs-sim.buetow.org">Projekt-Website</namedlink>
+		</enumitem>
+	</enumeration>
+   <header3>2007 - Kryptologievortrag &uuml;ber Kerberos</header3>
+	<text>Kerberos ist ein Protokoll f&uuml;r die sichere Authentifizierung in unsicheren Computernetzwerken. Das Kerberos-Protokoll wurde 1983 vom MIT entwickelt. Die 4. Version wurde 1989 als Open Source freigegeben. 1993 wurde Kerberos 5 fertiggestellt. 2005 gab es das letzte große Protokollupdate. Kerberos verwendet ausschließlich symmetrische Verschl&uuml;sslungsalgorithmen (DES in Kerberos 4, aktueller AES in Kerberos 5). Von der Nutzung von Kerberos 4 wird derzeit wegen Schwachstellen im Protokoll und nicht mehr sicherer Verschl&uuml;sselung (DES) abgeraten....</text>
+	<enumeration>
+		<enumitem>
+				<namedlink href="ftp://ftp.buetow.org/pub/studium/FHAC_Krypto-SS07/Kerberos/kerberos.pdf">Kerberos Vortragsfolien</namedlink>
+		</enumitem>
+		<enumitem>
+				<namedlink href="ftp://ftp.buetow.org/pub/studium/FHAC_Krypto-SS07/Kerberos/abkuerzungen.pdf">Abk&uuml;rzungen als Erg&auml;nzung zu den Folien</namedlink>
+		</enumitem>
+		<enumitem>
+				<namedlink href="ftp://ftp.buetow.org/pub/studium/FHAC_Krypto-SS07/Kerberos/kerberos-zusammenfassung.pdf">Kerberos Zusammenfassung</namedlink>
+		</enumitem>
+	</enumeration>
+		   <header3>2006 - Software Engineering / Test Driven Development (TDD)</header3>
+	<text>In der folgenden Ausarbeitung möchte ich einen Überblick und zugleich eine kleine Einführung in die praktische Anwendung des Test Driven Software Developments (TDD) geben. Insbesondere wird auf sogenannte Unit Tests Frameworks eingegangen. Hierbei werden ein paar Anwendungsbeispiele sowie Strategien vorgestellt. Ebenso wird auf den Aufbau von JUnit eingegangen, um das Innenleben eines Unit Test Frameworks zu verdeutlichen. Es werden ebenso Vorteile gegenüber konventionellen Softwaretests thematisiert.  Es wird allerdings erwartet, dass der Leser sich etwas mit objektorientierter Programmierung und Java auskennt. Die Beispiele sind dafür möglichst einfach gehaltet, da sie nur die Prinzipien hervorheben sollen.</text>
+
+	<enumeration>
+		<enumitem>
+				<namedlink href="ftp://ftp.buetow.org/pub/studium/FHAC_SWE-SS06/tdd2-ausarbeitung.pdf">TDD Ausarbeitung</namedlink>
+		</enumitem>
+		<enumitem>
+				<namedlink href="ftp://ftp.buetow.org/pub/studium/FHAC_SWE-SS06/tdd2-vortrag.pdf">TDD Vortrag</namedlink>
+		</enumitem>
+	</enumeration>
+   	<important>
+		<text>
+			<rimglink href="%%imagesurl%%get_adobe_reader.png" title="Adobe Acrobat Reader" link="http://www.adobe.com" />
+			<strong>Wichtiger Hinweis:</strong>
+    		<noop>F&uuml;r das Anzeigen der aufgelisteten Downloads wird der Adobe Acrobat Reader ben&ouml;tigt. Es k&ouml;nnen allerdings auch open source Alternativen wie z.B. </noop>
+			<namedlink href="http://www.foolabs.com/xpdf/">xPDF</namedlink>
+			<noop> (*NIX),</noop>
+			<namedlink href="http://www.gnome.org/projects/evince/">Evince</namedlink>
+			<noop> (GNOME) oder </noop>
+			<namedlink href="http://kpdf.kde.org/">KPDF</namedlink>
+			<noop> (KDE) verwendet werden!</noop>
+		</text>
+   	</important>
+  </main>
+</content>

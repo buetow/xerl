@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+        <pagetitle>Services</pagetitle>
+        <text>
+	<noop>In case you have work for me or have any other comments to pass, please don't bother to contact... I'm not available full-time but a few hours a week should be ok.</noop>
+	<enumeration>
+		<enumitem>Advanced skills in Linux and a like (e.g. Debian, *BSD)</enumitem>
+		<enumitem>Programming and scripting with AWK, Bash, Perl, Java, C/C++ and some Haskell</enumitem>
+		<enumitem>Automatic configuration management with Puppet</enumitem>
+		<enumitem>IP Loadbalancing with IPVS/Linux Virtual Server and ldirectord or keepalived and Apache</enumitem>
+		<enumitem>High availability with DRBD, Heartbeat, Pacemaker/Corosync</enumitem>
+		<enumitem>Intrusion detection and prevention with Samhain, Snort, auditd/SE Linux, Prelude and more...</enumitem>
+		<enumitem>Advanced networking with DNS, OpenVPN and more...</enumitem>
+		<enumitem>Performance and problem debugging with vmstat, iostat, iftop, dstat, sar, oprofile, SystemTap, Valgrind, gdb and more...</enumitem>
+		<enumitem>Analysis with SNMP, Cacti, MRTG, sysstat, and more...</enumitem>
+	 </enumeration>
+        </text>
+</content>

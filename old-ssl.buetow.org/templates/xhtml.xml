@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content type="text/html">
+ <tag>!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</tag>
+ <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+   <title>%%title%%</title>
+   <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+   <meta name="author" content="Paul Buetow / Original design: Andreas Viklund - http://andreasviklund.com/" />
+   <meta name="publisher" content="Xerl Template Engine (xerl.buetow.org)" />
+   <meta name="distribution" content="global" />
+   <meta name="robots" content="index, follow" />
+   <meta name="language" content="en, english" />
+   <meta name="revisit-after" content="1 days" /> 
+   <=link rel="stylesheet" type="text/css" href="%%stylesurl%%$$style$$" /> 
+                <script type="text/javascript">
+                        var pkBaseURL = (("https:" == document.location.protocol) ? "http://%%piwik%%/" : "http://%%piwik%%/");
+                        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <script type="text/javascript">
+                        try {
+                                var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+                                piwikTracker.trackPageView();
+                                piwikTracker.enableLinkTracking();
+                        } catch( err ) {}
+                </script>
+                <noscript>
+                        <img src="http://web.buetow.org/stats/piwik.php?idsite=1" style="border:0" alt="" />
+                </noscript>
+  </head>
+  <body>
+   <div id="content">
+   <div id="toptabs">
+	IT Services f&uuml;r Open Source, Linux, *BSD und Programmierung
+   </div>
+   <div id="container">
+    <div id="logo">
+    </div>
+    <div id="navitabs">
+      <navigation />
+    </div>
+    <noop>%%content%%</noop>
+    <div id="sidebar">
+     <header3>Projekte:</header3>
+     <sidelink href="http://loadbars.buetow.org">Loadbars</sidelink>
+     <sidelink href="http://netcalendar.buetow.org">NetCalendar</sidelink>
+     <sidelink href="http://pwgrep.buetow.org">PWGrep</sidelink>
+     <sidelink href="http://vs-sim.buetow.org">VS-Simulator</sidelink>
+     <sidelink href="http://xerl.buetow.org">Xerl Web-Engine</sidelink>
+     <sidelink href="http://dev.buetow.org">Weitere Projekte...</sidelink>
+     <header3>Community:</header3>
+     <sidelink href="http://comp.buetow.org">comp.buetow.org</sidelink>
+     <sidelink href="http://www.german-elite.net">GE IRC</sidelink>
+     <newline />
+     <cimg start="yes" title="PayPal" href="%%imagesurl%%paypal.jpg" />
+     <newline />
+    </div>
+    <div id="footer">
+     <noop>Copyright &copy; 2006 - 2011 Dipl.-Inform. (FH) Paul B&uuml;tow (</noop>
+     <namedlink href="http://xerl.buetow.org">Xerl Template Engine</namedlink>
+     <noop>) | Generiert in !!TIME!!s </noop> 
+    </div>
+   </div>
+   </div>
+  </body>
+ </html>
+</content>

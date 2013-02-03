@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+	<pagetitle>www.angelova.eu</pagetitle>
+	<text>
+		<noop>Hier entsteht eine neue Webpr&auml;senz von</noop> 
+  	</text>
+	<enumeration>
+		<enumitem>Albena Angelova</enumitem>
+	</enumeration>
+	<text>
+		<noop>Bei Fragen oder Anregungen wenden Sie sich bitte per E-Mail an </noop>
+       <javascript>
+	// Anti-Spam
+	function strrev(str) {
+		if (!str) return '';
+		var revstr = '';
+		for (var i = str.length-1; i>=0; i--)
+			revstr += str.charAt(i)
+		return revstr;
+	}
+	var array = new Array('ue', '.', 'avolegna', '@', 'anebla');
+	for (var i = array.length - 1; i >= 0; --i)  {
+		document.write(strrev(array[i]));
+	}
+       </javascript>
+	</text>
+</content>

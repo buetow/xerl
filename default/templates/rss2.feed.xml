@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<content type="application/rss+xml"> 
+  <tag>?xml version="1.0"?</tag>
+  <rss version="2.0">
+    <channel>
+      <title>buetow.org Newsfeed</title>
+      <link>http://%%host%%</link>
+      <description>buetow.org - Paul Buetows Tech Newsfeed</description>
+	  <pubDate>$$!/bin/date$$</pubDate>
+	  <generator>Xerl Web Engine (http://xerl.buetow.org)</generator>
+      <language>en</language>
+      <noop>%%content%%</noop>
+    </channel>
+  </rss>
+</content>

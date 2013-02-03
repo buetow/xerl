@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Download</pagetitle>
+  <text>Perldaemon can be downloaded from git. Just type "git clone git://git.buetow.org/perldaemon".</text> 
+  <text>        
+        <noop>Go to </noop>
+        <namedlink href="http://web.buetow.org/git/?p=perldaemon.git">gitweb</namedlink>
+        <noop> in order to browse the repository online. The master branch always keeps the current stable version. The devel branch always keeps the current development version. For releases there are tags.</noop>
+  </text>
+</content>
+

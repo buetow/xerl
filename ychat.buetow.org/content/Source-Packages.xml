@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Source Packages download</pagetitle>
+  <text>yChat binaries are not available for download. But source packages can be downloaded.</text>
+  <text>
+    <noop>Look at</noop>
+    <link>ftp://ftp.buetow.org/pub/yChat/</link>
+    <noop> for all available yChat source packages and at </noop>
+  </text>
+</content>

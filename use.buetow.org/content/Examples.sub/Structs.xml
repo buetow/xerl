@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Scructs</pagetitle>
+  <code>
+  <perl>
+ 	use LWP::Simple;
+	get("https://ssl.buetow.org/repos/playground/trunk/Perl/examples/structs.pl");
+  </perl>
+  </code>
+</content>

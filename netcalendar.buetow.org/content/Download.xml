@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Download</pagetitle>
+  <textheader>Bytecode compiled Jar archives</textheader>
+  <text>Here you can download the latest bytecode compiled Jar archives. You need a Java 5 runtime environment. Just unpack the zip-file and double click on the .jar file! The calendar comes with a sample database. You may delete all the events first.</text>
+  <text>
+    <noop>Look at</noop>
+    <link>ftp://ftp.buetow.org/pub/NetCalendar</link>
+    <noop>for all available binaries!</noop>
+  </text>
+  <textheader>Source code</textheader>
+  <text>
+    <noop>The sourcecode can be obtained from </noop>
+    <namedlink href="?site=SVN-Download">SVN</namedlink>
+    <noop> (Subversion).</noop>
+  </text>
+</content>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Easy Stack Calculator</pagetitle>
+   <important>
+    <text>
+     <strong>Important notice:</strong>
+     <noop>The development of the Easy Stack Calculator has been stalled. There will be no further development on this project. This project always was a proof of concept only. Bugs are not gonna be fixed. For current programming projects please visit </noop>
+     <link>http://dev.buetow.org</link>	
+	 <noop> and enjoy :)</noop>
+    </text>
+   </important>
+  <text>
+    <noop>Calculator is a very portable text based calculator program written in C++. If you wanna stay informed, please subscibe at </noop>
+     <namedlink href="http://freecode.com/projects/stack-calculator">freecode</namedlink>
+    <noop> to the stack-calculator project. You will receive an email then a new release has been made. However, I do not plan to release any new versions in the near future. This calculator is obsolet and may be replaced by the </noop>
+     <namedlink href="http://fype.buetow.org">Fype Language</namedlink>
+    <noop> which can do arithmetic calculations too.</noop>
+  </text>
+  <textheader>Version 0.6 (Sep 20th 2005)</textheader>
+  <enumeration>
+    <enumitem>Changed the source tree structure. Normal non-digits will now be treated with their ASCII values. Digits will be treated with ASCII values too if mode ascii has been activated.</enumitem>
+    <enumitem>Fixed the "operators" command.</enumitem>
+  </enumeration>
+  <textheader>Version 0.5 (Apr 18 2005)</textheader>
+  <enumeration>
+    <enumitem>Added list.h and stack.h. Calculator can now be used with parameters: ./calculator '1+6+4\'. Added the v(erbose) command. Added the pr(ecision) int command. </menuitem>
+    <enumitem>The - (minus) bug has been fixed!</enumitem>
+  </enumeration>
+  <textheader>Version 0.4.1 (Dec 1st 2004) - Bugfix release</textheader>
+  <enumeration>
+    <enumitem>
+      <noop>Equations like (...)op... can be solved now. Here, op is an operator. Before, ...op(...) only worked.</noop>
+      <newline />
+      <noop>Example: (4\+3)^(8*7)!</noop>
+    </enumitem>
+    <enumitem>The ^ operator now only uses whole numbers as an exponent.</enumitem>
+    <enumitem>Use \ to calculate the roots instead!</enumitem>
+  </enumeration>
+  <textheader>Version 0.4 (Nov 27th 2004)</textheader>
+  <enumeration>
+    <enumitem>Renamed the qu(it) command into ex(it).</enumitem>
+    <enumitem>Renamed the pri(ority) command into op(erators).</enumitem>
+    <enumitem>A "," can be used as a synonym for a ".".</enumitem>
+    <enumitem>0! resulted in an infinite loop. This has been fixed.</enumitem>
+    <enumitem>\w* resultet in a segmentation fault. This has been fixed.</enumitem>
+    <enumitem>New commands: ra(scii), which is the same as as(cii) but works the reverse way. !command executes a shell command. x\ calculates the square root of x.</menuitem>
+  </enumeration>
+  <textheader>Version 0.3.1 (Jul 26th 2004) - Bugfix release</textheader>
+  <enumeration>
+    <enumitem>This is a bugfix release only. No new features included.</menuitem>
+  </enumeration>
+  <textheader>Version 0.3 (May 8th 2004)</textheader>
+  <enumeration>
+    <enumitem>This version uses $ to store the result of the last calculaion in.</enumitem>
+    <enumitem>Also 4(2)(4) will be interpreted as 4*2*4.</enumitem>
+    <enumitem>Negative numbers can be typed: 4+-4(-1) = 4-4*-1 = 0</enumitem>
+    <enumitem>A few bugs have been fixed too.</enumitem>
+  </enumeration>
+  <textheader>Version 0.2 (May 2nd 2004)</textheader>
+  <enumeration>
+    <enumitem>This version can also handle different fields and double and float numbers. </enumitem>
+  </enumeration>
+  <textheader>Version 0.1 (May 1st 2004)</textheader>
+  <enumeration>
+    <enumitem>This version can only handle normal integer numbers. Double, floats etc. will be added in the next versions.</enumitem>
+  </enumeration>
+</content>

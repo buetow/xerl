@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content type="text/html">
+<tag>!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</tag>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>%%title%%</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+		<meta name="author" content="Albena Angelova" />
+		<meta name="publisher" content="Xerl Template Engine (xerl.buetow.org)" />
+		<meta name="distribution" content="global" />
+		<meta name="robots" content="index, follow" />
+		<meta name="language" content="en, english" />
+		<meta name="revisit-after" content="1 days" />
+		<=link rel="stylesheet" type="text/css" href="%%stylesurl%%$$style$$" />
+                <script type="text/javascript">
+                        var pkBaseURL = (("https:" == document.location.protocol) ? "http://%%piwik%%/" : "http://%%piwik%%/");
+                        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <script type="text/javascript">
+                        try {
+                                var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+                                piwikTracker.trackPageView();
+                                piwikTracker.enableLinkTracking();
+                        } catch( err ) {}
+                </script>
+                <noscript>
+                        <img src="http://web.buetow.org/stats/piwik.php?idsite=1" style="border:0" alt="" />
+                </noscript>
+	</head>
+	<body>
+		<div class="main">
+			<navigation />
+			<noop>%%content%%</noop>
+		</div>
+	</body>
+</html>
+</content>
+

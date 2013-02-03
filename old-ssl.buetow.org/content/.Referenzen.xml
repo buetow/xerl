@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <desc>
+   <header2>Referenzen</header2>
+   <text>Im Folgenden eine alphanumerisch sortierte Auflistung einiger Firmen und Institutionen, für die ich derzeit erfolgreiche Arbeit leiste und/oder geleistet hab. Bitte achten Sie auch darauf, dass diese Referenzen mein pers&ouml;nliches Profil meines kompletten Werdegangs wiederspiegelt, und nicht nur meine selbstst&auml;ndigen Arbeiten.</text>
+  </desc>
+  <main>
+   <header3>Auflistung der Referenzen</header3>
+   <important>
+    <text>
+     <noop>
+       <strong>Achtung:</strong>
+     </noop>
+     <noop>Diese Website enthält Verweise auf Websites von Dritten. Ich hab keinerlei Kontrolle &uuml;ber die Websites und die dort angebotenen Informationen, Waren oder Dienstleistungen. Ich &uuml;bernehme daher keinerlei Verantwortung, aus welchem Rechtsgrund auch immer, f&uuml;r den Inhalt der Websites Dritter.</noop>
+    </text>
+   </important>
+  <newline />
+   <text>Derzeit arbeite ich in Vollzeit in einer grossen IT-Firma als Linux Systemadministrator. Alle aktiven Referenzen &uuml;be ich deshalb ausschliesslich nebengewerblich (Teilzeit) aus.</text>
+   <header3>Nach dem Studium:</header3>
+   <enumeration>
+    <enumitem>
+      buetow.org - Gewerbe f&uuml;r IT Services (Webhosting, Support-Services und Beratung, Softwareentwicklung)
+    </enumitem> 
+    <enumitem>
+      <namedlink href="http://www.geos.de" title="GEOS Internet Solutions e.K.">GEOS Internet Solutions e.K.</namedlink>
+      <noop>(Linuxsupport)</noop>
+    </enumitem>
+    <enumitem>
+      <namedlink href="http://www.disapo.de">disapo.de Apotheke</namedlink>
+      <noop> / PUR-Pharma GmbH (Erstellung von Software in C und PHP; Linuxsupport)</noop>
+    </enumitem>
+    <enumitem>
+      <namedlink href="http://www.freshlabs.de" title="freshlabs GbR">freshlabs - Agentur f&uuml;r neue Medien</namedlink>
+      <noop>(Development-Server Hosting)</noop>
+    </enumitem>
+   </enumeration>
+   <header3>Noch w&auml;hrend des Studiums (&auml;ltere Referenzen):</header3>
+   <enumeration>
+    <enumitem>
+      EXA Digital Solutions GbR (Webhosting, Linuxsupport)
+    </enumitem> 
+    <enumitem>
+      <noop>elpi web (Linuxsupport)</noop>
+    </enumitem>
+    <enumitem>
+      <namedlink href="http://www.ipt.fraunhofer.de">Fraunhofer Institut f&uuml;r Produktionstechnologie (IPT)</namedlink>
+      <noop> als Hilfswissenschaftler (Studentische Arbeitskraft, C++/Java/Perl/Scheme Programmierung)</noop>
+      <newline />
+      <newline>F&uuml;r meine Arbeiten in Richtung Zerspan- und Umformsimulationen via Virtual Reality schauen Sie bitte hier: </newline>
+      <namedlink href="?site=Virtual-Reality">[Virtual Reality]</namedlink>
+    </enumitem>
+    <enumitem>
+      <namedlink href="http://www.infoweapons.com" title="Infoweapons Inc.">Infoweapons Incorporated</namedlink>
+      <noop>(C/C++/Perl Programmierung unter UNIX/*BSD)</noop>
+    </enumitem>
+    <enumitem>
+      <namedlink href="http://www.kevin-schmitz.de">Kevin Schmitz Internet Services</namedlink>
+      <noop>(Linuxsupport)</noop>
+    </enumitem>
+    <enumitem>
+      <namedlink href="http://www.nuance.de">Nuance Communications Aachen GmbH</namedlink>
+      <noop>(Werkstudent, Linux, Wiki Planung, Wiki Administration)</noop>
+    </enumitem>
+   </enumeration>
+   <text>
+		<noop>Mein komplettes Resume gibt es auf Anfrage! Bitte beachten Sie, dass ich derzeit keine Vollzeitstelle suche.</noop>
+   </text>
+  </main>
+</content>

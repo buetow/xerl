@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Under Construction</pagetitle>
+	<important>
+		<text>Soon here will be a new website.</text>
+	</important>
+	<text>
+		<noop>Please use the </noop>
+		<namedlink href="http://web.buetow.org/listinfo/dev">Development Mailing List</namedlink> 
+		<noop> for any considerations of this humble project or any other project of mine.</noop>
+	</text>
+	<text>
+		<noop>But you may also use other methods such as listed </noop>
+		<namedlink href="http://contact.buetow.org">on this site</namedlink> 
+		<noop> for example.</noop>
+	</text>
+	<text>
+		<noop>If you are interested in other stuff please visit my personal homepage at </noop>
+		<link>http://paul.buetow.org</link> 
+		<noop> :).</noop>
+	</text>
+</content>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Changelog</pagetitle>
+  <textheader>utils/pwgrep/trunk/CHANGELOG</pagetitle>
+  <text>This is the changelog of the current trunk:</text>
+  <pretext>
+  <perl>
+ 	use LWP::Simple;
+	get("https://ssl.buetow.org/repos/utils/pwgrep/trunk/CHANGELOG");
+  </perl>
+  </pretext>
+</content>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <textheader>NVi (New Vi)</textheader> 
+  <namedlink href="%%documentsurl%%images/nvi.gif">
+    <rimg href="%%documentsurl%%images/nvi.jpg" />
+  </namedlink>
+ <text>
+  <text>NVi is a screen oriented text editor. NVi is intended as bug-for-bug compatible replacements for the original Fourth Berkeley Software Distribution (4BSD) ex and vi programs. </text>
+   <text>
+  </text>
+</content>

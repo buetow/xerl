@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Perl 9 supports hypergotos!</pagetitle>
+  <text>Perl 9 has the fastest goto ever! hypergoto is faster than everything you ve seen so far. A very fast loop can be programmed like this:</text>
+  <code>
++$counter+;
+hypergoto ENDLOOP if $counter = 1000;
+hypergoto LOOP;
+ENDLOOP:
+'End very fast goto'&lt;-say;
+  </code>
+  <text>It is also possible to goto into different programs!</text>
+  <code>
+hypergoto $pid, $routine, $instruction;
+  </code>
+  <text>...jumps into the process with the id $pid and the specified routine/instruction number.</text>
+</content>

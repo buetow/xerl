@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>preview.buetow.org</pagetitle>
+  <text>Yes:</text>
+  <enumeration>
+    <enumitem>LIVE-Changes nur Werktags</enumitem>
+    <enumitem>Keine LIVE-Changes Werktags nach 15 Uhr</enumitem>
+    <enumitem>Keine LIVE-Changes Freitags oder vor Feiertagen</enumitem>
+  </enumeration>
+  <text><text>
+</content>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Perl 9 can now mix up contexes!</pagetitle>
+  <text>As you know from previous versions of Perl, you use the contexes void, list and scalar to program in. Now you are able to mix those together within the same variable!</text>
+  <code>
+my $@scaarr = ("Hello", (1, 2, 3, 4));
+$@scaarr.scalar.say; # Prints Hello
+local $, = ' '; $@scaarr.say; # Prints 1 2 3 4
+  </code>
+</content>

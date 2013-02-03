@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+	<pagetitle>Distributed Systems Simulator (VS-Sim)</pagetitle>
+	<text>
+		<limg href="?document=images/vs.jpg" title="VS" /> 
+		<noop>VS-Sim is an open source simulator programmed in Java for distributed systems. VS-Sim stands for "Verteilte Systeme Simulator" which is the german translation for "Distributed Sytstems Simulator". The VS-Sim project was my diploma thesis at the </noop>
+		<namedlink href="http://www.fh-aachen.de">Aachen University of Applied Sciences</namedlink>
+		<noop> and can simulate various scenarios of the distributed systems lecture at the university.</noop>
+	</text>
+	<text>
+		<noop>At the moment the whole simulator and the written diploma thesis document is in german only. An english version of the program may follow if requested.</noop> 
+	</text>
+  	<textheader>Version 1.0 (Aug 18th 2008)</textheader>
+  	<enumeration>
+    	<enumitem>Initial open source version of the VS-Simulator released.</enumitem>
+    	<enumitem>ATM in german language only. An english version will follow.</enumitem>
+  	</enumeration>
+</content>
+

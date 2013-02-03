@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<config>
+  <!-- Static variables are written like %%varname%% -->
+  <!-- Dynamic variables are written like $$varname$$ -->
+  <!-- Special variables for XML-ing are written like @@varname@@ -->
+  <variables>
+    <title>buetow.org - %%nsite%%</title>
+    <piwik>web.buetow.org/stats</piwik>
+    <documentsurl>?document=</documentsurl>
+    <documentsurl2>$$proto$$://%%host%%/index.pl?document=</2documentsurl>
+    <imagesurl>%%documentsurl%%images/</imagesurl>
+    <stylesurl>%%documentsurl%%styles/</stylesurl>
+    <toolbaseurl>http://web.buetow.org</toolbaseurl>
+    <loginurl>%%toolbaseurl%%/login</loginurl>
+    <adminurl>%%toolbaseurl%%/admin</adminurl>
+    <dburl>%%toolbaseurl%%/db</dburl>
+    <mailurl>%%toolbaseurl%%/mail</mailurl>
+    <rturl>%%toolbaseurl%%/rt</rturl>
+    <pubftp>ftp://ftp.buetow.org/pub</pubftp>
+    <websvnurl>%%toolbaseurl%%/websvn</websvnurl>
+    <whitespace> </whitespace>
+	<test>LT hi GT</test>
+  </variables>
+  <rules>
+    <!-- Possible rules-params: -->
+    <!--  end=yes -->
+    <!--  start=yes -->
+    <!-- Possible special-vars: -->
+    <!--  @@text@@ = The content text of the current content-tag -->
+    <!--  @@paramname@@ = The value of the specified tag parameter -->
+    <xhtml>
+      <desc>[div id="desc"]</desc>
+      <main>[div id="main"]</main>
+      <important>[div class="important"]</important>
+      <block>[div class="block"]</block>
+      <header1>[h1]</header1>
+      <header2>[h2]</header2>
+      <header3>[h3]</header3>
+      <rb>[div class="@@class@@"]</rb>
+      <text>[p]</text>
+      <pretext>[p][pre]</pretext>
+      <link>[a href="@@text@@"]</link>
+      <sidelink>[a class="sidelink" href="@@href@@"]</sidelink>
+      <namedlink>[a href="@@href@@" title="@@title@@"]</namedlink>
+      <img start="yes">[img alt="@@title@@" title="@@title@@" src="@@href@@" /]</img>
+      <cimg start="yes">[center][img alt="@@title@@" title="@@title@@" src="@@href@@" /][/center]</cimg>
+      <cimglink start="yes">[center][a href="@@link@@"][img alt="@@title@@" title="@@title@@" src="@@href@@" /][/a][/center]</cimglink>
+      <rimg start="yes">[img alt="@@title@@" title="@@title@@" class="rimg" src="@@href@@" align="right" /]</rimg>
+      <rimglink start="yes">[a href="@@link@@"][img border="0" alt="@@title@@" title="@@title@@" class="rimg" src="@@href@@" align="right" /][/a]</rimg>
+      <limg start="yes">[img alt="@@title@@" title="@@title@@" class="limg" src="@@href@@" align="left" /]</limg>
+      <iimg start="yes">[img alt="@@title@@" title="@@title@@" class="iimg" src="@@href@@" align="left" /]</limg>
+      <newline start="yes">[br /]</newline>
+      <menu>[div class="menu"]</menu>
+      <menuitem>[a class="menuitem" href="@@link@@$$params$$"]</menuitem>
+      <activemenuitem>[a class="activemenuitem" href="@@link@@$$params$$"]</activemenuitem>
+      <enumerationr>[ul class="right"]</enumerationr>
+      <enumeration>[ul]</enumeration>
+      <enumitem>[li]</enumitem>
+      <benumitem>[li][b]</benumitem>
+      <javascript>[script type="text/javascript" language="JavaScript"]</javascript>
+      <incsep>[div class="incsep"]</incsep>
+    </xhtml>
+  </rules> 
+</config>

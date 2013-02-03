@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>SVN Download</pagetitle>
+  <text>SLoad can be downloaded from SVN. Use the following steps to do so:</text>
+  <pretext>svn co https://ssl.buetow.org/repos/utils/sload/</pretext> 
+</content>
+

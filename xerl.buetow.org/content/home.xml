@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>Xerl - A XML/Perl Website Engine</pagetitle>
+  <text>
+    <limg href="?document=images/xerl.png" title="Xerl" /> 
+    <noop>... is an open source website template engine (TE) with some features of a Content Management System (CMS) programmed in object oriented Perl (boosted by FastCGI) and using XML. This is the alpha version. Xerl is work in progress! It has no real documentation and no release available atm. This is mostly a hobby project fitting my own needs in having dynamic websites. However, if you are interested in Xerl you can feel free to download the sources and try your luck. If you wanna stay in touch please </noop>
+    <namedlink href="http://freecode.com/projects/xerl">subscribe via freecode.</namedlink>
+  </text>
+</content>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>NetCalendar</pagetitle>
+   <important>
+    <text>
+     <strong>Important notice:</strong>
+     <noop>The development of NetCalendar has been stalled. In near future, there will be no further development on this project. This project always was a proof of concept only. For current programming projects please visit </noop>
+     <link>http://dev.buetow.org</link>	
+	 <noop> and enjoy :)</noop>
+    </text>
+   </important>
+	<text>NetCalendar is a network capable calendar application. NetCalendar has a server and a client part which communicate over a TCP/IP network. It also supports secure sockets using SSL. NetCalendar can also be used as a stand-alone application. NetCalendar does not use an SQL database but rather the database of the classic Unix "calendar" program.</text>
+    <text>
+	<noop>Its initial motivaion was a programming project at the </noop>
+    <namedlink href="http://www.fh-aachen.de">Aachen University of Applied Sciences</namedlink>
+    <noop> for the object oriented programming class. But it became much more than just that! If you want to stay informed, please subscibe at </noop>
+     <namedlink href="http://freecode.com/projects/netcalendar">freecode</namedlink>
+    <noop> to the netcalendar project. You will receive an email then a new release has been made.</noop>
+  </text>
+  <textheader>Sun Feb 08th 2009 - NetCalendar 1.0 released</textheader>
+  <text>The "NetCalendar 1.0" has been finally released. It has been almost 3 years since 1.0 RC5. However, only a few things have changed. NetCalendar now supports secure sockets using SSL. And the documentation is now completely in english (a part of it used to be in german). I've also managed to include a few cosmetic fixes as well (e.g. new splash screen). </text>
+  <textheader>Thu May 18th 2006 - Website up</textheader>
+  <text>
+    <noop>The initial website of the NetCalendar application is up an running using the </noop>
+    <namedlink href="http://xerl.buetow.org">Xerl Template Engine</namedlink>
+    <noop> as its base. All new releases will be anounced here. Currently 1.0 Release Candidate 5 is ready for download.</noop>
+  </text>
+</content>

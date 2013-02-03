@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<config>
+  <!-- Static variables are written like %%varname%% -->
+  <!-- Dynamic variables are written like $$varname$$ -->
+  <!-- Special variables for XML-ing are written like @@varname@@ -->
+  <variables>
+    <title>%%host%% - %%site%%</title>
+    <piwik>web.buetow.org/stats</piwik>
+    <documentsurl>?document=</documentsurl>
+    <imagesurl>%%documentsurl%%images/</imagesurl>
+    <stylesurl>%%documentsurl%%styles/</stylesurl>
+    <whitespace> </whitespace>
+    <analytics>A-5916832-1</analytics>
+  </variables>
+  <rules>
+    <!-- Possible rules-params: -->
+    <!--  end=yes -->
+    <!--  start=yes -->
+    <!-- Possible special-vars: -->
+    <!--  @@text@@ = The content text of the current content-tag -->
+    <!--  @@paramname@@ = The value of the specified tag parameter -->
+    <xhtml>
+      <pagetitle>[h1]</pagetitle>
+      <textheader>[h2]</textheader>
+      <textsubheader>[h3]</textsubheader>
+      <news start="yes"></news>
+      <important>[div class="important"]</important>
+      <text>[p]</text>
+      <type>[span class="@@class@@"]</type>
+      <quote>[pre class="quote"]</quote>
+      <pretext>[p][pre]</pretext>
+      <link>[a href="@@text@@"]</link>
+      <namedlink>[a href="@@href@@"]</namedlink>
+      <picture>[a href="@@href@@"][img align="center" border="1" alt="@@desc@@" title="@@desc@@" src="@@src@@"]</picture>
+      <cimg start="yes">[img border="0" alt="@@title@@" title="@@title@@" src="@@href@@" /]</cimg>
+      <rimg start="yes">[img border="0" alt="@@title@@" title="@@title@@" class="rimg" src="@@href@@" align="right" /]</rimg>
+      <limg start="yes">[img border="0" alt="@@title@@" title="@@title@@" class="limg" src="@@href@@" align="left" /]</limg>
+      <newline start="yes">[br /]</newline>
+      <menu>[div class="menu"]</menu>
+      <menuitem>[a class="menuitem" href="@@link@@$$params$$"]</menuitem>
+      <activemenuitem>[a class="activemenuitem" href="@@link@@$$params$$"]</activemenuitem>
+      <enumeration>[ul]</enumeration>
+      <enumitem>[li]</enumitem>
+      <enumitemna>[li class="na"]</enumitemna>
+      <incsep>[div class="incsep"]</incsep>
+      <code>[pre class="code"]</code>
+      <javascript>[script type="text/javascript" language="JavaScript"]</javascript>
+    </xhtml>
+  </rules> 
+</config>

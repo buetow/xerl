@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>NiduTerm</pagetitle>
+   <important>
+    <text>
+     <strong>Important notice:</strong>
+     <noop>The development of NiduTerm has been stalled. There will be no further development on this project. This project always was a proof of concept only. For current programming projects please visit </noop>
+     <link>http://dev.buetow.org</link>	
+	 <noop> and enjoy :)</noop>
+    </text>
+   </important>
+  <text>
+    <noop>NiduTerm is a ncurses based Nidura chat client written in Perl. Nidura is a german web chat located at</noop>
+    <link>http://www.nidura.de</link>
+    <noop>.</noop>
+  </text>
+  <text>
+    <noop>The changelog can be found at SVN: </noop>
+    <link basename="yes">https://ssl.buetow.org/repos/perl-stuff/nidura/CHANGES</link>
+    <noop>.</noop>
+  </text>
+</content>
