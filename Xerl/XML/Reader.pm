@@ -73,114 +73,123 @@ sub parse($) {
         # Allow <tag />
         my $is_single_tag = $line =~ s#<([^/].+?)( (.*?))? ?/ *>#<$1 $3></$1>#o;
 
-        # Open XML tag
-        if ( $line =~ s#<([^/].+?)( (.*?))? *>##o ) {
-            my ( $name, $params ) = ( $1, $3 );
+        my $flag = 0;
 
-            # Ignore XML comments
-            next if $name =~ /^!--/o;
+        do {
 
-            $next = Xerl::XML::Element->new();
-            $next->set_name($name);
-            $next->set_prev($element);
-            $next->set_single($is_single_tag);
+            # Open XML tag
+            if ( $line =~ s#<([^/].+?)( (.*?))? *>##o ) {
+                my ( $name, $params ) = ( $1, $3 );
+                $flag = 1;
 
-            # Handle tag parameters
-            if ( defined $params ) {
-                my %params = $params =~ /
+                # Ignore XML comments
+                next if $name =~ /^!--/o;
+
+                $next = Xerl::XML::Element->new();
+                $next->set_name($name);
+                $next->set_prev($element);
+                $next->set_single($is_single_tag);
+
+                # Handle tag parameters
+                if ( defined $params ) {
+                    my %params = $params =~ /
       		(?: ( [^\s]+? ) \s*=\s* ( 
 			(?: '(?:.|(?:\\'))*?' ) | 
 			(?: "(?:.|(?:\\"))*?" ) | 
 			(?: [^\s]+ ) ) ) 
 		/gox;
 
-                # Remove " and '
-                $params{$_} =~ s/^(?:"|')|(?:"|')$//go for keys %params;
-                $next->set_params( \%params );
-                $notrim = 1 if exists $params{notrim};
-            }
-
-            $element->push_array($next);
-
-            $root    = $element unless defined $root;
-            $element = $next;
-            $insert  = $element;
-
-            redo;
-        }
-
-        # Close XML tag
-        if ( $line =~ s#<(/.+?)>##o ) {
-
-            #print "XML::<$1>\n";
-            if ( $element->get_name() eq 'includefiles' ) {
-                my $config = $self->get_config();
-                my $params = $element->get_params();
-                my $path =
-                  $config->get_hostpath() . 'content/' . $params->{reldir};
-                my $pattern = $params->{pattern};
-                my $maxitems =
-                  exists $params->{maxitems} ? $params->{maxitems} : 100;
-                my $startindex =
-                  exists $params->{startindex} ? $params->{startindex} : 0;
-
-                my Xerl::Tools::FileIO $io =
-                  Xerl::Tools::FileIO->new( path => $path );
-
-                $io->dslurp();
-                $io->reverse_array() if exists $params->{reversed};
-
-                for my $include ( grep { /$pattern/o } @{ $io->get_array() } ) {
-                    last unless $maxitems--;
-                    next if 0 < $startindex--;
-
-                    my Xerl::XML::Reader $reader = Xerl::XML::Reader->new(
-                        path   => $include,
-                        config => $config
-                    );
-
-                    if ( -1 == $reader->open() ) {
-                        $config->set_finish_request(1);
-                        return undef;
-                    }
-                    $reader->parse();
-
-                    my Xerl::XML::Element $starttag =
-                      $reader->get_root()->starttag('content');
-
-                    my $sep =
-                      exists $params->{separator}
-                      ? $params->{separator}
-                      : 'noop';
-                    $starttag->set_name($sep);
-                    $element->set_name('noop');
-                    $element->push_array($starttag);
+                    # Remove " and '
+                    $params{$_} =~ s/^(?:"|')|(?:"|')$//go for keys %params;
+                    $next->set_params( \%params );
+                    $notrim = 1 if exists $params{notrim};
                 }
+
+                $element->push_array($next);
+
+                $root    = $element unless defined $root;
+                $element = $next;
+                $insert  = $element;
+
+                redo;
             }
 
-            $insert  = $element;
-            $prev    = $element->get_prev();
-            $element = $prev if defined $prev;
-            $notrim  = 0 if $notrim;
+            # Close XML tag
+            if ( $line =~ s#<(/.+?)>##o ) {
+                $flag = 1;
 
-            redo;
-        }
+                #print "XML::<$1>\n";
+                if ( $element->get_name() eq 'includefiles' ) {
+                    my $config = $self->get_config();
+                    my $params = $element->get_params();
+                    my $path =
+                      $config->get_hostpath() . 'content/' . $params->{reldir};
+                    my $pattern = $params->{pattern};
+                    my $maxitems =
+                      exists $params->{maxitems} ? $params->{maxitems} : 100;
+                    my $startindex =
+                      exists $params->{startindex} ? $params->{startindex} : 0;
 
-        # XML text
-        if ( defined $insert
-            and $line =~ s/^( *)(.+?) *$/$notrim ? $1.$2 : $2/oe )
-        {
+                    my Xerl::Tools::FileIO $io =
+                      Xerl::Tools::FileIO->new( path => $path );
 
-            if ($newlineadd) {
-                $insert->append_text("\n");
-                $newlineadd = 0;
+                    $io->dslurp();
+                    $io->reverse_array() if exists $params->{reversed};
+
+                    for
+                      my $include ( grep { /$pattern/o } @{ $io->get_array() } )
+                    {
+                        last unless $maxitems--;
+                        next if 0 < $startindex--;
+
+                        my Xerl::XML::Reader $reader = Xerl::XML::Reader->new(
+                            path   => $include,
+                            config => $config
+                        );
+
+                        if ( -1 == $reader->open() ) {
+                            $config->set_finish_request(1);
+                            return undef;
+                        }
+                        $reader->parse();
+
+                        my Xerl::XML::Element $starttag =
+                          $reader->get_root()->starttag('content');
+
+                        my $sep =
+                          exists $params->{separator}
+                          ? $params->{separator}
+                          : 'noop';
+                        $starttag->set_name($sep);
+                        $element->set_name('noop');
+                        $element->push_array($starttag);
+                    }
+                }
+
+                $insert  = $element;
+                $prev    = $element->get_prev();
+                $element = $prev if defined $prev;
+                $notrim  = 0 if $notrim;
+
+                redo;
             }
 
-            $line =~ s/!!LT!!/</g;
-            $line =~ s/!!GT!!/>/g;
+            # XML text
+            if ( defined $insert
+                and $line =~ s/^( *)(.+?) *$/$notrim ? $1.$2 : $2/oe )
+            {
 
-            $insert->append_text($line);
-        }
+                if ($newlineadd) {
+                    $insert->append_text("\n");
+                    $newlineadd = 0;
+                }
+
+                $line =~ s/!!LT!!/</g;
+                $line =~ s/!!GT!!/>/g;
+
+                $insert->append_text($line);
+            }
+        } while ( $flag == 1 );
     }
 
     $root->set_name('root');
