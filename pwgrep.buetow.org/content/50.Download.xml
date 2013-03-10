@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+    <pagetitle>Download</pagetitle>
+    <text>pwgrep can be downloaded from a deb repo or from git.</text>
+    <textheader>Download from Git repository</textheader>
+    <text>For git just type "git clone git://git.buetow.org/pwgrep".</text> 
+    <text>To update to the latest stable version just type "cd ./pwgrep; git pull".</text> 
+    <text>        
+          <noop>Go to </noop>
+          <namedlink href="http://web.buetow.org/git/?p=pwgrep.git">gitweb</namedlink>
+        <noop> to browse the online repository. The master branch always keeps the current stable version. The devel branch always keeps the current development version. For releases there are tags and for screenshots check out the screenshots branch.</noop>
+    </text>
+    <text>For bleeding edge you can fetch the devel branch with "git clone -b devel git://git.buetow.org/pwgrep pwgrep-devel". But be warned, this one might be broken! It will be merged to master when it's done.</text>
+</content>
+
+
