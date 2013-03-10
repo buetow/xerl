@@ -26,7 +26,7 @@
 				<noop>Generated in !!TIME!!s</noop> 
 				<noop>| Powered by </noop>
 				<namedlink href="http://xerl.buetow.org">Xerl</namedlink>
-				<noop>| Xerl templates generated with Puppet</noop>
+				<noop>| Xerl templates managed via Puppet/Git</noop>
 			</div>
 		</div>
 	</body>
