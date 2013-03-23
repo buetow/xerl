@@ -10,7 +10,7 @@
 		<enumitem>Encryption of all the passwords.</enumitem>
 		<enumitem>Versioning of all the passwords. No loss of old passwords.</enumitem>
 		<enumitem>Since a versioning system is used, the password database can be used on several hosts at once (automatic synchronization). Even several user can share the same password database. The versioning system will keep track of who was changing which entries and at which time.</enumitem>
-		<enumitem>The versioning system to use can be configured (Subversion by default)</enumitem>
+		<enumitem>The versioning system to use can be configured (Git by default)</enumitem>
 		<enumitem>Besides of passwords, pwgrep can also be used for storing a collection of files like certificates</enumitem>
 		<enumitem>The file shredding command for secure deleting of temporary files can be configured (shred on Linux and destroy or rm -P on FreeBSD by default)</enumitem>
 		<enumitem>Automatic local backup of all database changes (Still access to old data after editing the password database and the network connection to the versioning system is not accessible)</enumitem>
