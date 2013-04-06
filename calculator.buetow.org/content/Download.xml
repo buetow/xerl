@@ -14,4 +14,10 @@
     <link>ftp://ftp.buetow.org/pub/Calculator/</link>
     <noop>.</noop>
   </text>
+  <textheader>Git</textheader>
+  <text>
+    <noop>The source is also available in git</noop>
+    <pretext>git clone git://git.buetow.org/playground.git
+cd playground/Cpp/StackCalculator</pretext>
+  </text>
 </content>
