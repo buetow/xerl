@@ -10,8 +10,7 @@
   </text>
   <textheader>Source code</textheader>
   <text>
-    <noop>The sourcecode can be obtained from </noop>
-    <namedlink href="?site=SVN-Download">SVN</namedlink>
-    <noop> (Subversion).</noop>
+    <noop>The sourcecode can be obtained from git as follows</noop>
+    <pretext>git clone git://git.buetow.org/netcalendar.git</pretext>
   </text>
 </content>
