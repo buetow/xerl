@@ -16,16 +16,4 @@
     <noop> to the yChat project. You will receive an email then a new release has been made.</noop>
   </text>
   <text>PLEASE NOTICE THAT yChat IS NOT Ychat! Ychat is a Yahoo Chat Client while yChat is a web based chat server. So they both handle chatting but are very different and are totally different projects!</text>
-  <textheader>Changelogs</textheader>
-  <text>
-    <noop>The CURRENT (0.9.x) branch changelog can be found at </noop>
-    <link>https://ssl.buetow.org/repos/ychat/trunk/ychat/CHANGES</link>
-  </text>
-  <text>
-    <noop>The CURRENT (0.9.x) branch todo list can be found at </noop>
-    <link>https://ssl.buetow.org/repos/ychat/trunk/ychat/TODO</link>
-  </text>
-  <text>
-    <noop>There is no active STABLE branch available atm.</noop>
-  </text>
 </content>
