@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
-  <pagetitle>Download through SVN (Subversion)</pagetitle>
-  <text>Awksite can be downloaded from SVN. Use the following steps to do so:</text>
-  <pretext>svn co https://ssl.buetow.org/repos/utils/awksite/</pretext>
+  <pagetitle>Download through Git</pagetitle>
+  <text>Awksite can be downloaded from Git. Use the following steps to do so:</text>
+  <pretext>git clone git://git.buetow.org/awksite.git</pretext>
 </content>
 
