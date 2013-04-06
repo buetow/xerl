@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
-  <pagetitle>SVN Download</pagetitle>
+  <pagetitle>Download</pagetitle>
   <text>Fype can be downloaded from Git. Use the following step to do so:</text>
   <pretext>git clone -b build-009669 git://git.buetow.org/fype.git</pretext> 
   <text>For the latest version please replace the URI as follows (be aware that this version may be broken):</text>
