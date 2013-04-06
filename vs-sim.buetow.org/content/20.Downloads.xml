@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
-	<pagetitle>Downloads</pagetitle>
-	<text>This section contains all relevant downloads. Currently everything is in german only. The diploma thesis has a grade of 1.0 (best available). The .jar file requires at least the Java Runtime Environment in version 6.</text>
-	<enumeration>
-		<enumitem>
-			<text>
-				<namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/documents/diplomarbeit.pdf">Diploma Thesis</namedlink> 
-				<noop> (PDF/more than 1MB; German)</noop>
-			</text>
-		</enumitem>
-		<enumitem>
-			<text>
-				<namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/documents/vortrag.pdf">Diploma Thesis Speech (German)</namedlink> 
-				<noop>(Of 18. August, 2008)</noop>
-			</text>
-		</enumitem>
-		<enumitem>
-			<text>
-				<namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/VS-Sim-v1.0.zip">VS-Sim v1.0</namedlink> 
-				<noop>(Released on 18. August, 2008)</noop>
-			</text>
-		</enumitem>
-		<enumitem>
-			<text>
-				<namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/VS-Sim-v0.3.zip">VS-Sim v0.3</namedlink> 
-				<noop>(Previous internal version)</noop>
-			</text>
-		</enumitem>
-		<enumitem>
-			<text>
-				<namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/VS-Sim-v0.2.zip">VS-Sim v0.2</namedlink> 
-				<noop>(Previous internal version)</noop>
-			</text>
-		</enumitem>
-		<enumitem>
-			<text>
-				<namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/VS-Sim-v0.1.zip">VS-Sim v0.1</namedlink> 
-				<noop>(Previous internal version)</noop>
-			</text>
-		</enumitem>
-	</enumeration>
+  <pagetitle>Downloads</pagetitle>
+  <text>This section contains all relevant downloads. Currently everything is in german only. The diploma thesis has a grade of 1.0 (best available). The .jar file requires at least the Java Runtime Environment in version 6.</text>
+  <enumeration>
+    <enumitem>
+      <text>
+        <namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/documents/diplomarbeit.pdf">Diploma Thesis</namedlink> 
+        <noop> (PDF/more than 1MB; German)</noop>
+      </text>
+    </enumitem>
+    <enumitem>
+      <text>
+        <namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/documents/vortrag.pdf">Diploma Thesis Speech (German)</namedlink> 
+        <noop>(Of 18. August, 2008)</noop>
+      </text>
+    </enumitem>
+    <enumitem>
+      <text>
+        <namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/VS-Sim-v1.0.zip">VS-Sim v1.0</namedlink> 
+        <noop>(Released on 18. August, 2008)</noop>
+      </text>
+    </enumitem>
+    <enumitem>
+      <text>
+        <namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/VS-Sim-v0.3.zip">VS-Sim v0.3</namedlink> 
+        <noop>(Previous internal version)</noop>
+      </text>
+    </enumitem>
+    <enumitem>
+      <text>
+        <namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/VS-Sim-v0.2.zip">VS-Sim v0.2</namedlink> 
+        <noop>(Previous internal version)</noop>
+      </text>
+    </enumitem>
+    <enumitem>
+      <text>
+        <namedlink href="ftp://ftp.buetow.org/pub/VS-Sim/VS-Sim-v0.1.zip">VS-Sim v0.1</namedlink> 
+        <noop>(Previous internal version)</noop>
+      </text>
+    </enumitem>
+  </enumeration>
+  <text>VS-Sim can also be downloaded from Git. Use the following steps to do so:</text>
+  <pretext>git clone git://git.buetow.org/vs-sim.git</pretext> 
 </content>
 
