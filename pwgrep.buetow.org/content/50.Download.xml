@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
     <pagetitle>Download</pagetitle>
-    <text>pwgrep can be downloaded from a deb repo or from git.</text>
+    <text>Pwgrep can be downloaded from a deb repo or from git.</text>
+    <textheader>Install from deb repository</textheader>
+    <text>If you have Debian GNU/Linux Squeeze you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install pwgrep:</text>
+<code>deb ftp://deb.buetow.org/apt squeeze main
+deb-src ftp://deb.buetow.org/apt squeeze main</code>
+    <text>Or if you prefer http:</text>
+<code>deb http://deb.buetow.org/apt squeeze main
+deb-src http://deb.buetow.org/apt squeeze main</code>
+    <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | apt-key add -"</text>
     <textheader>Download from Git repository</textheader>
     <text>For git just type "git clone git://git.buetow.org/pwgrep".</text> 
     <text>To update to the latest stable version just type "cd ./pwgrep; git pull".</text> 
