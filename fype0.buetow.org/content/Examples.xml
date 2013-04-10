@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
   <pagetitle>Sourcecode Examples</pagetitle>
+  <code>
   <perl>
 		use LWP::Simple;
 
 		get 'http://web.buetow.org/git/?p=fype.git;a=blob_plain;f=examples/all-examples.txt;hb=build-009669';
   </perl>
+  </code>
 </content>
 
