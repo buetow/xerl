@@ -15,7 +15,7 @@
 		<enumitem>No extra software needed on the remote hosts (only Perl, SSHD and procfs is required). You need SSH access to all servers. All servers need a SSH public key for your user installed.</enumitem>
 		<enumitem>IPv4 and IPv6 compatible (due use of OpenSSH client)</enumitem>
 	</enumeration>
-	<text>To get started fetch loadbars from the deb repository or via git and run it. You'll install some additional CPAN Modules in order to get it running locally (only if you are using git). All required modules are available in the current Debian and Ubuntu releases (e.G. Getopt::Long, SDL::*, Time::HiRes, Proc::ProcessTable).</text>
+	<text>To get started fetch loadbars from the deb repository or via git and run it. You'll install some additional CPAN Modules in order to get it running locally (only if you are using git). All required modules are available in the Debian Squeeze some Ubuntu releases (e.G. Getopt::Long, SDL::*, Time::HiRes, Proc::ProcessTable). Debian Wheezy is not yet supported due some changes in some SDL dependencies.</text>
         <text>
                 <noop>If you wanna stay in touch please </noop>
                 <namedlink href="http://freecode.com/projects/loadbars">subscribe on freecode.</namedlink>
