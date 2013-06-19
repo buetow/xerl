@@ -4,19 +4,19 @@
     <text>Loadbars can be downloaded from a deb repo or from git.</text>
     <textheader>Install from deb repository</textheader>
     <text>If you have Debian GNU/Linux Squeeze you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install loadbars:</text>
-<code>deb ftp://deb.buetow.org/apt squeeze main
-deb-src ftp://deb.buetow.org/apt squeeze main</code>
+<code>deb ftp://deb.buetow.org/apt wheezy main
+deb-src ftp://deb.buetow.org/apt wheezy main</code>
     <text>Or if you prefer http:</text>
-<code>deb http://deb.buetow.org/apt squeeze main
-deb-src http://deb.buetow.org/apt squeeze main</code>
-    <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | apt-key add -"</text>
+<code>deb http://deb.buetow.org/apt wheezy main
+deb-src http://deb.buetow.org/apt wheezy main</code>
+    <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | apt-key add -".</text>
     <textheader>Download from Git repository</textheader>
     <text>For git just type "git clone git://git.buetow.org/loadbars".</text> 
     <text>To update to the latest stable version just type "cd ./loadbars; git pull".</text> 
     <text>        
-          <noop>Go to </noop>
-          <namedlink href="http://web.buetow.org/git/?p=loadbars.git">gitweb</namedlink>
-        <noop> to browse the online repository. The master branch always keeps the current stable version. The devel branch always keeps the current development version. For releases there are tags and for screenshots check out the screenshots branch.</noop>
+     <noop>Go to </noop>
+     <namedlink href="http://web.buetow.org/git/?p=loadbars.git">gitweb</namedlink>
+     <noop> to browse the online repository. The master branch always keeps the current stable version. The devel branch always keeps the current development version. For releases there are tags and for screenshots check out the screenshots branch.</noop>
     </text>
     <text>For bleeding edge you can fetch the devel branch with "git clone -b devel git://git.buetow.org/loadbars loadbars-devel". But be warned, this one might be broken! It will be merged to master when it's done.</text>
 </content>
