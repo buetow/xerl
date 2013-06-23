@@ -1,5 +1,0 @@
-Puppet
-IPVS/LVS
-DRBD
-OpenVPN
-Pacemaker/Heartbeat/...
