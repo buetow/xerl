@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
-        <pagetitle>It's just buetow.org</pagetitle>
-	<text>Welcome to my small humble website. My real name is Paul B&uuml;tow and I am a full time Linux System Administrator managing more than 1000 servers at work (in a team). In my spare time I drive buetow.org and manage my own small company (to give support to Linux / *BSD systems and also to spend my time in system programming tasks).</text>
-	<text>If you don't like this website design: I am not a web designer and sometimes less is more.</text>
-        <text>
-  	<enumeration>
-		<enumitem>
-			<noop>My development site: </noop>
-			<link>http://dev.buetow.org</link>
-			<noop> (english)</noop>
-		</enumitem>
-		<enumitem>
-			<noop>My blogs: </noop>
-			<link>http://blogs.buetow.org</link>
-			<noop> (mostly german)</noop>
-		</enumitem>
-  	</enumeration>
-        </text>
+  <pagetitle>It's just buetow.org</pagetitle>
+  <text>Welcome to my small humble website. My real name is Paul B&uuml;tow and I am a full time Linux System Administrator managing more than 1000 servers at work (in a team). In my spare time I drive buetow.org and manage my own small company (to give support to Linux / *BSD systems and also to spend my time in system programming tasks).</text>
+  <text>If you don't like this website design: I am not a web designer and sometimes less is more.</text>
+  <text>
+    <enumeration>
+    <enumitem>
+      <noop>My development site: </noop>
+      <link>http://dev.buetow.org</link>
+      <noop> (english)</noop>
+    </enumitem>
+    <enumitem>
+      <noop>My blogs: </noop>
+      <link>http://blogs.buetow.org</link>
+      <noop> (mostly german)</noop>
+    </enumitem>
+    <enumitem>
+      <noop>My pictures: </noop>
+      <link>http://www.flickr.com/photos/buetow/</link>
+    </enumitem>
+    </enumeration>
+  </text>
 </content>
