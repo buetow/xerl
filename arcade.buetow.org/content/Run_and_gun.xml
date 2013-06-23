@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
-<content>
-	<pagetitle>Run and gun games</pagetitle>
-  	<includefiles separator="incsep" reldir="Run_and_gun" pattern="\.inc$" />
-</content>

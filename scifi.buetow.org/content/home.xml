@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
-<content>
-	<pagetitle>Aktuelle B&uuml;cher</pagetitle>
-  	<text>Seitenanzahl: 1326</text>
-  	<includefiles separator="incsep" reldir="home" pattern="\.inc$" />
-</content>

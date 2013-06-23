@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
-<content>
-	<pagetitle>Wird bald gelesen</pagetitle>
-	<text>Seitenanzahl: 2778</text>
-	<text>Die folgenden B&uuml;cher stehen bereits in meinem Regal und werden demn&auml;chst gelesen:</text>
-  	<includefiles separator="incsep" reldir="Bald" pattern="\.inc$" />
-</content>
