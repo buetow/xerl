@@ -13,11 +13,10 @@
 		<enumitem>The versioning system to use can be configured (Git by default)</enumitem>
 		<enumitem>Besides of passwords, pwgrep can also be used for storing a collection of files like certificates</enumitem>
 		<enumitem>The file shredding command for secure deleting of temporary files can be configured (shred on Linux and destroy or rm -P on FreeBSD by default)</enumitem>
-		<enumitem>Automatic local backup of all database changes (Still access to old data after editing the password database and the network connection to the versioning system is not accessible)</enumitem>
+		<enumitem>Automatic local backup of all database changes (Still access to old data after editing the password database if the network connection to the versioning system is not accessible)</enumitem>
 		<enumitem>No need of a GUI (can be used through a SSH session)</enumitem>
 		<enumitem>Using only open source software</enumitem>
 		<enumitem>Running on all *NIX and alike systems</enumitem>
-		<enumitem>Very easy and straight forward to use</enumitem>
 	</enumeration>
         <text>
                 <noop>If you wanna stay in touch please </noop>
