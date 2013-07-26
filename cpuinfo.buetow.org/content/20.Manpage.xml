@@ -5,7 +5,7 @@
   <pretext>
   <perl>
  	use LWP::Simple;
-	get("http://web.buetow.org/git/?p=cpuinfo.git;a=blob_plain;f=docs/cbars.txt;hb=HEAD");
+	get("http://web.buetow.org/git/?p=cpuinfo.git;a=blob_plain;f=docs/cpuinfo.txt;hb=HEAD");
   </perl>
   </pretext>
 </content>
