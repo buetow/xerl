@@ -8,12 +8,19 @@
     <enumitem>
       <noop>My development site: </noop>
       <link>http://dev.buetow.org</link>
-      <noop> (english)</noop>
     </enumitem>
     <enumitem>
-      <noop>My blogs: </noop>
-      <link>http://blogs.buetow.org</link>
+      <noop>My tech blog: </noop>
+      <link>http://comp.buetow.org</link>
+    </enumitem>
+    <enumitem>
+      <noop>My "normal stuff" blog: </noop>
+      <link>http://blog.buetow.org</link>
       <noop> (mostly german)</noop>
+    </enumitem>
+    <enumitem>
+      <noop>Twitter: </noop>
+      <link>https://twitter.com/plantanran</link>
     </enumitem>
     <enumitem>
       <noop>My pictures: </noop>
