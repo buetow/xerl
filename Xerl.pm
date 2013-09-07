@@ -42,6 +42,7 @@ use Xerl::Page::Document;
 use Xerl::Page::Parameter;
 use Xerl::Page::Request;
 use Xerl::Page::Templates;
+use Xerl::Plugins::Session;
 
 sub run($) {
     my Xerl $self = $_[0];
