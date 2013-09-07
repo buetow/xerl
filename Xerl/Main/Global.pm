@@ -67,15 +67,17 @@ sub REDIRECT ($) {
     return undef;
 }
 
-sub _HTTP_DESCR ($) {
-    my $status = shift;
+sub _HTTP_DESCR ($;$) {
+    my ($status, $infomsg) = @_;
+
+    $infomsg //= '';
 
     if ( $status == 404 ) {
-        "Status: 404 Not Found\015\012\n\n"
+        "Status: 404 Not Found $infomsg\015\012\n\n"
 
     }
     else {
-        "Status: 405 Method not allowed\015\012\n\n";
+        "Status: 405 Method not allowed $infomsg\015\012\n\n";
     }
 }
 
