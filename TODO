@@ -3,3 +3,4 @@ Hint: Run 'make todo' to see everything in every file what is to do!
 TODO: - Documentation of all features/options
 TODO: - Fix <foo><bar></bar></foo> bug
 TODO: - Rename config.txt into xerl.conf
+TODO: - Remove logging
