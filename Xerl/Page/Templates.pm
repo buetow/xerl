@@ -97,6 +97,7 @@ sub parse($) {
             $config->set_finish_request(1);
             return undef;
         }
+
         $xmlconfigreader->parse();
         $config->set_xmlconfigrootobj( $xmlconfigreader->get_root() );
 
