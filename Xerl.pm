@@ -42,7 +42,6 @@ use Xerl::Page::Document;
 use Xerl::Page::Parameter;
 use Xerl::Page::Request;
 use Xerl::Page::Templates;
-use Xerl::Plugins::Session;
 
 sub run($) {
     my Xerl $self = $_[0];
@@ -58,10 +57,10 @@ sub run($) {
     $config->parse();
     return undef if $config->finish_request_exists();
 
-    unless ( $config->sessionsdisable_exists() ) {
-        my Xerl::Plugins::Session $session =
-          Xerl::Plugins::Session->new( config => $config );
+    my Xerl::Plugins::Session $session =
+      Xerl::Plugins::Session->new( config => $config );
 
+    unless ( $config->sessionsdisable_exists() ) {
         $session->process();
         $config->set_session($session);
     }
