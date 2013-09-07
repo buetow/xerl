@@ -84,7 +84,6 @@ sub parse($) {
 
     }
     else {
-
         my $xmlconfigpath = $config->get_hostpath() . 'config.xml';
 
         $xmlconfigpath = $config->get_defaulthostpath() . 'config.xml'
