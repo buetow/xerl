@@ -5,8 +5,7 @@ do
   for i in `find . -name "*.$j"`
   do
     echo $i
-    sed "s/$1/$2/g" $i > temp
-    mv -f temp $i
+    sed -i "s/$1/$2/g" $i > temp
   done 
 done 
   
