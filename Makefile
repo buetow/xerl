@@ -4,7 +4,7 @@ clean:
 stats:	clean
 	perl scripts/stats.pl
 replace:
-	for i in index.pl Xerl.pm config.txt; \
+	for i in index.pl Xerl.pm xerl.conf; \
 	do \
 		sed -n "s/$(FROM)/$(INTO)/g; \
 		w .tmp" $$i && mv -f .tmp $$i; \
@@ -23,7 +23,7 @@ pidy:
 	find . -name \*.pm | xargs perltidy -b 
 	find . -name \*.bak | xargs rm -f
 todo:
-	grep -R TODO . | grep -v Makefile | grep -v .svn
+	grep -R TODO . | grep -v Makefile | grep -v .git
 warn: 
 	perl index.pl 2> warnings
 	less warnings
