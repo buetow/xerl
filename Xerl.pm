@@ -58,7 +58,6 @@ sub run($) {
     $config->parse();
     return undef if $config->finish_request_exists();
 
-    # TODO: Plugin API
     unless ( $config->sessionsdisable_exists() ) {
         my Xerl::Plugins::Session $session =
           Xerl::Plugins::Session->new( config => $config );

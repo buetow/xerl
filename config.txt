@@ -22,4 +22,5 @@ hidesubhome=1
 hostroot=/usr/local/www/xerlhosts/branches/stable/hosts/
 statsroot=/usr/local/www/xerlstats/
 hyperion.buetow.org=ssl.buetow.org
+sessiondisable=1
 404=http://www.buetow.org
