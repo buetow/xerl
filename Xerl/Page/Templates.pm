@@ -161,32 +161,6 @@ sub parse($) {
         $io->fwrite();
     }
 
-    unless ( $config->nolog_exists() ) {
-        my @time = localtime;
-        my $ctx  = Digest::MD5->new();
-        $ctx->add( $ENV{REMOTE_ADDR} );
-
-        my Xerl::Tools::FileIO $stats = Xerl::Tools::FileIO->new(
-            path     => $config->get_statsroot(),
-            filename => sprintf(
-                "\%02d%02d%02d", $time[5] - 100, $time[4] + 1, $time[3]
-              )
-              . '.log',
-            array => [
-                time() . ' '
-                  . $ctx->hexdigest() . ' '
-
-                  #. $ENV{REMOTE_ADDR} . ' '
-                  . $config->get_host()
-                  . $config->get_request_subdir() . ' '
-                  . $config->get_site() . ' '
-                  . $ENV{HTTP_USER_AGENT} . "\n"
-            ],
-        );
-
-        $stats->fwriteappend();
-    }
-
     $self->parsetemplate('$$');    # Parsing dynamic vars.
     return undef;
 }

@@ -55,7 +55,6 @@ sub parse($) {
     }
 
     if ( $config->devel_exists() ) {
-        $config->set_nolog(1);
         $config->set_nocache(1);
     }
 

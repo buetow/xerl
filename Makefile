@@ -1,8 +1,4 @@
-all:	stats
-clean:
-	rm -Rf cache/*
-stats:	clean
-	perl scripts/stats.pl
+all:	
 replace:
 	for i in index.pl Xerl.pm xerl.conf; \
 	do \
