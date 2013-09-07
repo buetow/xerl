@@ -14,7 +14,7 @@ replace:
 	find ./Xerl -name '*.xml' -exec sh -c 'sed -n "s/$(FROM)/$(INTO)/g; \
 		w .tmp" {} && mv -f .tmp {}' \;
 	chmod 755 index.pl
-pidy:
+perltidy:
 	find . -name \*.pl | xargs perltidy -b 
 	find . -name \*.pm | xargs perltidy -b 
 	find . -name \*.bak | xargs rm -f

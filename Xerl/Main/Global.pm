@@ -68,7 +68,7 @@ sub REDIRECT ($) {
 }
 
 sub _HTTP_DESCR ($;$) {
-    my ($status, $infomsg) = @_;
+    my ( $status, $infomsg ) = @_;
 
     $infomsg //= '';
 

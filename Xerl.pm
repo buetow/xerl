@@ -65,7 +65,6 @@ sub run($) {
     $parameter->parse();
     return undef if $config->finish_request_exists();
 
-
     if ( $config->document_exists() ) {
         my Xerl::Page::Document $document =
           Xerl::Page::Document->new( config => $config );
