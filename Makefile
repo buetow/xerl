@@ -15,6 +15,7 @@ replace:
 		w .tmp" {} && mv -f .tmp {}' \;
 	chmod 755 index.pl
 perltidy:
+	find . -name \*.fpl | xargs perltidy -b 
 	find . -name \*.pl | xargs perltidy -b 
 	find . -name \*.pm | xargs perltidy -b 
 	find . -name \*.bak | xargs rm -f
