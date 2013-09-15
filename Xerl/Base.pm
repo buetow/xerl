@@ -119,6 +119,11 @@ sub AUTOLOAD {
     return exists $self->{$1} ? $self->{ $_[0] } : 0;
 
   }
+  elsif ( $auto =~ /.*::debug$/ ) {
+    print "DEBUG: @_\n";
+    return undef;
+
+  }
   else {
     print "$auto is not a method of $self or UNIVERSAL\n";
   }
