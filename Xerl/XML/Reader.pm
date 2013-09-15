@@ -37,8 +37,10 @@ use XML::LibXML;
 use Xerl::Base;
 use Xerl::XML::Element;
 
-sub newparse($) {
+sub process($) {
   my Xerl::XML::Reader $self = shift;
+
+  my $doc = XML::LibXML->load_xml(location => $self->get_path());
 
   return undef;
 }
@@ -58,7 +60,7 @@ sub open($) {
 sub parse($) {
   my Xerl::XML::Reader $self = $_[0];
 
-  $self->newparse( $self->get_path() );
+  my $process = $self->process();
 
   my $rarray = $self->get_array();
   return $self unless ref $rarray eq 'ARRAY';
@@ -92,13 +94,19 @@ sub parse($) {
         my ( $name, $params ) = ( $1, $3 );
         $flag = 1;
 
+        my $DEBUG = $name =~ /^=/ ? 1 : 0;
+        $self->debug($name, $params) if $DEBUG;
+
         # Ignore XML comments
         next if $name =~ /^!--/o;
+
 
         $next = Xerl::XML::Element->new();
         $next->set_name($name);
         $next->set_prev($element);
         $next->set_single($is_single_tag);
+
+        $next->print() if $DEBUG;
 
         # Handle tag parameters
         if ( defined $params ) {
