@@ -5,14 +5,14 @@
     <text>
      <strong>Important notice:</strong>
      <noop>There will be no more updates on this website. For current projects please visit </noop>
-     <link>http://dev.buetow.org</link>	
+     <hyperlink>http://dev.buetow.org</hyperlink>	
 	 <noop> and enjoy :)</noop>
     </text>
    </important>
 <text> Linux DSL Router f&uuml;r RWTH-VPN Howto - Version 0.8.5</text>
 <text>
 <noop>Wie richte ich einen auf Linux basierten DSL+VPN router f&uuml;r UniDSL Aachen</noop>
-<link>http://aachen.uni-dsl.de</link>
+<hyperlink>http://aachen.uni-dsl.de</hyperlink>
 <noop>ein?</noop>
 <newline />
 <newline />
@@ -35,7 +35,7 @@ Zudem wird hier darauf hingewiesen, dass dieses Howto nicht perfekt ist und es k
 </text>
 <textheader>2. Kernel Konfigurieren</textheader>
 <text><noop>Meine Konfiguration beinhaltet u. A. Treiber beider Netzwerkkarten sowie zus&auml;tzliche Optionen f&uuml;r PPP und iptables. Meine Kernel Config gibts hier:</noop>
-<link basename="yes">%%documentsurl%%kernel.config.txt</link>
+<link basename="yes">%%documentsurl%%kernel.config.txt</hyperlink>
 <noop>. Diese einfach herunterladen und nach /usr/src/linux/.config abspeichern. (Kernel beinhaltet schon alle ben&ouml;tigten iptables und PPP Optionen). Danach:</noop>
 </text>
 <pretext>cd /usr/src/linux
@@ -74,7 +74,7 @@ Anschliessend kannst Du direkt testen, ob die DSL-Verbindung alleine schon funkt
 <textheader>5. VPN konfigurieren</textheader>
 <text><noop>Hier sollte der neuste VPN Client von der RWTH Seite heruntergeladen werden.
 Aber ACHTUNG, installiert man den Client nach Anleitung, so belegt dieser nach Starten alle (!!) Netzwerkdevices. D.h. man kann vom LAN nicht mehr auf eth1 vom Router zugreifen, da VPN diese blockiert und das w&uuml;rde die Debian Kiste als Router unnutzbar machen! Um dies zu umgehen ist eine kleine Manipulation der VPN-Client Sourcen notwendig. Also zuerst den Cisco-VPN Client herunterladen, z.B. von</noop>
-<link>http://www.rz.rwth-aachen.de/</link>
+<hyperlink>http://www.rz.rwth-aachen.de/</hyperlink>
 <noop>und diese in ein beliebiges Verzeichnis entpacken (bei mir: ~/src/vpnclient). Dann wie folgt vorgehen:
 </noop>
 </text>
@@ -255,7 +255,7 @@ Hierbei solltest Du sicher gehen, dass hier der String "rwthvpn" mit Deinem VPN 
 <text>Wenn etwas schief geht, kannst Du stets die Datei /var/log/rwthvpn.log einsehen, sie beinhaltet alle Ausgaben vom Cisco-VPN Client seit dem letzten Ausf&uuml;hren des routing_and_vpnc Skriptes.</text>
 <text>
 <noop>Nun ist Dein Debian Router perfekt. Wenn Dir noch ein DynDNS Dienst fehlt, dann verweise ich auf</noop>
-<link>http://www.DynDNS.org</link>
+<hyperlink>http://www.DynDNS.org</hyperlink>
 <noop>.</noop>
 <textheader>7. Konfiguration der Rechner hinter dem Router</textheader>
 <text>Nun sollte jeder Rechner im LAN als Gateway die 192.168.0.1 und als Netmask die 255.255.255.0 verwenden, um ins VPN gerouted zu werden ;-P.</text>
@@ -265,13 +265,13 @@ F&uuml;r weitere Fragen stehe ich gerne bereit (paul at buetow dot org), kann je
 <textheader>Referenzen</textheader>
 <text>
 <noop>UniDSL Aachen:</noop>
-<link>http://aachen.uni-dsl.de</link>
+<hyperlink>http://aachen.uni-dsl.de</hyperlink>
 <newline>Debian Linux:</newline>
-<link>http://www.debian.org</link>
+<hyperlink>http://www.debian.org</hyperlink>
 <newline>RWTH Einwahlberatung:</newline>
 <newline />
-<link>http://www.rz.rwth-aachen.de/kommunikation/betrieb/dialup/index.php</link>
+<hyperlink>http://www.rz.rwth-aachen.de/kommunikation/betrieb/dialup/index.php</hyperlink>
 <newline>Excluded Linux DSL howto:</newline>
-<link>http://www.excluded.org/papers/Router.html</link>
+<hyperlink>http://www.excluded.org/papers/Router.html</hyperlink>
 </text>
 </content>

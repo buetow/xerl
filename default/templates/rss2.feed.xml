@@ -5,7 +5,7 @@
   <rss version="2.0">
     <channel>
       <title>buetow.org Newsfeed</title>
-      <link>http://%%host%%</link>
+      <hyperlink>http://%%host%%</hyperlink>
       <description>buetow.org - Paul Buetows Tech Newsfeed</description>
 	  <pubDate>$$!/bin/date$$</pubDate>
 	  <generator>Xerl Web Engine (http://xerl.buetow.org)</generator>

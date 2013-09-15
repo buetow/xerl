@@ -5,14 +5,14 @@
     <text>
      <strong>Important notice:</strong>
      <noop>There will be no more updates on this website. For current projects please visit </noop>
-     <link>http://dev.buetow.org</link>	
+     <hyperlink>http://dev.buetow.org</hyperlink>	
 	 <noop> and enjoy :)</noop>
     </text>
    </important>
   <text>This site is about programs, mainly for different Unices and Unix derivates such as FreeBSD, NetBSD and OpenBSD and Unix like operating systems such as diverse Linux Distributions, which can run in a terminal window without using the X Window System and using a curses lib or another interactive text user interface.</text>
   <text>
     <noop>If you wanna contact me, look for contact informations @ the </noop>
-    <link>http://contact.buetow.org</link> 
+    <hyperlink>http://contact.buetow.org</hyperlink> 
     <noop>website.</noop>
   </text>
 </content>

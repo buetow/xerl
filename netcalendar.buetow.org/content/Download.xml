@@ -5,7 +5,7 @@
   <text>Here you can download the latest bytecode compiled Jar archives. You need a Java 5 runtime environment. Just unpack the zip-file and double click on the .jar file! The calendar comes with a sample database. You may delete all the events first.</text>
   <text>
     <noop>Look at</noop>
-    <link>ftp://ftp.buetow.org/pub/NetCalendar</link>
+    <hyperlink>ftp://ftp.buetow.org/pub/NetCalendar</hyperlink>
     <noop>for all available binaries!</noop>
   </text>
   <textheader>Source code</textheader>

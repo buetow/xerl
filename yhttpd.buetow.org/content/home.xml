@@ -5,7 +5,7 @@
     <text>
      <strong>Important notice:</strong>
      <noop>The development of the yhttpd has been stalled. There will be no further development on this project. This project always was a proof of concept only. For current programming projects please visit </noop>
-     <link>http://dev.buetow.org</link>	
+     <hyperlink>http://dev.buetow.org</hyperlink>	
 	 <noop> and enjoy :)</noop>
     </text>
    </important>

@@ -4,7 +4,7 @@
   <text>yChat binaries are not available for download. But source packages can be downloaded.</text>
   <text>
     <noop>Look at</noop>
-    <link>ftp://ftp.buetow.org/pub/yChat/</link>
+    <hyperlink>ftp://ftp.buetow.org/pub/yChat/</hyperlink>
     <noop> for all available yChat source packages and at </noop>
   </text>
 </content>

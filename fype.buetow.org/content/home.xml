@@ -17,7 +17,7 @@
   </text>
   <text>
 	<noop>In order to stay updated I recommend you to follow my blog at </noop>
-	<link>http://comp.buetow.org</link>
+	<hyperlink>http://comp.buetow.org</hyperlink>
 	<noop> and see what's new or changing.</noop>
   </text>
 </content>

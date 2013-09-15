@@ -24,7 +24,7 @@
 		    <strong>Mailing Lists:</strong>
 		  </noop>
 		  <newline />
-		  <link>http://lists.buetow.org</link>
+		  <hyperlink>http://lists.buetow.org</hyperlink>
 		  <newline />
 		  <newline />
 		</enumitem>
