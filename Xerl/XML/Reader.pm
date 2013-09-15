@@ -58,12 +58,12 @@ sub sax() {
   );
 
   $parser->parse_uri($self->get_path());
+
+  return $parser->{xerl}{root};
 }
 
 sub parse($) {
   my Xerl::XML::Reader $self = $_[0];
-
-  my $sax_result = $self->sax();
 
   my $rarray = $self->get_array();
   return $self unless ref $rarray eq 'ARRAY';
@@ -171,6 +171,17 @@ sub parse($) {
 
   # $root->print();
   $self->set_root($root);
+
+  use Data::Dumper;
+  open my $foo, '>', '/tmp/root.old';
+  print $foo (Dumper $root);
+  close $foo;
+
+  my $root = $self->sax();
+  open $foo, '>', '/tmp/root.new';
+  print $foo (Dumper $root);
+  close $foo;
+
 
   return undef;
 }
