@@ -32,8 +32,11 @@ package Xerl::XML::Reader;
 use strict;
 use warnings;
 
+use XML::SAX;
+
 use Xerl::Base;
 use Xerl::XML::Element;
+use Xerl::XML::SAXHandler;
 
 sub open($) {
   my Xerl::XML::Reader $self = $_[0];
@@ -47,8 +50,20 @@ sub open($) {
   return 0;
 }
 
+sub sax() {
+  my Xerl::XML::Reader $self = $_[0];
+
+  my $parser = XML::SAX::ParserFactory->parser(
+    Handler => Xerl::XML::SAXHandler->new()
+  );
+
+  $parser->parse_uri($self->get_path());
+}
+
 sub parse($) {
   my Xerl::XML::Reader $self = $_[0];
+
+  my $sax_result = $self->sax();
 
   my $rarray = $self->get_array();
   return $self unless ref $rarray eq 'ARRAY';
