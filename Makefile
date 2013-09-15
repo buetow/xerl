@@ -15,9 +15,9 @@ replace:
 		w .tmp" {} && mv -f .tmp {}' \;
 	chmod 755 index.pl
 perltidy:
-	find . -name \*.fpl | xargs perltidy -b 
-	find . -name \*.pl | xargs perltidy -b 
-	find . -name \*.pm | xargs perltidy -b 
+	find . -name \*.fpl | xargs perltidy -i=2 -b 
+	find . -name \*.pl | xargs perltidy -i=2 -b 
+	find . -name \*.pm | xargs perltidy -i=2 -b 
 	find . -name \*.bak | xargs rm -f
 todo:
 	grep -R TODO . | grep -v Makefile | grep -v .git

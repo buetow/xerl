@@ -38,33 +38,33 @@ use Xerl::Page::Configure;
 use Xerl::Tools::FileIO;
 
 sub parse($) {
-    my Xerl::Page::Parameter $self   = $_[0];
-    my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Page::Parameter $self   = $_[0];
+  my Xerl::Page::Configure $config = $self->get_config();
 
-    print "Content-Type: text/plain\n\n"
-      if $config->plain_exists();
+  print "Content-Type: text/plain\n\n"
+    if $config->plain_exists();
 
-    if ( $config->href_exists() ) {
-        print "Location: ", $config->get_href(), "\n\n";
-        $config->set_finish_request(1);
-    }
-    elsif ( $config->env_exists() ) {
-        print "Content-Type: text/plain\n\n";
-        print "$_=", $ENV{$_}, "\n" for keys %ENV;
-        $config->set_finish_request(1);
-    }
+  if ( $config->href_exists() ) {
+    print "Location: ", $config->get_href(), "\n\n";
+    $config->set_finish_request(1);
+  }
+  elsif ( $config->env_exists() ) {
+    print "Content-Type: text/plain\n\n";
+    print "$_=", $ENV{$_}, "\n" for keys %ENV;
+    $config->set_finish_request(1);
+  }
 
-    if ( $config->devel_exists() ) {
-        $config->set_nocache(1);
-    }
+  if ( $config->devel_exists() ) {
+    $config->set_nocache(1);
+  }
 
-    if ( $config->conf_exists() ) {
-        print "Content-Type: text/plain\n\n";
-        print "$_=", $config->{$_}, "\n" for keys %$config;
-        $config->set_finish_request(1);
-    }
+  if ( $config->conf_exists() ) {
+    print "Content-Type: text/plain\n\n";
+    print "$_=", $config->{$_}, "\n" for keys %$config;
+    $config->set_finish_request(1);
+  }
 
-    return $self;
+  return $self;
 }
 
 1;

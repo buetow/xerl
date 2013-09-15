@@ -35,35 +35,35 @@ use warnings;
 use Xerl::Base;
 
 sub parse($) {
-    my Xerl::Page::Request $self = $_[0];
-    my $request = $self->get_request();
+  my Xerl::Page::Request $self = $_[0];
+  my $request = $self->get_request();
 
-    # Secure it!
-    $request =~ s#/\.\.##g;
+  # Secure it!
+  $request =~ s#/\.\.##g;
 
-    # Remove last /
-    $request =~ s#/$##;
+  # Remove last /
+  $request =~ s#/$##;
 
-    my $request_subdir = $request;
-    $request_subdir =~ s#/\?.*##;
-    $self->set_request_subdir($request_subdir);
+  my $request_subdir = $request;
+  $request_subdir =~ s#/\?.*##;
+  $self->set_request_subdir($request_subdir);
 
-    # List context returns $1
-    ($_) = $request =~ /\?(.+)/;
+  # List context returns $1
+  ($_) = $request =~ /\?(.+)/;
 
-    return $self unless defined;
+  return $self unless defined;
 
-    my $params = '';
-    for ( split /&/ ) {
+  my $params = '';
+  for ( split /&/ ) {
 
-        # List context uses ($1,$2) as method args
-        $self->setval(/(.+?)=(.+)/);
-        $params .= "&amp;$1=$2" if $1 ne 'site';
-    }
+    # List context uses ($1,$2) as method args
+    $self->setval(/(.+?)=(.+)/);
+    $params .= "&amp;$1=$2" if $1 ne 'site';
+  }
 
-    $self->set_params($params);
+  $self->set_params($params);
 
-    return undef;
+  return undef;
 }
 
 1;

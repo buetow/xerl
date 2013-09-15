@@ -44,45 +44,45 @@ use Xerl::Page::Request;
 use Xerl::Page::Templates;
 
 sub run($) {
-    my Xerl $self = $_[0];
-    my $time = [gettimeofday];
+  my Xerl $self = $_[0];
+  my $time = [gettimeofday];
 
-    my Xerl::Page::Request $request =
-      Xerl::Page::Request->new( request => $ENV{REQUEST_URI} );
+  my Xerl::Page::Request $request =
+    Xerl::Page::Request->new( request => $ENV{REQUEST_URI} );
 
-    $request->parse();
-    my Xerl::Page::Configure $config =
-      Xerl::Page::Configure->new( config => $self->get_config(), %$request );
+  $request->parse();
+  my Xerl::Page::Configure $config =
+    Xerl::Page::Configure->new( config => $self->get_config(), %$request );
 
-    $config->parse();
+  $config->parse();
+  return undef if $config->finish_request_exists();
+
+  $config->defaults();
+
+  my Xerl::Page::Parameter $parameter =
+    Xerl::Page::Parameter->new( config => $config );
+
+  $parameter->parse();
+  return undef if $config->finish_request_exists();
+
+  if ( $config->document_exists() ) {
+    my Xerl::Page::Document $document =
+      Xerl::Page::Document->new( config => $config );
+
+    $document->parse();
     return undef if $config->finish_request_exists();
 
-    $config->defaults();
+  }
+  else {
+    my Xerl::Page::Templates $templates =
+      Xerl::Page::Templates->new( config => $config );
 
-    my Xerl::Page::Parameter $parameter =
-      Xerl::Page::Parameter->new( config => $config );
-
-    $parameter->parse();
+    $templates->parse();
     return undef if $config->finish_request_exists();
+    $templates->print($time);
+  }
 
-    if ( $config->document_exists() ) {
-        my Xerl::Page::Document $document =
-          Xerl::Page::Document->new( config => $config );
-
-        $document->parse();
-        return undef if $config->finish_request_exists();
-
-    }
-    else {
-        my Xerl::Page::Templates $templates =
-          Xerl::Page::Templates->new( config => $config );
-
-        $templates->parse();
-        return undef if $config->finish_request_exists();
-        $templates->print($time);
-    }
-
-    return undef;
+  return undef;
 }
 
 1;

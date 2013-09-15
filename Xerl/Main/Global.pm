@@ -30,67 +30,67 @@
 package Xerl::Main::Global;
 
 sub SHUTDOWN {
-    exit 0;
+  exit 0;
 
-    # Never reach this point
-    return undef;
+  # Never reach this point
+  return undef;
 }
 
 sub DEBUG {
-    print 'Debug::', @_, "\n";
+  print 'Debug::', @_, "\n";
 
-    return undef;
+  return undef;
 }
 
 sub ERROR {
-    print "Content-Type: text/plain\n\nXerl runtime error: ",
-      join( ' ', time, @_ );
+  print "Content-Type: text/plain\n\nXerl runtime error: ",
+    join( ' ', time, @_ );
 
-    Xerl::Main::Global::SHUTDOWN();
+  Xerl::Main::Global::SHUTDOWN();
 
-    # Never reach this point
-    return undef;
+  # Never reach this point
+  return undef;
 }
 
 sub PLAIN {
-    print "Content-Type: text/plain\n\n";
+  print "Content-Type: text/plain\n\n";
 
-    DEBUG(@_) if @_;
+  DEBUG(@_) if @_;
 
-    return undef;
+  return undef;
 }
 
 sub REDIRECT ($) {
-    my $location = shift;
-    print "Status: 301 Moved Permanantly\n";
-    print "Location: $location\n\n";
-    return undef;
+  my $location = shift;
+  print "Status: 301 Moved Permanantly\n";
+  print "Location: $location\n\n";
+  return undef;
 }
 
 sub _HTTP_DESCR ($;$) {
-    my ( $status, $infomsg ) = @_;
+  my ( $status, $infomsg ) = @_;
 
-    $infomsg //= '';
+  $infomsg //= '';
 
-    if ( $status == 404 ) {
-        "Status: 404 Not Found $infomsg\015\012\n\n"
+  if ( $status == 404 ) {
+    "Status: 404 Not Found $infomsg\015\012\n\n"
 
-    }
-    else {
-        "Status: 405 Method not allowed $infomsg\015\012\n\n";
-    }
+  }
+  else {
+    "Status: 405 Method not allowed $infomsg\015\012\n\n";
+  }
 }
 
 sub HTTP {
-    my $descr = _HTTP_DESCR(shift);
-    print $descr;
-    local $, = ' ';
-    print $descr;
+  my $descr = _HTTP_DESCR(shift);
+  print $descr;
+  local $, = ' ';
+  print $descr;
 
-    Xerl::Main::Global::SHUTDOWN();
+  Xerl::Main::Global::SHUTDOWN();
 
-    # Never reach this point
-    return undef;
+  # Never reach this point
+  return undef;
 }
 
 1;

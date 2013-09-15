@@ -38,38 +38,38 @@ use Xerl::Page::Configure;
 use Xerl::Tools::FileIO;
 
 sub parse($) {
-    my Xerl::Page::Document $self    = $_[0];
-    my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Page::Document $self    = $_[0];
+  my Xerl::Page::Configure $config = $self->get_config();
 
-    return undef unless $config->document_exists();
+  return undef unless $config->document_exists();
 
-    my $document = $config->get_document();
-    my ($filename) = $document =~ m#([^/]+)$#;
-    my ($postfix)  = $document =~ /\.(.+)$/;
-    my $path;
+  my $document = $config->get_document();
+  my ($filename) = $document =~ m#([^/]+)$#;
+  my ($postfix)  = $document =~ /\.(.+)$/;
+  my $path;
 
-    print 'Content-Type: ';
-    print $config->getval( 'ctype.' . lc($postfix) ), "\n";
-    print "Content-Disposition: attachment; filename=\"$filename\"\n\n";
+  print 'Content-Type: ';
+  print $config->getval( 'ctype.' . lc($postfix) ), "\n";
+  print "Content-Disposition: attachment; filename=\"$filename\"\n\n";
 
-    $path = $config->get_hostpath() . "/htdocs/$document";
-    unless ( -f $path ) {
-        $path =
-            $config->get_hostroot()
-          . $config->get_defaulthost()
-          . "/htdocs/$document";
-    }
+  $path = $config->get_hostpath() . "/htdocs/$document";
+  unless ( -f $path ) {
+    $path =
+        $config->get_hostroot()
+      . $config->get_defaulthost()
+      . "/htdocs/$document";
+  }
 
-    my Xerl::Tools::FileIO $io = Xerl::Tools::FileIO->new( path => $path );
+  my Xerl::Tools::FileIO $io = Xerl::Tools::FileIO->new( path => $path );
 
-    if ( -1 == $io->fslurp() ) {
-        $config->set_finish_request(1);
-    }
-    else {
-        $io->print();
-    }
+  if ( -1 == $io->fslurp() ) {
+    $config->set_finish_request(1);
+  }
+  else {
+    $io->print();
+  }
 
-    return undef;
+  return undef;
 }
 
 1;

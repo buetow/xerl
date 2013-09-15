@@ -16,6 +16,6 @@ my $config =
   : ( -e "xerl-$host.conf" ? "xerl-$host.conf" : 'config.conf' );
 
 while ( FCGI::accept >= 0 ) {
-    my Xerl $xerl = Xerl->new( config => $config );
-    $xerl->run();
+  my Xerl $xerl = Xerl->new( config => $config );
+  $xerl->run();
 }

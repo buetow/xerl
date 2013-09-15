@@ -1,6 +1,6 @@
 # Xerl (c) 2005-2011,2013 Dipl.-Inform. (FH) Paul C. Buetow
 #
-# 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
+#   E-Mail: xerl@dev.buetow.org   WWW: http://xerl.buetow.org
 #
 # All rights reserved.
 #
@@ -12,8 +12,8 @@
 #       notice, this list of conditions and the following disclaimer in the
 #       documentation and/or other materials provided with the distribution.
 #     * Neither the name of buetow.org nor the names of its contributors may
-# 	  be used to endorse or promote products derived from this software
-# 	  without specific prior written permission.
+#     be used to endorse or promote products derived from this software
+#     without specific prior written permission.
 #
 # THIS SOFTWARE IS PROVIDED Paul C. Buetow ``AS IS'' AND ANY EXPRESS OR
 # IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -32,172 +32,136 @@ package Xerl::XML::Reader;
 use strict;
 use warnings;
 
+use XML::LibXML;
+
 use Xerl::Base;
 use Xerl::XML::Element;
 
+sub newparse($) {
+  my Xerl::XML::Reader $self = shift;
+
+  return undef;
+}
+
 sub open($) {
-    my Xerl::XML::Reader $self = $_[0];
+  my Xerl::XML::Reader $self = $_[0];
 
-    my Xerl::Tools::FileIO $xmlfile =
-      Xerl::Tools::FileIO->new( path => $self->get_path() );
+  my Xerl::Tools::FileIO $xmlfile =
+    Xerl::Tools::FileIO->new( path => $self->get_path() );
 
-    return -1 if -1 == $xmlfile->fslurp();
-    $self->set_array( $xmlfile->get_array() );
+  return -1 if -1 == $xmlfile->fslurp();
+  $self->set_array( $xmlfile->get_array() );
 
-    return 0;
+  return 0;
 }
 
 sub parse($) {
-    my Xerl::XML::Reader $self = $_[0];
+  my Xerl::XML::Reader $self = $_[0];
 
-    my $rarray = $self->get_array();
-    return $self unless ref $rarray eq 'ARRAY';
+  $self->newparse( $self->get_path() );
 
-    my Xerl::XML::Element $element = Xerl::XML::Element->new();
-    my Xerl::XML::Element( $root, $next, $prev, $insert );
+  my $rarray = $self->get_array();
+  return $self unless ref $rarray eq 'ARRAY';
 
-    # Prove and remove XML Header.
-    Xerl::Main::Global::ERROR( 'No valid XML header', caller() )
-      unless $rarray->[0] =~ s/<\?xml .*?version.+?\?>//io;
+  my Xerl::XML::Element $element = Xerl::XML::Element->new();
+  my Xerl::XML::Element( $root, $next, $prev, $insert );
 
-    my ( $newlineadd, $linecount, $notrim ) = ( 0, 0, 0 );
+  # Prove and remove XML Header.
+  Xerl::Main::Global::ERROR( 'No valid XML header', caller() )
+    unless $rarray->[0] =~ s/<\?xml .*?version.+?\?>//io;
 
-    #for my $line (@$rarray) {
-    for my $line (@$rarray) {
-        $newlineadd = 1 if length $line == 1 and $linecount > 3;
-        ++$linecount;
+  my ( $newlineadd, $linecount, $notrim ) = ( 0, 0, 0 );
 
-        $line =~ s/\\</!!LT!!/g;
-        $line =~ s/\\>/!!GT!!/g;
+  #for my $line (@$rarray) {
+  for my $line (@$rarray) {
+    $newlineadd = 1 if length $line == 1 and $linecount > 3;
+    ++$linecount;
 
-        # Allow <tag />
-        my $is_single_tag = $line =~ s#<([^/].+?)( (.*?))? ?/ *>#<$1 $3></$1>#o;
+    $line =~ s/\\</!!LT!!/g;
+    $line =~ s/\\>/!!GT!!/g;
 
-        my $flag = 0;
+    # Allow <tag />
+    my $is_single_tag = $line =~ s#<([^/].+?)( (.*?))? ?/ *>#<$1 $3></$1>#o;
 
-        do {
+    my $flag = 0;
 
-            # Open XML tag
-            if ( $line =~ s#<([^/].+?)( (.*?))? *>##o ) {
-                my ( $name, $params ) = ( $1, $3 );
-                $flag = 1;
+    do {
 
-                # Ignore XML comments
-                next if $name =~ /^!--/o;
+      # Open XML tag
+      if ( $line =~ s#<([^/].+?)( (.*?))? *>##o ) {
+        my ( $name, $params ) = ( $1, $3 );
+        $flag = 1;
 
-                $next = Xerl::XML::Element->new();
-                $next->set_name($name);
-                $next->set_prev($element);
-                $next->set_single($is_single_tag);
+        # Ignore XML comments
+        next if $name =~ /^!--/o;
 
-                # Handle tag parameters
-                if ( defined $params ) {
-                    my %params = $params =~ /
-      		(?: ( [^\s]+? ) \s*=\s* ( 
-			(?: '(?:.|(?:\\'))*?' ) | 
-			(?: "(?:.|(?:\\"))*?" ) | 
-			(?: [^\s]+ ) ) ) 
-		/gox;
+        $next = Xerl::XML::Element->new();
+        $next->set_name($name);
+        $next->set_prev($element);
+        $next->set_single($is_single_tag);
 
-                    # Remove " and '
-                    $params{$_} =~ s/^(?:"|')|(?:"|')$//go for keys %params;
-                    $next->set_params( \%params );
-                    $notrim = 1 if exists $params{notrim};
-                }
+        # Handle tag parameters
+        if ( defined $params ) {
+          my %params = $params =~ /
+          (?: ( [^\s]+? ) \s*=\s* ( 
+          (?: '(?:.|(?:\\'))*?' ) | 
+          (?: "(?:.|(?:\\"))*?" ) | 
+          (?: [^\s]+ ) ) ) 
+          /gox;
 
-                $element->push_array($next);
+          # Remove " and '
+          $params{$_} =~ s/^(?:"|')|(?:"|')$//go for keys %params;
+          $next->set_params( \%params );
+          $notrim = 1 if exists $params{notrim};
+        }
 
-                $root    = $element unless defined $root;
-                $element = $next;
-                $insert  = $element;
+        $element->push_array($next);
 
-                redo;
-            }
+        $root    = $element unless defined $root;
+        $element = $next;
+        $insert  = $element;
 
-            # Close XML tag
-            if ( $line =~ s#<(/.+?)>##o ) {
-                $flag = 1;
+        redo;
+      }
 
-                #print "XML::<$1>\n";
-                if ( $element->get_name() eq 'includefiles' ) {
-                    my $config = $self->get_config();
-                    my $params = $element->get_params();
-                    my $path =
-                      $config->get_hostpath() . 'content/' . $params->{reldir};
-                    my $pattern = $params->{pattern};
-                    my $maxitems =
-                      exists $params->{maxitems} ? $params->{maxitems} : 100;
-                    my $startindex =
-                      exists $params->{startindex} ? $params->{startindex} : 0;
+      # Close XML tag
+      if ( $line =~ s#<(/.+?)>##o ) {
+        $flag = 1;
 
-                    my Xerl::Tools::FileIO $io =
-                      Xerl::Tools::FileIO->new( path => $path );
+        #print "XML::<$1>\n";
 
-                    $io->dslurp();
-                    $io->reverse_array() if exists $params->{reversed};
+        $insert  = $element;
+        $prev    = $element->get_prev();
+        $element = $prev if defined $prev;
+        $notrim  = 0 if $notrim;
 
-                    for
-                      my $include ( grep { /$pattern/o } @{ $io->get_array() } )
-                    {
-                        last unless $maxitems--;
-                        next if 0 < $startindex--;
+        redo;
+      }
 
-                        my Xerl::XML::Reader $reader = Xerl::XML::Reader->new(
-                            path   => $include,
-                            config => $config
-                        );
+      # XML text
+      if ( defined $insert
+        and $line =~ s/^( *)(.+?) *$/$notrim ? $1.$2 : $2/oe )
+      {
 
-                        if ( -1 == $reader->open() ) {
-                            $config->set_finish_request(1);
-                            return undef;
-                        }
-                        $reader->parse();
+        if ($newlineadd) {
+          $insert->append_text("\n");
+          $newlineadd = 0;
+        }
 
-                        my Xerl::XML::Element $starttag =
-                          $reader->get_root()->starttag('content');
+        $line =~ s/!!LT!!/</g;
+        $line =~ s/!!GT!!/>/g;
 
-                        my $sep =
-                          exists $params->{separator}
-                          ? $params->{separator}
-                          : 'noop';
-                        $starttag->set_name($sep);
-                        $element->set_name('noop');
-                        $element->push_array($starttag);
-                    }
-                }
+        $insert->append_text($line);
+      }
+    } while ( $flag == 1 );
+  }
 
-                $insert  = $element;
-                $prev    = $element->get_prev();
-                $element = $prev if defined $prev;
-                $notrim  = 0 if $notrim;
+  $root->set_name('root');
 
-                redo;
-            }
+  # $root->print();
+  $self->set_root($root);
 
-            # XML text
-            if ( defined $insert
-                and $line =~ s/^( *)(.+?) *$/$notrim ? $1.$2 : $2/oe )
-            {
-
-                if ($newlineadd) {
-                    $insert->append_text("\n");
-                    $newlineadd = 0;
-                }
-
-                $line =~ s/!!LT!!/</g;
-                $line =~ s/!!GT!!/>/g;
-
-                $insert->append_text($line);
-            }
-        } while ( $flag == 1 );
-    }
-
-    $root->set_name('root');
-
-    # $root->print();
-    $self->set_root($root);
-
-    return undef;
+  return undef;
 }
 
 1;

@@ -35,77 +35,77 @@ use warnings;
 use Xerl::Base;
 
 sub starttag($$) {
-    my Xerl::XML::Element $self = $_[0];
-    my ( $name, $temp ) = ( $_[1], undef );
+  my Xerl::XML::Element $self = $_[0];
+  my ( $name, $temp ) = ( $_[1], undef );
 
-    return $self if $self->get_name() eq $name;
-    return undef if ref $self->get_array() ne 'ARRAY';
+  return $self if $self->get_name() eq $name;
+  return undef if ref $self->get_array() ne 'ARRAY';
 
-    for ( @{ $self->get_array() } ) {
-        $temp = $_->starttag($name);
-        return $temp if defined $temp;
-    }
+  for ( @{ $self->get_array() } ) {
+    $temp = $_->starttag($name);
+    return $temp if defined $temp;
+  }
 
-    return undef;
+  return undef;
 }
 
 sub starttag2($$$) {
-    my Xerl::XML::Element $self = $_[0];
-    my ( $name, $after ) = @_[ 1 ... 2 ];
+  my Xerl::XML::Element $self = $_[0];
+  my ( $name, $after ) = @_[ 1 ... 2 ];
 
-    my Xerl::XML::Element $element = $self->starttag($name);
-    return $element->starttag($after) if defined $element;
+  my Xerl::XML::Element $element = $self->starttag($name);
+  return $element->starttag($after) if defined $element;
 
-    return undef;
+  return undef;
 }
 
 sub params_str($) {
-    my Xerl::XML::Element $self = $_[0];
-    my $params = $self->get_params();
+  my Xerl::XML::Element $self = $_[0];
+  my $params = $self->get_params();
 
-    return if $params eq '';
+  return if $params eq '';
 
-    return join '', map { " $_=\"" . $params->{$_} . '"' } keys %$params;
+  return join '', map { " $_=\"" . $params->{$_} . '"' } keys %$params;
 }
 
 # Only for testing
 sub print($) {
-    my Xerl::XML::Element $self = $_[0];
-    print $self. "::print(\$)\n";
+  my Xerl::XML::Element $self = $_[0];
+  print $self. "::print(\$)\n";
 
-    my $sub;
-    $sub = sub {
-        my ( $element, $spaceing ) = @_;
-        my $spaces = ' ' x $spaceing;
+  my $sub;
+  $sub = sub {
+    my ( $element, $spaceing ) = @_;
+    my $spaces = ' ' x $spaceing;
 
-        print $spaces, '<', $element->get_name(), ">\n";
-        print "$spaces [$_=", _no_newline( $$element{$_} ), "]\n"
-          for keys %$element;
+    print $spaces, '<', $element->get_name(), ">\n";
+    print "$spaces [$_=", _no_newline( $$element{$_} ), "]\n"
+      for keys %$element;
 
-        #if ($element->exists('params')) {
-        if ( $element->params_exists() ) {
-            print "$spaces Params:\n";
-            while ( my ( $key, $val ) = each %{ $element->get_params() } ) {
-                print "$spaces  $key=$val\n";
-            }
-        }
+    #if ($element->exists('params')) {
+    if ( $element->params_exists() ) {
+      print "$spaces Params:\n";
+      while ( my ( $key, $val ) = each %{ $element->get_params() } ) {
+        print "$spaces  $key=$val\n";
+      }
+    }
 
-        return unless ref $element->get_array() eq 'ARRAY';
-        $sub->( $_, $spaceing + 1 ) for @{ $element->get_array() };
-    };
+    return unless ref $element->get_array() eq 'ARRAY';
+    $sub->( $_, $spaceing + 1 ) for @{ $element->get_array() };
+  };
 
-    $sub->( $self, 0 );
-    print $self. "::print(\$)::END\n";
+  $sub->( $self, 0 );
+  print $self. "::print(\$)::END\n";
 
-    return undef;
+  return undef;
 }
 
 sub _no_newline($) {
-    my $line = $_[0];
+  my $line = $_[0];
 
-    $line =~ s/\n//g;
+  $line =~ s/\n//g;
 
-    return $line;
+  return $line;
 }
 
 1;
