@@ -5,7 +5,7 @@
   <text>        
         <noop>Go to </noop>
         <namedlink href="http://web.buetow.org/git/?p=xerl.git">gitweb</namedlink>
-        <noop> in order to browse the repository online. The master branch always keeps the current stable version. The devel branch always keeps the current development version. For releases there are tags.</noop>
+        <noop> in order to browse the repository online. The master branch always keeps the current stable version. The develop branch always keeps the current development version. For releases there are tags.</noop>
   </text>
 </content>
 
