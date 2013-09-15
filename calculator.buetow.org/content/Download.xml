@@ -5,13 +5,13 @@
   <text>Calculator binaries are available for the following platforms. But may compile on lots more. Check out the CVS Download to do so.</text>
   <text>
     <noop>Look at</noop>
-    <link>ftp://ftp.buetow.org/pub/Calculator/binaries</noop>
+    <hyperlink>ftp://ftp.buetow.org/pub/Calculator/binaries</noop>
     <noop>for all available binaries!</noop>
   </text>
   <textheader>Source packages</textheader>
   <text>
     <noop>Calculator source packages are available at</noop>
-    <link>ftp://ftp.buetow.org/pub/Calculator/</link>
+    <hyperlink>ftp://ftp.buetow.org/pub/Calculator/</hyperlink>
     <noop>.</noop>
   </text>
   <textheader>Git</textheader>

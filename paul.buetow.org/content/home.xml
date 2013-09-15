@@ -7,24 +7,24 @@
     <enumeration>
     <enumitem>
       <noop>My development site: </noop>
-      <link>http://dev.buetow.org</link>
+      <hyperlink>http://dev.buetow.org</hyperlink>
     </enumitem>
     <enumitem>
       <noop>My tech blog: </noop>
-      <link>http://comp.buetow.org</link>
+      <hyperlink>http://comp.buetow.org</hyperlink>
     </enumitem>
     <enumitem>
       <noop>My "normal stuff" blog: </noop>
-      <link>http://blog.buetow.org</link>
+      <hyperlink>http://blog.buetow.org</hyperlink>
       <noop> (mostly german)</noop>
     </enumitem>
     <enumitem>
       <noop>Twitter: </noop>
-      <link>https://twitter.com/plantanran</link>
+      <hyperlink>https://twitter.com/plantanran</hyperlink>
     </enumitem>
     <enumitem>
       <noop>My pictures: </noop>
-      <link>http://www.flickr.com/photos/buetow/</link>
+      <hyperlink>http://www.flickr.com/photos/buetow/</hyperlink>
     </enumitem>
     </enumeration>
   </text>

@@ -13,7 +13,7 @@
 	</text>
 	<text>
 		<noop>If you are interested in other projects please visit </noop>
-		<link>http://dev.buetow.org</link> 
+		<hyperlink>http://dev.buetow.org</hyperlink> 
 		<noop> :)</noop>
 	</text>
 </content>

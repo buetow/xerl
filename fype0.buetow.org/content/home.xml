@@ -6,7 +6,7 @@
     <text>
      <strong>Important notice:</strong>
      <noop>The development of fype0 has been stalled. See fype instead, which is based on a complete new technology. There will be no further development on fype0. This project always was a proof of concept only. Bugs are not gonna be fixed. For the new fype programming project please visit </noop>
-     <link>http://fype.buetow.org</link>	
+     <hyperlink>http://fype.buetow.org</hyperlink>	
 	 <noop> and enjoy :)</noop>
     </text>
    </important>

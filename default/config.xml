@@ -5,12 +5,10 @@
   <!-- Special variables for XML-ing are written like @@varname@@ -->
   <variables>
     <title>%%host%% - %%site%%</title>
-    <piwik>web.buetow.org/stats</piwik>
     <documentsurl>?document=</documentsurl>
     <imagesurl>%%documentsurl%%images/</imagesurl>
     <stylesurl>%%documentsurl%%styles/</stylesurl>
     <whitespace> </whitespace>
-    <analytics>A-5916832-1</analytics>
     <pubftp>ftp://ftp.buetow.org/pub</pubftp>
   </variables>
   <rules>
@@ -30,7 +28,7 @@
       <type>[span class="@@class@@"]</type>
       <quote>[pre class="quote"]</quote>
       <pretext>[p][pre]</pretext>
-      <link>[a href="@@text@@"]</link>
+      <hyperlink>[a href="@@text@@"]</hyperlink>
       <namedlink>[a href="@@href@@"]</namedlink>
       <picture>[a href="@@href@@"][img align="center" border="1" alt="@@desc@@" title="@@desc@@" src="@@src@@"]</picture>
       <cimg start="yes">[img border="0" alt="@@title@@" title="@@title@@" src="@@href@@" /]</cimg>
@@ -53,7 +51,7 @@
       <textsubheader>[title]</textsubheader>
       <news addfront="![CDATA[" addback="]]">[description]</news>
       <text>[p]</text>
-      <link>[a href="@@text@@"]</link>
+      <hyperlink>[a href="@@text@@"]</hyperlink>
       <namedlink>[a href="@@href@@"]</namedlink>
       <namedlink end="yes">%%whitespace%%(@@href@@)</namedlink>
       <incsep>[item]</incsep>
