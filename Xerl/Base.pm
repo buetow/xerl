@@ -32,6 +32,8 @@ package UNIVERSAL;
 use strict;
 use warnings;
 
+use Data::Dumper;
+
 sub new ($;) {
   my $self = shift;
 
@@ -119,8 +121,8 @@ sub AUTOLOAD {
     return exists $self->{$1} ? $self->{ $_[0] } : 0;
 
   }
-  elsif ( $auto =~ /.*::debug$/ ) {
-    print "DEBUG: @_\n";
+  elsif ( $auto =~ /.*::dumper$/ ) {
+    print Dumper @_;
     return undef;
 
   }
