@@ -32,18 +32,8 @@ package Xerl::XML::Reader;
 use strict;
 use warnings;
 
-use XML::LibXML;
-
 use Xerl::Base;
 use Xerl::XML::Element;
-
-sub process($) {
-  my Xerl::XML::Reader $self = shift;
-
-  my $doc = XML::LibXML->load_xml(location => $self->get_path());
-
-  return undef;
-}
 
 sub open($) {
   my Xerl::XML::Reader $self = $_[0];
@@ -59,8 +49,6 @@ sub open($) {
 
 sub parse($) {
   my Xerl::XML::Reader $self = $_[0];
-
-  my $process = $self->process();
 
   my $rarray = $self->get_array();
   return $self unless ref $rarray eq 'ARRAY';

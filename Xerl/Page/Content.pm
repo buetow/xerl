@@ -213,8 +213,6 @@ sub _insert_special_vars($$$$) {
   $$rtext =~ s/@\@text\@\@/$_=$element->get_text();chomp;$_/geo;
   $$rtext =~ s/@\@ln\@\@//go;
 
-  #$$rtext =~ s/@\@link\@\@/$element->get_params()->{link}.'$$params$$'/geo;
-
   if ( $$rtext =~ /@\@(.*?)\@\@/ ) {
     my $params = $element->get_params();
     return unless ref $params eq 'HASH';

@@ -1,6 +1,6 @@
 # Xerl (c) 2005-2011,2013 Dipl.-Inform. (FH) Paul C. Buetow
 #
-# 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
+#   E-Mail: xerl@dev.buetow.org   WWW: http://xerl.buetow.org
 #
 # All rights reserved.
 #
@@ -12,8 +12,8 @@
 #       notice, this list of conditions and the following disclaimer in the
 #       documentation and/or other materials provided with the distribution.
 #     * Neither the name of buetow.org nor the names of its contributors may
-# 	  be used to endorse or promote products derived from this software
-# 	  without specific prior written permission.
+#     be used to endorse or promote products derived from this software
+#     without specific prior written permission.
 #
 # THIS SOFTWARE IS PROVIDED Paul C. Buetow ``AS IS'' AND ANY EXPRESS OR
 # IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -188,8 +188,8 @@ sub PARSELINE($$$;$) {
   $$line =~ s/$sep(!)?(.+?)$sep/
      defined $1 ? `$2` :
        (ref $config->getval($2) eq 'ARRAY') 
-  	  ? join '', @{$config->getval($2)} :
-	    $config->getval($2)/eg and $$foundflag = 1;
+      ? join '', @{$config->getval($2)} :
+      $config->getval($2)/eg and $$foundflag = 1;
 
   return undef;
 }
