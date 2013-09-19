@@ -2,74 +2,74 @@
 <content>
         <pagetitle>Imprint</pagetitle>
         <text>
-	<noop>In case you have work for me or have any other comments to pass, please choose your contact method...</noop>
-	<enumeration>
-		<enumitem>
-		  <noop>
-		    <strong>Address / Snail Mail:</strong>
-		  </noop>
-		  <newline />
-		  <noop>Dipl.-Inform. (FH) Paul C. B&uuml;tow</noop>
-		  <newline />
-		  <noop>Schneidem&uuml;hler Stra&szlig;e 12c</noop>
-		  <newline />
-		  <noop>D-76139 Karlsruhe-Waldstadt</noop>
-		  <newline />
-		  <noop>Germany / Deutschland</noop>
-		  <newline />
-		  <newline />
-		</enumitem>
-		<enumitem>
-		  <noop>
-		    <strong>Mailing Lists:</strong>
-		  </noop>
-		  <newline />
-		  <hyperlink>http://lists.buetow.org</hyperlink>
-		  <newline />
-		  <newline />
-		</enumitem>
-		<enumitem>
-		  <noop>
-		    <strong>Ticket and Mail:</strong>
-		  </noop>
-		  <newline />
-		   	<noop>Ticket system:</noop>
-		  <javascript>
-		   // Anti-Spam
-		   function strrev(str) {
-		   	if (!str) return '';
-		   	var revstr = '';
-		   	for (var i = str.length-1; i>=0; i--)
-		   		revstr += str.charAt(i)
-		   	return revstr;
-		   }
-		   var array = new Array('oof', '.', 'woteub', '@', 'tseuqer');
-		   for (var i = array.length - 1; i >= 0; --i)  {
-		   	document.write(strrev(array[i]));
-		   }
-		  </javascript>
-		  <newline />
-		  <newline />
-		   	<noop>Mail:</noop>
-		  <javascript>
-		   // Anti-Spam
-		   function strrev(str) {
-		   	if (!str) return '';
-		   	var revstr = '';
-		   	for (var i = str.length-1; i>=0; i--)
-		   		revstr += str.charAt(i)
-		   	return revstr;
-		   }
-		   var array = new Array('gro', '.', 'woteub', '@', 'luap');
-		   for (var i = array.length - 1; i >= 0; --i)  {
-		   	document.write(strrev(array[i]));
-		   }
-		  </javascript>
-		  <newline />
-		  <noop>GPG/PGP public key ID: 0x37EC5C1D </noop>
-		  <newline />
-		  <newline />
-		</enumitem>
-	 </enumeration>
+  <noop>In case you have work for me or have any other comments to pass, please choose your contact method...</noop>
+  <enumeration>
+    <enumitem>
+      <noop>
+        <strong>Address / Snail Mail:</strong>
+      </noop>
+      <newline />
+      <noop>Dipl.-Inform. (FH) Paul C. B&uuml;tow</noop>
+      <newline />
+      <noop>Schneidem&uuml;hler Stra&szlig;e 12c</noop>
+      <newline />
+      <noop>D-76139 Karlsruhe-Waldstadt</noop>
+      <newline />
+      <noop>Germany / Deutschland</noop>
+      <newline />
+      <newline />
+    </enumitem>
+    <enumitem>
+      <noop>
+        <strong>Mailing Lists:</strong>
+      </noop>
+      <newline />
+      <hyperlink>http://lists.buetow.org</hyperlink>
+      <newline />
+      <newline />
+    </enumitem>
+    <enumitem>
+      <noop>
+        <strong>Ticket and Mail:</strong>
+      </noop>
+      <newline />
+       <noop>Ticket system:</noop>
+      <javascript>
+       // Anti-Spam
+       function strrev(str) {
+        if (!str) return '';
+        var revstr = '';
+        for (var i = str.length-1; i>=0; i--)
+          revstr += str.charAt(i)
+        return revstr;
+       }
+       var array = new Array('oof', '.', 'woteub', '@', 'tseuqer');
+       for (var i = array.length - 1; i >= 0; --i)  {
+        document.write(strrev(array[i]));
+       }
+      </javascript>
+      <newline />
+      <newline />
+        <noop>Mail:</noop>
+      <javascript>
+       // Anti-Spam
+       function strrev(str) {
+        if (!str) return '';
+        var revstr = '';
+        for (var i = str.length-1; i>=0; i--)
+          revstr += str.charAt(i)
+        return revstr;
+       }
+       var array = new Array('oof', '.', 'woteub', '@', 'luap');
+       for (var i = array.length - 1; i >= 0; --i)  {
+        document.write(strrev(array[i]));
+       }
+      </javascript>
+      <newline />
+      <noop>GPG/PGP public key ID: 0x37EC5C1D </noop>
+      <newline />
+      <newline />
+    </enumitem>
+   </enumeration>
         </text>
 </content>
