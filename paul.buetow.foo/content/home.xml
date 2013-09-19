@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>It's just paul.buetow.foo</pagetitle>
+  <text>Welcome to my small humble website. My real name is Paul B&uuml;tow and I am a full time Linux System Administrator managing a few servers at work (in a team). In my spare time I drive buetow.org and also spend my time in system programming tasks.</text>
+  <text>If you don't like this website design: I am not a web designer and sometimes less is more.</text>
+  <text>
+    <enumeration>
+    <enumitem>
+      <noop>My development site: </noop>
+      <hyperlink>http://dev.buetow.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>My tech blog: </noop>
+      <hyperlink>http://comp.buetow.foo</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>My "normal stuff" blog: </noop>
+      <hyperlink>http://blog.buetow.foo</hyperlink>
+      <noop> (mostly german)</noop>
+    </enumitem>
+    <enumitem>
+      <noop>Twitter: </noop>
+      <hyperlink>https://twitter.com/plantanran</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>My pictures: </noop>
+      <hyperlink>http://www.flickr.com/photos/buetow/</hyperlink>
+    </enumitem>
+    </enumeration>
+  </text>
+</content>
