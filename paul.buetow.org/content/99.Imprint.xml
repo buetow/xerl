@@ -74,5 +74,15 @@
         <newline />
       </enumitem>
     </enumeration>
+      <enumitem>
+        <noop>
+          <strong>IRC:</strong>
+        </noop>
+        <newline />
+        <noop>On request</noop>
+        <newline />
+        <newline />
+      </enumitem>
+    </enumeration>
   </text>
 </content>
