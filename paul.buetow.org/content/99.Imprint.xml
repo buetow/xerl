@@ -39,8 +39,6 @@
           }
         </javascript>
         <newline />
-        <noop>GPG/PGP public key ID: 0x37EC5C1D </noop>
-        <newline />
         <newline />
       </enumitem>
       <enumitem>
@@ -62,8 +60,7 @@
           document.write(strrev(array[i]));
           }
         </javascript>
-        <newline />
-        <noop>GPG/PGP public key ID: 0x37EC5C1D </noop>
+        <noop> GPG/PGP public key ID: 0x37EC5C1D </noop>
         <newline />
         <newline />
       </enumitem>
