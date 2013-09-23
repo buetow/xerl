@@ -43,7 +43,7 @@
       </enumitem>
       <enumitem>
         <noop>
-          <strong>Mail:</strong>
+          <strong>E-Mail:</strong>
         </noop>
         <newline />
         <javascript>
@@ -60,7 +60,7 @@
           document.write(strrev(array[i]));
           }
         </javascript>
-        <noop> GPG/PGP public key ID: 0x37EC5C1D </noop>
+        <noop> (GPG/PGP public key ID: 0x37EC5C1D)</noop>
         <newline />
         <newline />
       </enumitem>
