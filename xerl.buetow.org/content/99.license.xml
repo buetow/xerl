@@ -4,7 +4,7 @@
   <code>
     <perl>
       use LWP::Simple;
-      get 'http://web.buetow.org/git/?p=xerl.git;a=blob;f=COPYING;hb=HEAD';
+      get 'http://web.buetow.org/git/?p=xerl.git;a=blob_plain;f=COPYING;hb=HEAD';
     </perl>
   </code>
 </content>
