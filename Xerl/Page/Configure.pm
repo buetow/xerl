@@ -28,7 +28,8 @@ sub parse($) {
   my $re = qr/^(.+?) *=(.+?) *\n?$/;
 
   for ( @{ $file->get_array() } ) {
-    next if /^ *#/;
+    next if /^\s*#/;
+    s/#.*//;
 
     $self->setval( $1, $self->eval($2) ) if $_ =~ $re;
   }
