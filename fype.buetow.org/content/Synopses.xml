@@ -4,18 +4,18 @@
   <textheader>Synopses</pagetitle>
   <text>This are the Fype synopses of the concurrent svn version:</text>
   <pretext>
-  <perl>
- 	use LWP::Simple;
-	get("https://ssl.buetow.org/repos/fype/trunk/docs/synopses.txt");
-  </perl>
+    <perl>
+ 	    use LWP::Simple;
+	    get("https://ssl.buetow.org/repos/fype/trunk/docs/synopses.txt");
+    </perl>
   </pretext>
   <textheader>Help</pagetitle>
   <text>This are the Fype help options of the concurrent svn version:</text>
   <pretext>
-  <perl>
- 	use LWP::Simple;
-	get("https://ssl.buetow.org/repos/fype/trunk/docs/help.txt");
-  </perl>
+    <perl>
+ 	    use LWP::Simple;
+	    get("https://ssl.buetow.org/repos/fype/trunk/docs/help.txt");
+    </perl>
   </pretext>
 </content>
 
