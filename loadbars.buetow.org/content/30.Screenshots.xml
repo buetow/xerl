@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
   <pagetitle>Screenshots</pagetitle>
-  <text>Screenshots can be downloaded from git. Just type "git clone -b screenshots git://git.buetow.org/loadbars loadbars-screenshots".</text> 
   <text>
-    <noop>Or go to </noop>
+    <noop>Screenshots can be downloaded from git. Just type </noop>
+    <code>git clone -b screenshots git://git.buetow.org/loadbars loadbars-screenshots</code>
+    <noop> Or go to </noop>
     <namedlink href="http://web.buetow.org/git/?p=loadbars.git;a=tree;h=refs/heads/screenshots;hb=screenshots">gitweb</namedlink>
     <noop> in order to browse the screenshot branch online.</noop>
   </text>
