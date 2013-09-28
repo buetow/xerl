@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
-	<rimg href="?document=images/perl.png" title="Perl" /> 
-	<pagetitle>PerlDaemon</pagetitle>
-	<textheader>Writing your own daemon...</pagetitle>
-	<text>PerlDaemon is a minimal linux/unix daemon programmed in Perl. It can be extended to fit any task...</text>
-	<enumeration>
-		<enumitem>Automatic daemonizing</enumitem>
-		<enumitem>Logging and logrotate support (SIGHUP)</enumitem>
-		<enumitem>Clean shutdown support (SIGTERM)</enumitem>
-		<enumitem>Pidfile support (incl. check on startup)</enumitem>
-		<enumitem>Easy to configure</enumitem>
-		<enumitem>Easy to extend using perl modules</enumitem>
-	</enumeration>
-        <text>
-                <noop>If you wanna stay in touch please </noop>
-                <namedlink href="http://freecode.com/projects/perldaemon">subscribe via freecode.</namedlink>
-        </text>
+  <rimg href="?document=images/perl.png" title="Perl" /> 
+  <pagetitle>PerlDaemon</pagetitle>
+  <textheader>Writing your own daemon...</textheader>
+  <text>PerlDaemon is a minimal linux/unix daemon programmed in Perl. It can be extended to fit any task...</text>
+  <enumeration>
+    <enumitem>Automatic daemonizing</enumitem>
+    <enumitem>Logging and logrotate support (SIGHUP)</enumitem>
+    <enumitem>Clean shutdown support (SIGTERM)</enumitem>
+    <enumitem>Pidfile support (incl. check on startup)</enumitem>
+    <enumitem>Easy to configure</enumitem>
+    <enumitem>Easy to extend using perl modules</enumitem>
+  </enumeration>
+  <text>
+    <noop>If you wanna stay in touch please </noop>
+    <namedlink href="http://freecode.com/projects/perldaemon">subscribe via freecode.</namedlink>
+  </text>
 </content>
 
