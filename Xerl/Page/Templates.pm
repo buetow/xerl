@@ -10,7 +10,7 @@ package Xerl::Page::Templates;
 use strict;
 use warnings;
 
-use v5.10.0;
+use v5.14.0;
 
 use Time::HiRes 'tv_interval';
 use Digest::MD5;

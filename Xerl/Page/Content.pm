@@ -10,7 +10,7 @@ package Xerl::Page::Content;
 use strict;
 use warnings;
 
-use v5.10.0;
+use v5.14.0;
 
 use Xerl::Base;
 

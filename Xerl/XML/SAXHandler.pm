@@ -12,7 +12,7 @@ use base qw(XML::SAX::Base);
 use strict;
 use warnings;
 
-use 5.10.0;
+use 5.14.0;
 
 use Data::Dumper;
 
