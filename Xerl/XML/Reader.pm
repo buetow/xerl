@@ -38,19 +38,7 @@ use Xerl::Base;
 use Xerl::XML::Element;
 use Xerl::XML::SAXHandler;
 
-sub open($) {
-  my Xerl::XML::Reader $self = $_[0];
-
-  my Xerl::Tools::FileIO $xmlfile =
-    Xerl::Tools::FileIO->new( path => $self->get_path() );
-
-  return -1 if -1 == $xmlfile->fslurp();
-  $self->set_array( $xmlfile->get_array() );
-
-  return 0;
-}
-
-sub sax() {
+sub parse() {
   my Xerl::XML::Reader $self = $_[0];
   my $sax_handler = Xerl::XML::SAXHandler->new();
 
@@ -60,129 +48,7 @@ sub sax() {
 
   $parser->parse_uri($self->get_path());
 
-  return $sax_handler->{xerl}{root};
-}
-
-sub parse($) {
-  my Xerl::XML::Reader $self = $_[0];
-
-  my $rarray = $self->get_array();
-  return $self unless ref $rarray eq 'ARRAY';
-
-  my Xerl::XML::Element $element = Xerl::XML::Element->new();
-  my Xerl::XML::Element( $root, $next, $prev, $insert );
-
-  # Prove and remove XML Header.
-  Xerl::Main::Global::ERROR( 'No valid XML header', caller() )
-    unless $rarray->[0] =~ s/<\?xml .*?version.+?\?>//io;
-
-  my ( $newlineadd, $linecount, $notrim ) = ( 0, 0, 0 );
-
-  #for my $line (@$rarray) {
-  for my $line (@$rarray) {
-    $newlineadd = 1 if length $line == 1 and $linecount > 3;
-    ++$linecount;
-
-    $line =~ s/\\</!!LT!!/g;
-    $line =~ s/\\>/!!GT!!/g;
-
-    # Allow <tag />
-    my $is_single_tag = $line =~ s#<([^/].+?)( (.*?))? ?/ *>#<$1 $3></$1>#o;
-
-    my $flag = 0;
-
-    do {
-
-      # Open XML tag
-      if ( $line =~ s#<([^/].+?)( (.*?))? *>##o ) {
-        my ( $name, $params ) = ( $1, $3 );
-        $flag = 1;
-
-        my $DEBUG = $name =~ /^=/ ? 1 : 0;
-        $self->debug($name, $params) if $DEBUG;
-
-        # Ignore XML comments
-        next if $name =~ /^!--/o;
-
-
-        $next = Xerl::XML::Element->new();
-        $next->set_name($name);
-        $next->set_prev($element);
-        $next->set_single($is_single_tag);
-
-        $next->print() if $DEBUG;
-
-        # Handle tag parameters
-        if ( defined $params ) {
-          my %params = $params =~ /
-          (?: ( [^\s]+? ) \s*=\s* ( 
-          (?: '(?:.|(?:\\'))*?' ) | 
-          (?: "(?:.|(?:\\"))*?" ) | 
-          (?: [^\s]+ ) ) ) 
-          /gox;
-
-          # Remove " and '
-          $params{$_} =~ s/^(?:"|')|(?:"|')$//go for keys %params;
-          $next->set_params( \%params );
-          $notrim = 1 if exists $params{notrim};
-        }
-
-        $element->push_array($next);
-
-        $root    = $element unless defined $root;
-        $element = $next;
-        $insert  = $element;
-
-        redo;
-      }
-
-      # Close XML tag
-      if ( $line =~ s#<(/.+?)>##o ) {
-        $flag = 1;
-
-        #print "XML::<$1>\n";
-
-        $insert  = $element;
-        $prev    = $element->get_prev();
-        $element = $prev if defined $prev;
-        $notrim  = 0 if $notrim;
-
-        redo;
-      }
-
-      # XML text
-      if ( defined $insert
-        and $line =~ s/^( *)(.+?) *$/$notrim ? $1.$2 : $2/oe )
-      {
-
-        if ($newlineadd) {
-          $insert->append_text("\n");
-          $newlineadd = 0;
-        }
-
-        $line =~ s/!!LT!!/</g;
-        $line =~ s/!!GT!!/>/g;
-
-        $insert->append_text($line);
-      }
-    } while ( $flag == 1 );
-  }
-
-  $root->set_name('root');
-
-  # $root->print();
-  $self->set_root($root);
-
-  use Data::Dumper;
-  open my $foo, '>', '/tmp/root.old';
-  print $foo (Dumper $root);
-  close $foo;
-
-  my $root = $self->sax();
-  open $foo, '>', '/tmp/root.new';
-  print $foo (Dumper $root);
-  close $foo;
-
+  $self->set_root($sax_handler->{xerl}{root});
 
   return undef;
 }

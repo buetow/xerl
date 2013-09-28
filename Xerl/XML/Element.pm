@@ -68,44 +68,4 @@ sub params_str($) {
   return join '', map { " $_=\"" . $params->{$_} . '"' } keys %$params;
 }
 
-# Only for testing
-sub print($) {
-  my Xerl::XML::Element $self = $_[0];
-  print $self. "::print(\$)\n";
-
-  my $sub;
-  $sub = sub {
-    my ( $element, $spaceing ) = @_;
-    my $spaces = ' ' x $spaceing;
-
-    print $spaces, '<', $element->get_name(), ">\n";
-    print "$spaces [$_=", _no_newline( $$element{$_} ), "]\n"
-      for keys %$element;
-
-    #if ($element->exists('params')) {
-    if ( $element->params_exists() ) {
-      print "$spaces Params:\n";
-      while ( my ( $key, $val ) = each %{ $element->get_params() } ) {
-        print "$spaces  $key=$val\n";
-      }
-    }
-
-    return unless ref $element->get_array() eq 'ARRAY';
-    $sub->( $_, $spaceing + 1 ) for @{ $element->get_array() };
-  };
-
-  $sub->( $self, 0 );
-  print $self. "::print(\$)::END\n";
-
-  return undef;
-}
-
-sub _no_newline($) {
-  my $line = $_[0];
-
-  $line =~ s/\n//g;
-
-  return $line;
-}
-
 1;

@@ -76,7 +76,11 @@ sub characters {
   my ($self, $doc) = @_;
   my $x = $self->{xerl};
 
-  $x->{last_data} = $doc->{Data};
+  my $data = $doc->{Data};
+  $data =~ s/!!LT!!/</g;
+  $data =~ s/!!GT!!/>/g;
+
+  $x->{current}{text} = $data;
 
   return undef;
 }
@@ -85,18 +89,7 @@ sub end_element {
   my ($self, $doc) = @_;
   my $x = $self->{xerl};
 
-  my $prev = pop @{$x->{stack}};
-  $prev->{text} = $x->{last_data};
-  $x->{current} = $prev;
-
-  return undef;
-}
-
-sub end_document {
-  my ($self, $doc) = @_;
-  my $x = $self->{xerl};
-
-  print Dumper $x->{root};
+  $x->{current} = pop @{$x->{stack}};
 
   return undef;
 }
