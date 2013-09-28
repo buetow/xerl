@@ -5,7 +5,7 @@
     <perl>
 		use LWP::Simple;
 
-		get 'http://web.buetow.org/git/?p=fype.git;a=blob_plain;f=examples/all-examples.txt;hb=build-009669';
+		get 'http://web.buetow.org/git/?p=fype.git;a=blob_plain;f=examples/all-examples.txt';
   </perl>
   </code>
 </content>

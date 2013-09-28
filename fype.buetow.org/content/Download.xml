@@ -2,5 +2,5 @@
 <content>
   <pagetitle>Download</pagetitle>
   <text>Fype can be downloaded from Git. Use the following step to do so:</text>
-  <pretext>git clone -b build-009669 git://git.buetow.org/fype.git</pretext>
+  <pretext>git clone git://git.buetow.org/fype.git</pretext>
 </content>
