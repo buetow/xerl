@@ -52,14 +52,15 @@ sub open($) {
 
 sub sax() {
   my Xerl::XML::Reader $self = $_[0];
+  my $sax_handler = Xerl::XML::SAXHandler->new();
 
   my $parser = XML::SAX::ParserFactory->parser(
-    Handler => Xerl::XML::SAXHandler->new()
+    Handler => $sax_handler
   );
 
   $parser->parse_uri($self->get_path());
 
-  return $parser->{xerl}{root};
+  return $sax_handler->{xerl}{root};
 }
 
 sub parse($) {

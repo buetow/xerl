@@ -34,6 +34,8 @@ use base qw(XML::SAX::Base);
 use strict;
 use warnings;
 
+use 5.10.0;
+
 use Data::Dumper;
 
 use Xerl::Base;
@@ -45,6 +47,7 @@ sub start_document {
   $self->{xerl}{root} = undef;
   $self->{xerl}{current} = undef;
   $self->{xerl}{stack} = [];
+
 
   return undef;
 }
@@ -62,9 +65,18 @@ sub start_element {
 
   $x->{current} = Xerl::XML::Element->new();
   $x->{current}->set_name($doc->{Name});
-  $x->{current}->set_params(\%params);
+  $x->{current}->set_params(\%params) if %params;
 
   ${$x->{stack}}[-1]->push_array($x->{current}) if @{$x->{stack}};
+
+  return undef;
+}
+
+sub characters {
+  my ($self, $doc) = @_;
+  my $x = $self->{xerl};
+
+  $x->{last_data} = $doc->{Data};
 
   return undef;
 }
@@ -73,7 +85,9 @@ sub end_element {
   my ($self, $doc) = @_;
   my $x = $self->{xerl};
 
-  $x->{current} = pop @{$x->{stack}};
+  my $prev = pop @{$x->{stack}};
+  $prev->{text} = $x->{last_data};
+  $x->{current} = $prev;
 
   return undef;
 }
@@ -83,7 +97,6 @@ sub end_document {
   my $x = $self->{xerl};
 
   print Dumper $x->{root};
-  exit;
 
   return undef;
 }
