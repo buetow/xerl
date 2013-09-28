@@ -16,4 +16,9 @@
     <namedlink href="http://fype.buetow.org">Fype Language</namedlink>
     <noop> which can do arithmetic calculations too.</noop>
   </text>
+  <textheader>Version 0.6 (Sep 20th 2005)</textheader>
+  <enumeration>
+    <enumitem>Changed the source tree structure. Normal non-digits will now be treated with their ASCII values. Digits will be treated with ASCII values too if mode ascii has been activated.</enumitem>
+    <enumitem>Fixed the "operators" command.</enumitem>
+  </enumeration>
 </content>
