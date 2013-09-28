@@ -9,7 +9,7 @@
 	    get("https://ssl.buetow.org/repos/fype/trunk/docs/synopses.txt");
     </perl>
   </pretext>
-  <textheader>Help</pagetitle>
+  <textheader>Help</textheader>
   <text>This are the Fype help options of the concurrent svn version:</text>
   <pretext>
     <perl>
