@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
-<content>
-  <pagetitle>Built in artificial intelligence engine!</pagetitle>
-  <text>Perl 9 now has a built in AI engine! If you are too lazy to work, just tell Perl 9 to work for you.</text>
-  <code>
-# The AI will determine what needs to get done and will do it for you!
-(my AI $ai .= new).work;
-  </code>
-</content>
