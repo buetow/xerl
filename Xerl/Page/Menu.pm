@@ -12,13 +12,13 @@ use warnings;
 
 use v5.14.0;
 
-use Xerl::Page::Configure;
+use Xerl::Setup::Configure;
 use Xerl::Tools::FileIO;
 use Xerl::XML::Element;
 
 sub generate($;$) {
   my Xerl::Page::Menu $self        = $_[0];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
 
   my @site    = split /\//, $config->get_site();
   my @compare = @site;
@@ -46,7 +46,7 @@ sub generate($;$) {
 
 sub get_menu($$$$) {
   my Xerl::Page::Menu $self        = $_[0];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
 
   my ( $content, $siteadd, $compare ) = ( @_[ 1 ... 2 ], lc $_[3] );
   my $issubsection = $content =~ m{\.sub/$};

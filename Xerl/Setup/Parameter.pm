@@ -5,7 +5,7 @@
 # This is free software, you may use it and distribute it under the same
 # terms as Perl itself.
 
-package Xerl::Page::Parameter;
+package Xerl::Setup::Parameter;
 
 use strict;
 use warnings;
@@ -14,12 +14,12 @@ use v5.14.0;
 
 use Xerl::Base;
 use Xerl::Main::Global;
-use Xerl::Page::Configure;
+use Xerl::Setup::Configure;
 use Xerl::Tools::FileIO;
 
 sub parse($) {
-  my Xerl::Page::Parameter $self   = $_[0];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Parameter $self   = $_[0];
+  my Xerl::Setup::Configure $config = $self->get_config();
 
   print "Content-Type: text/plain\n\n"
     if $config->plain_exists();

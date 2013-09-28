@@ -5,7 +5,7 @@
 # This is free software, you may use it and distribute it under the same
 # terms as Perl itself.
 
-package Xerl::Page::Configure;
+package Xerl::Setup::Configure;
 
 use strict;
 use warnings;
@@ -17,7 +17,7 @@ use Xerl::Tools::FileIO;
 use Xerl::XML::Element;
 
 sub parse($) {
-  my Xerl::Page::Configure $self = $_[0];
+  my Xerl::Setup::Configure $self = $_[0];
 
   my Xerl::Tools::FileIO $file =
     Xerl::Tools::FileIO->new( 'path' => $self->get_config() );
@@ -40,7 +40,7 @@ sub parse($) {
 }
 
 sub defaults($) {
-  my Xerl::Page::Configure $self = $_[0];
+  my Xerl::Setup::Configure $self = $_[0];
 
   $self->set_proto('https') if exists $ENV{HTTPS};
 
@@ -124,7 +124,7 @@ sub defaults($) {
 }
 
 sub eval($$) {
-  my Xerl::Page::Configure $self = $_[0];
+  my Xerl::Setup::Configure $self = $_[0];
   my $val = $_[1];
 
   $val =~ s/^!(.+)/`$1`/eo;
@@ -133,7 +133,7 @@ sub eval($$) {
 }
 
 sub insertxmlvars($$) {
-  my Xerl::Page::Configure $self = $_[0];
+  my Xerl::Setup::Configure $self = $_[0];
   my Xerl::XML::Element $element = $_[1];
 
   $element = $element->starttag('variables');

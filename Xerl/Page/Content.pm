@@ -18,11 +18,11 @@ use Xerl::XML::Reader;
 use Xerl::XML::Element;
 
 use Xerl::Page::Rules;
-use Xerl::Page::Configure;
+use Xerl::Setup::Configure;
 
 sub parse($) {
   my Xerl::Page::Content $self     = $_[0];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
 
   my Xerl::XML::Reader $xmlcontent = Xerl::XML::Reader->new(
     path   => $config->get_templatepath(),
@@ -73,7 +73,7 @@ sub _insertrules($$$) {
   my Xerl::Page::Content $self     = $_[0];
   my Xerl::Page::Rules $rules      = $_[1];
   my Xerl::XML::Element $element   = $_[2];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
   my $nonewlines                   = 0;
 
   # Don't interate through the XML childs if we have a leaf node.
@@ -184,7 +184,7 @@ sub _insert_special_vars($$$$) {
   my Xerl::Page::Content $self     = $_[0];
   my Xerl::Page::Rules $rules      = $_[1];
   my Xerl::XML::Element $element   = $_[2];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
   my $rtext                        = $_[3];
 
   $$rtext =~ s/@\@text\@\@/$_=$element->get_text();chomp;$_/geo;

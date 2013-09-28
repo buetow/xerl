@@ -17,7 +17,7 @@ use Digest::MD5;
 
 use Xerl::Base;
 
-use Xerl::Page::Configure;
+use Xerl::Setup::Configure;
 use Xerl::Page::Content;
 use Xerl::Page::Menu;
 
@@ -27,7 +27,7 @@ use constant RECURSIVE => 1;
 
 sub parse($) {
   my Xerl::Page::Templates $self   = $_[0];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
 
   my $site = $config->get_site();
 
@@ -147,7 +147,7 @@ sub parse($) {
 
 sub parsetemplate($$;$) {
   my Xerl::Page::Templates $self   = $_[0];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
   my $deepnesslevel = $_[2] || 0;
 
   return $self if $deepnesslevel == 100;
@@ -164,7 +164,7 @@ sub parsetemplate($$;$) {
 
 sub print($;$) {
   my Xerl::Page::Templates $self   = $_[0];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
 
   my ( $code, $flag ) = ( '', 0 );
   my $time  = $_[1];
@@ -210,7 +210,7 @@ sub print($;$) {
 
 # Static sub
 sub PARSELINE($$$;$) {
-  my Xerl::Page::Configure $config = $_[0];
+  my Xerl::Setup::Configure $config = $_[0];
   my ( $sep, $line, $foundflag ) = @_[ 1 .. 3 ];
 
   $$line =~ s/$sep(!)?(.+?)$sep/

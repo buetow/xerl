@@ -14,12 +14,12 @@ use v5.14.0;
 
 use Xerl::Base;
 use Xerl::Main::Global;
-use Xerl::Page::Configure;
+use Xerl::Setup::Configure;
 use Xerl::Tools::FileIO;
 
 sub parse($) {
   my Xerl::Page::Document $self    = $_[0];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
 
   return undef unless $config->document_exists();
 

@@ -15,30 +15,30 @@ use Time::HiRes 'gettimeofday';
 
 use Xerl::Base;
 use Xerl::Main::Global;
-use Xerl::Page::Configure;
+use Xerl::Setup::Configure;
 use Xerl::Page::Document;
-use Xerl::Page::Parameter;
-use Xerl::Page::Request;
+use Xerl::Setup::Parameter;
+use Xerl::Setup::Request;
 use Xerl::Page::Templates;
 
 sub run($) {
   my Xerl $self = $_[0];
   my $time = [gettimeofday];
 
-  my Xerl::Page::Request $request =
-    Xerl::Page::Request->new( request => $ENV{REQUEST_URI} );
+  my Xerl::Setup::Request $request =
+    Xerl::Setup::Request->new( request => $ENV{REQUEST_URI} );
 
   $request->parse();
-  my Xerl::Page::Configure $config =
-    Xerl::Page::Configure->new( config => $self->get_config(), %$request );
+  my Xerl::Setup::Configure $config =
+    Xerl::Setup::Configure->new( config => $self->get_config(), %$request );
 
   $config->parse();
   return undef if $config->finish_request_exists();
 
   $config->defaults();
 
-  my Xerl::Page::Parameter $parameter =
-    Xerl::Page::Parameter->new( config => $config );
+  my Xerl::Setup::Parameter $parameter =
+    Xerl::Setup::Parameter->new( config => $config );
 
   $parameter->parse();
   return undef if $config->finish_request_exists();

@@ -5,7 +5,7 @@
 # This is free software, you may use it and distribute it under the same
 # terms as Perl itself.
 
-package Xerl::Page::Request;
+package Xerl::Setup::Request;
 
 use strict;
 use warnings;
@@ -15,7 +15,7 @@ use v5.14.0;
 use Xerl::Base;
 
 sub parse($) {
-  my Xerl::Page::Request $self = $_[0];
+  my Xerl::Setup::Request $self = $_[0];
   my $request = $self->get_request();
 
   # Secure it!

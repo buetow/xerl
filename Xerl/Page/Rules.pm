@@ -14,12 +14,12 @@ use v5.14.0;
 
 use Xerl::Base;
 use Xerl::XML::Element;
-use Xerl::Page::Configure;
+use Xerl::Setup::Configure;
 
 sub parse($) {
   my Xerl::Page::Rules $self       = $_[0];
   my Xerl::XML::Element $element   = $_[1];
-  my Xerl::Page::Configure $config = $self->get_config();
+  my Xerl::Setup::Configure $config = $self->get_config();
 
   $element = $element->starttag2( 'rules', $config->get_outputformat() );
   return unless defined $element;
