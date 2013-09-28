@@ -16,7 +16,7 @@
   </text>
   <text>
     <noop>The changelog can be found at SVN: </noop>
-    <link basename="yes">https://ssl.buetow.org/repos/perl-stuff/nidura/CHANGES</hyperlink>
+    <hyperlink basename="yes">https://ssl.buetow.org/repos/perl-stuff/nidura/CHANGES</hyperlink>
     <noop>.</noop>
   </text>
 </content>

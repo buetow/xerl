@@ -16,15 +16,15 @@
 			<enumitem>Sentences should not start with rantanplan if you normally capitalize the first word of a sentence. Recast the sentence so that it begins with a capital letter. Or just write the whole sentence in small or capitalized letters!</enumitem>
 			<enumitem>If rantanplan is too long for you, you may use rant or ranti instead.</enumitem>
 			<enumitem>If you like rantanplan very much, you may use rantiplanti as his nickname!</enumitem>
-			<enumitem>Sometimes rantanplan changes his nick into some weird combinations like plantanran or ranplantan or tanplanrantanplan! Any version is valid! You can think of 3 main body parts: ran tan and plan. You may combine them in any order!</noop>
-			<enumitem>The above mentioned is also valid for the reversed body parts: nar nat nalp. This combination is valid as well: nartanranplannat.</menuitem>
+			<enumitem>Sometimes rantanplan changes his nick into some weird combinations like plantanran or ranplantan or tanplanrantanplan! Any version is valid! You can think of 3 main body parts: ran tan and plan. You may combine them in any order!</enumitem>
+			<enumitem>The above mentioned is also valid for the reversed body parts: nar nat nalp. This combination is valid as well: nartanranplannat.</enumitem>
 			<enumitem>Sometimes rantanplan likes to show other people on what cool stuff he is working on. In this case a |foo postfix is added to any version of his nickname. E.g.: ranti|C means, that rantanplan is currently coding in C. rantanplan|vs|work means, that he is fighting against his current task at work!</enumitem>
 			<enumitem>Another way to express what rantanplan is doing is a prefix notation like worktanplan (he is working) or eattanplan (he is eating).</enumitem>
 		</enumeration>
 	</text>
 	<textheader>"pbuetow"</textheader>
 	<text>
-		<noop>This is the style guide for my nickname "pbuetow".</bnoop>
+		<noop>This is the style guide for my nickname "pbuetow".</noop>
     </text>
 	<textsubheader>The rules</textsubheader>
 	<text>
