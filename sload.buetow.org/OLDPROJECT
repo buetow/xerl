@@ -1,1 +1,0 @@
-SLoad is an abbreviation for serverload. SLoad uses basic parameters (current CPU peak, current requests per second) for approximating the need of additional servers. It's programmed in Haskell.
