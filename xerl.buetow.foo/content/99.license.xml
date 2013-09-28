@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<content>
+  <pagetitle>License</pagetitle>
+  <text>
+    <noop>Xerl is (C) by Paul B!!N!!uuml;tow.</noop>
+  </text>
+  <text>
+    <noop>All rights reserved. </noop>
+    <newline />
+    <newline />
+    <noop>
+      foo
+    </noop>
+    <newline />
+    <newline />
+    <noop>
+      * Bar
+    </noop>
+  </text>
+  <code>
+    sdf
+    sdfsdf</code>
+</content>
+
