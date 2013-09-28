@@ -17,4 +17,14 @@
     <noop> which can do arithmetic calculations too.</noop>
   </text>
   <textheader>Version 0.6 (Sep 20th 2005)</textheader>
+  <enumeration>
+    <enumitem>Changed the source tree structure. Normal non-digits will now be treated with their ASCII values. Digits will be treated with ASCII values too if mode ascii has been activated.</enumitem>
+    <enumitem>Fixed the "operators" command.</enumitem>
+  </enumeration>
+  <textheader>Version 0.5 (Apr 18 2005)</textheader>
+  <enumeration>
+    <enumitem>Added list.h and stack.h. Calculator can now be used with parameters: ./calculator '1+6+4\'. Added the v(erbose) command. Added the pr(ecision) int command. </menuitem>
+    <enumitem>The - (minus) bug has been fixed!</enumitem>
+  </enumeration>
+  <textheader>Version 0.4.1 (Dec 1st 2004) - Bugfix release</textheader>
 </content>
