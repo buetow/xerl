@@ -27,4 +27,41 @@
     <enumitem>The - (minus) bug has been fixed!</enumitem>
   </enumeration>
   <textheader>Version 0.4.1 (Dec 1st 2004) - Bugfix release</textheader>
+  <enumeration>
+    <enumitem>
+      <noop>Equations like (...)op... can be solved now. Here, op is an operator. Before, ...op(...) only worked.</noop>
+      <newline />
+      <noop>Example: (4\+3)^(8*7)!</noop>
+    </enumitem>
+    <enumitem>The ^ operator now only uses whole numbers as an exponent.</enumitem>
+    <enumitem>Use \ to calculate the roots instead!</enumitem>
+  </enumeration>
+  <textheader>Version 0.4 (Nov 27th 2004)</textheader>
+  <enumeration>
+    <enumitem>Renamed the qu(it) command into ex(it).</enumitem>
+    <enumitem>Renamed the pri(ority) command into op(erators).</enumitem>
+    <enumitem>A "," can be used as a synonym for a ".".</enumitem>
+    <enumitem>0! resulted in an infinite loop. This has been fixed.</enumitem>
+    <enumitem>\w* resultet in a segmentation fault. This has been fixed.</enumitem>
+    <enumitem>New commands: ra(scii), which is the same as as(cii) but works the reverse way. !command executes a shell command. x\ calculates the square root of x.</menuitem>
+  </enumeration>
+  <textheader>Version 0.3.1 (Jul 26th 2004) - Bugfix release</textheader>
+  <enumeration>
+    <enumitem>This is a bugfix release only. No new features included.</menuitem>
+  </enumeration>
+  <textheader>Version 0.3 (May 8th 2004)</textheader>
+  <enumeration>
+    <enumitem>This version uses $ to store the result of the last calculaion in.</enumitem>
+    <enumitem>Also 4(2)(4) will be interpreted as 4*2*4.</enumitem>
+    <enumitem>Negative numbers can be typed: 4+-4(-1) = 4-4*-1 = 0</enumitem>
+    <enumitem>A few bugs have been fixed too.</enumitem>
+  </enumeration>
+  <textheader>Version 0.2 (May 2nd 2004)</textheader>
+  <enumeration>
+    <enumitem>This version can also handle different fields and double and float numbers. </enumitem>
+  </enumeration>
+  <textheader>Version 0.1 (May 1st 2004)</textheader>
+  <enumeration>
+    <enumitem>This version can only handle normal integer numbers. Double, floats etc. will be added in the next versions.</enumitem>
+  </enumeration>
 </content>
