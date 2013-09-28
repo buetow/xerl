@@ -36,7 +36,7 @@ sub dslurp($;$) {
 
 sub fslurp($) {
   my Xerl::Tools::FileIO $self = $_[0];
-  my $path = SECUREPATH( $self->get_path() );
+  my $path = _SECUREPATH( $self->get_path() );
 
   unless ( -f $path ) {
     Xerl::Main::Global::HTTP( 404, "Not found: $path" );
@@ -58,7 +58,7 @@ sub fslurp($) {
 
 sub exists($) {
   my Xerl::Tools::FileIO $self = $_[0];
-  my $path = SECUREPATH( $self->get_path() );
+  my $path = _SECUREPATH( $self->get_path() );
 
   return -e $path;
 }
@@ -83,7 +83,7 @@ sub _fwrite($;$) {
   my $append = $_[1];
 
   my ( $path, $filename ) =
-    ( SECUREPATH( $self->get_path() ), SECUREPATH( $self->get_filename() ) );
+    ( _SECUREPATH( $self->get_path() ), _SECUREPATH( $self->get_filename() ) );
 
   my $path_ = '';
   for ( split /\//, $path ) {
@@ -155,7 +155,7 @@ sub pop($) {
 
 use overload '+' => \&merge;
 
-sub SECUREPATH($) {
+sub _SECUREPATH($) {
   my $path = $_[0];
 
   $path =~ s/\.\.+\/?//g;
