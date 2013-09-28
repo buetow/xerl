@@ -35,6 +35,7 @@ sub generate($;$) {
   for my $s (@site) {
     $content .= "$s.sub/";
     $siteadd .= "$s/";
+
     $menuelem = $self->get_menu( $content, $siteadd, shift @compare );
     $self->push_array($menuelem)
       if $menuelem->first_array()->array_length() > 1;
@@ -46,6 +47,7 @@ sub generate($;$) {
 sub get_menu($$$$) {
   my Xerl::Page::Menu $self        = $_[0];
   my Xerl::Page::Configure $config = $self->get_config();
+
   my ( $content, $siteadd, $compare ) = ( @_[ 1 ... 2 ], lc $_[3] );
   my $issubsection = $content =~ m{\.sub/$};
   my $pattern = qr/\.(?:xml)|(?:sub)$/;

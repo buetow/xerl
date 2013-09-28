@@ -45,27 +45,16 @@ sub PLAIN {
 
 sub REDIRECT ($) {
   my $location = shift;
+
   say "Status: 301 Moved Permanantly";
   print "Location: $location\n\n";
+
   return undef;
-}
-
-sub _HTTP_DESCR ($;$) {
-  my ( $status, $infomsg ) = @_;
-
-  $infomsg //= '';
-
-  if ( $status == 404 ) {
-    "Status: 404 Not Found $infomsg\015\012\n\n"
-
-  }
-  else {
-    "Status: 405 Method not allowed $infomsg\015\012\n\n";
-  }
 }
 
 sub HTTP {
   my $descr = _HTTP_DESCR(shift);
+
   print $descr;
   local $, = ' ';
   print $descr;
@@ -74,6 +63,21 @@ sub HTTP {
 
   # Never reach this point
   return undef;
+}
+
+sub _HTTP_DESCR ($;$) {
+  my ( $status, $infomsg ) = @_;
+
+  $infomsg //= '';
+
+  # Sub returns one of the strings below
+  if ( $status == 404 ) {
+    "Status: 404 Not Found $infomsg\015\012\n\n"
+
+  }
+  else {
+    "Status: 405 Method not allowed $infomsg\015\012\n\n";
+  }
 }
 
 1;

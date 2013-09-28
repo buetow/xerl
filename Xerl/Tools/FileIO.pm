@@ -10,6 +10,8 @@ package Xerl::Tools::FileIO;
 use strict;
 use warnings;
 
+use v5.14.0;
+
 use Xerl::Base;
 use Xerl::Main::Global;
 
@@ -78,40 +80,6 @@ sub fwriteappend($) {
   return undef;
 }
 
-sub _fwrite($;$) {
-  my Xerl::Tools::FileIO $self = $_[0];
-  my $append = $_[1];
-
-  my ( $path, $filename ) =
-    ( _SECUREPATH( $self->get_path() ), _SECUREPATH( $self->get_filename() ) );
-
-  my $path_ = '';
-  for ( split /\//, $path ) {
-    $path_ .= $_ . '/';
-    mkdir $path_
-      or Xerl::Main::Global::ERROR( $!, $path_, caller() )
-      unless -d $path_;
-  }
-
-  my $f;
-  if ( $append == 0 ) {
-    open $f, ">$path$filename"
-      or Xerl::Main::Global::ERROR( $!, $path . $filename, caller() );
-
-  }
-  else {
-    open $f, ">>$path$filename"
-      or Xerl::Main::Global::ERROR( $!, $path . $filename, caller() );
-  }
-
-  flock $f, 2;
-  print $f @{ $self->get_array() };
-  flock $f, 3;
-  close $f;
-
-  return undef;
-}
-
 sub print($) {
   my Xerl::Tools::FileIO $self = $_[0];
 
@@ -151,6 +119,40 @@ sub pop($) {
   chomp( my $pop = pop @{ $self->get_array() } );
 
   return $pop;
+}
+
+sub _fwrite($;$) {
+  my Xerl::Tools::FileIO $self = $_[0];
+  my $append = $_[1];
+
+  my ( $path, $filename ) =
+    ( _SECUREPATH( $self->get_path() ), _SECUREPATH( $self->get_filename() ) );
+
+  my $path_ = '';
+  for ( split /\//, $path ) {
+    $path_ .= $_ . '/';
+    mkdir $path_
+      or Xerl::Main::Global::ERROR( $!, $path_, caller() )
+      unless -d $path_;
+  }
+
+  my $f;
+  if ( $append == 0 ) {
+    open $f, ">$path$filename"
+      or Xerl::Main::Global::ERROR( $!, $path . $filename, caller() );
+
+  }
+  else {
+    open $f, ">>$path$filename"
+      or Xerl::Main::Global::ERROR( $!, $path . $filename, caller() );
+  }
+
+  flock $f, 2;
+  print $f @{ $self->get_array() };
+  flock $f, 3;
+  close $f;
+
+  return undef;
 }
 
 use overload '+' => \&merge;

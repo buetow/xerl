@@ -34,9 +34,9 @@ sub parse($) {
   return $self unless defined;
 
   my $params = '';
-  for ( split /&/ ) {
 
-    # List context uses ($1,$2) as method args
+  # List context uses ($1,$2) as method args
+  for ( split /&/ ) {
     $self->setval(/(.+?)=(.+)/);
     $params .= "&amp;$1=$2" if $1 ne 'site';
   }

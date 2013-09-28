@@ -17,7 +17,7 @@ use Xerl::XML::Element;
 use Xerl::XML::SAXHandler;
 
 sub open($) {
-  my Xerl::XML::Reader $self = $_[0];
+  my Xerl::XML::Reader $self = shift;
 
   if ( -f $self->get_path() ) {
     return 0;
@@ -28,7 +28,7 @@ sub open($) {
 }
 
 sub parse() {
-  my Xerl::XML::Reader $self = $_[0];
+  my Xerl::XML::Reader $self = shift;
   my $sax_handler = Xerl::XML::SAXHandler->new();
 
   my $parser = XML::SAX::ParserFactory->parser( Handler => $sax_handler );

@@ -43,6 +43,7 @@ sub exists($$) {
 sub AUTOLOAD {
   my UNIVERSAL $self = $_[0];
   my $auto = our $AUTOLOAD;
+
   return $self if $auto =~ /DESTROY/;
 
   if ( $auto =~ /.*::set_(.+)$/ ) {

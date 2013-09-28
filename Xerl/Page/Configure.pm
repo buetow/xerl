@@ -63,18 +63,23 @@ sub defaults($) {
 
   unless ( -d $self->get_hostroot() . $self->get_host() ) {
     my $redirect = $self->get_hostroot() . 'redirect:' . $self->get_host();
+
     if ( -f $redirect ) {
       my Xerl::Tools::FileIO $file =
         Xerl::Tools::FileIO->new( 'path' => $redirect );
       $file->fslurp();
+
       my $location = $file->shift();
       Xerl::Main::Global::REDIRECT($location);
       $self->set_finish_request(1);
     }
+
     my $alias = $self->get_hostroot() . 'alias:' . $self->get_host();
+
     if ( -f $alias ) {
       my Xerl::Tools::FileIO $file =
         Xerl::Tools::FileIO->new( 'path' => $alias );
+
       $file->fslurp();
       $self->set_host( $file->shift() );
     }
@@ -113,7 +118,7 @@ sub defaults($) {
 
   $self->set_contentpath( $self->get_hostpath() . 'content/' );
 
-  # $self->set_ipv6( $ENV{REMOTE_ADDR} =~ /:/ ? 1 : 0 );
+  $self->set_is_ipv6( $ENV{REMOTE_ADDR} =~ /:/ ? 1 : 0 );
 
   return undef;
 }
@@ -123,6 +128,7 @@ sub eval($$) {
   my $val = $_[1];
 
   $val =~ s/^!(.+)/`$1`/eo;
+
   return $val;
 }
 

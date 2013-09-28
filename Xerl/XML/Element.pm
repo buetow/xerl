@@ -41,7 +41,7 @@ sub params_str($) {
   my Xerl::XML::Element $self = $_[0];
   my $params = $self->get_params();
 
-  return if $params eq '';
+  return undef if $params eq '';
 
   return join '', map { " $_=\"" . $params->{$_} . '"' } keys %$params;
 }

@@ -16,9 +16,11 @@ use Time::HiRes 'tv_interval';
 use Digest::MD5;
 
 use Xerl::Base;
+
 use Xerl::Page::Configure;
 use Xerl::Page::Content;
 use Xerl::Page::Menu;
+
 use Xerl::Tools::FileIO;
 
 use constant RECURSIVE => 1;
@@ -160,20 +162,6 @@ sub parsetemplate($$;$) {
   return undef;
 }
 
-# Static sub
-sub PARSELINE($$$;$) {
-  my Xerl::Page::Configure $config = $_[0];
-  my ( $sep, $line, $foundflag ) = @_[ 1 .. 3 ];
-
-  $$line =~ s/$sep(!)?(.+?)$sep/
-     defined $1 ? `$2` :
-       (ref $config->getval($2) eq 'ARRAY') 
-      ? join '', @{$config->getval($2)} :
-      $config->getval($2)/eg and $$foundflag = 1;
-
-  return undef;
-}
-
 sub print($;$) {
   my Xerl::Page::Templates $self   = $_[0];
   my Xerl::Page::Configure $config = $self->get_config();
@@ -187,6 +175,7 @@ sub print($;$) {
       $line =~ s#^Content-Type.*#Content-Type: text/plain#i;
       $hflag = 0;
     }
+
     $line =~ s/  +/ /g;
     redo if !$flag and $line =~ s/<perl>((?:.|\n)*?)<\/perl>/eval $1/ego;
 
@@ -212,8 +201,23 @@ sub print($;$) {
     $line =~ s/!!LT!!/</g;
     $line =~ s/!!GT!!/>/g;
     $line =~ s#!!URL\((.+?)\)!!#<a href="$1">$1</a>#g;
+
     print $line;
   }
+
+  return undef;
+}
+
+# Static sub
+sub PARSELINE($$$;$) {
+  my Xerl::Page::Configure $config = $_[0];
+  my ( $sep, $line, $foundflag ) = @_[ 1 .. 3 ];
+
+  $$line =~ s/$sep(!)?(.+?)$sep/
+     defined $1 ? `$2` :
+       (ref $config->getval($2) eq 'ARRAY') 
+      ? join '', @{$config->getval($2)} :
+      $config->getval($2)/eg and $$foundflag = 1;
 
   return undef;
 }
