@@ -10,6 +10,8 @@ package Xerl;
 use strict;
 use warnings;
 
+use v5.14.0;
+
 use CGI::Carp 'fatalsToBrowser';
 use Time::HiRes 'gettimeofday';
 
