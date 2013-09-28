@@ -20,7 +20,7 @@ perltidy:
 	find . -name \*.pm | xargs perltidy -i=2 -b 
 	find . -name \*.bak | xargs rm -f
 todo:
-	grep -R TODO . | grep -v Makefile | grep -v .git
+	grep -R TODO . | grep -E -v '(\.git|Makefile)' 
 warn: 
 	perl index.pl 2> warnings
 	less warnings
