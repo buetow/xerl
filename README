@@ -26,8 +26,8 @@ If no real ret val, set undef; explicitly
 sub foo() {
   # Do some stuff
 ...
-# Set explicit undef ret value
-return undef;
+  # Set explicit undef ret value
+  return undef;
 }
 
 Private subs use _ as its prefix and are called only from the current package.
@@ -37,34 +37,34 @@ package Xerl::Foo::Bla;
 .
 
 sub _iamprivate($) {
-my Xerl::Foo:Bla $self = $_[0];
-.
-.
+  my Xerl::Foo:Bla $self = $_[0];
+  .
+  .
 }
 
 sub iampublic($) {
-my Xerl::Foo:Bla $self = $_[0];
-$self->_iamprivate();
-return undef;
+  my Xerl::Foo:Bla $self = $_[0];
+  $self->_iamprivate();
+  return undef;
 }
 
 Static subs (not OOP) are in CAPITAL letters. 
 
 sub IAMSTATIC($) {
-print shift;
-return 'Hello World';
+  print shift;
+  return 'Hello World';
 }
 
 sub iamdynamic($) {
-my Xerl::Foo:Bla $self = $_[0];
-return Xerl::Foo::Bla::IAMSTATIC( $self->get_somevalue() );
+  my Xerl::Foo:Bla $self = $_[0];
+  return Xerl::Foo::Bla::IAMSTATIC( $self->get_somevalue() );
 }
 
 Static private subs start with _ and are written in CAPITAL letters
 
 sub _IAMSTATICPRIVATE() { 
-.
-.
+  .
+  .
 }
 
 Use Pidy to automaically restyle the code! (make perltidy)
