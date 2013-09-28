@@ -10,6 +10,8 @@ package UNIVERSAL;
 use strict;
 use warnings;
 
+use 5.10.0;
+
 use Data::Dumper;
 
 sub new ($;) {
@@ -100,12 +102,12 @@ sub AUTOLOAD {
 
   }
   elsif ( $auto =~ /.*::dumper$/ ) {
-    print Dumper @_;
+    say Dumper @_;
     return undef;
 
   }
   else {
-    print "$auto is not a method of $self or UNIVERSAL\n";
+    say "$auto is not a method of $self or UNIVERSAL";
   }
 
   return $self;

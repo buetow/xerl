@@ -10,6 +10,8 @@ package Xerl::Page::Parameter;
 use strict;
 use warnings;
 
+use v5.10.0;
+
 use Xerl::Base;
 use Xerl::Main::Global;
 use Xerl::Page::Configure;

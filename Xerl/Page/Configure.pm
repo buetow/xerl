@@ -10,6 +10,8 @@ package Xerl::Page::Configure;
 use strict;
 use warnings;
 
+use v5.10.0;
+
 use Xerl::Base;
 use Xerl::Tools::FileIO;
 use Xerl::XML::Element;

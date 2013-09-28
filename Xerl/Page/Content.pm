@@ -10,6 +10,8 @@ package Xerl::Page::Content;
 use strict;
 use warnings;
 
+use v5.10.0;
+
 use Xerl::Base;
 
 use Xerl::XML::Reader;
@@ -73,8 +75,6 @@ sub _insertrules($$$) {
   my Xerl::Page::Configure $config = $self->get_config();
   my $nonewlines                   = 0;
 
-  #$element->print();
-  #
   # Don't interate through the XML childs if we have a leaf node.
   return () unless ref $element->get_array() eq 'ARRAY';
   my ( $name, $rule, @content, $text, $params );
@@ -102,8 +102,6 @@ sub _insertrules($$$) {
 
       }
       elsif ( lc $name eq 'perl' ) {
-
-        # Perl content will be interpreted by Xerl::Page::Templates::print later
         push @content, '<perl>', $text, '</perl>';
 
       }

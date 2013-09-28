@@ -7,6 +7,11 @@
 
 package Xerl::Main::Global;
 
+use strict;
+use warnings;
+
+use v5.10.0;
+
 sub SHUTDOWN {
   exit 0;
 
@@ -15,7 +20,7 @@ sub SHUTDOWN {
 }
 
 sub DEBUG {
-  print 'Debug::', @_, "\n";
+  say "Debug::@_";
 
   return undef;
 }
@@ -40,7 +45,7 @@ sub PLAIN {
 
 sub REDIRECT ($) {
   my $location = shift;
-  print "Status: 301 Moved Permanantly\n";
+  say "Status: 301 Moved Permanantly";
   print "Location: $location\n\n";
   return undef;
 }

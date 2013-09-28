@@ -10,6 +10,8 @@ package Xerl::Page::Rules;
 use strict;
 use warnings;
 
+use v5.10.0;
+
 use Xerl::Base;
 use Xerl::XML::Element;
 use Xerl::Page::Configure;
