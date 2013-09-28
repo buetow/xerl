@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
   <pagetitle>Easy Stack Calculator</pagetitle>
-   <important>
+  <important>
     <text>
-     <strong>Important notice:</strong>
-     <noop>The development of the Easy Stack Calculator has been stalled. There will be no further development on this project. This project always was a proof of concept only. Bugs are not gonna be fixed. For current programming projects please visit </noop>
-     <hyperlink>http://dev.buetow.org</hyperlink>	
-	 <noop> and enjoy :)</noop>
+      <strong>Important notice:</strong>
+      <noop>The development of the Easy Stack Calculator has been stalled. There will be no further development on this project. This project always was a proof of concept only. Bugs are not gonna be fixed. For current programming projects please visit </noop>
+      <hyperlink>http://dev.buetow.org</hyperlink> 
+      <noop> and enjoy :)</noop>
     </text>
-   </important>
+  </important>
   <text>
     <noop>Calculator is a very portable text based calculator program written in C++. If you wanna stay informed, please subscibe at </noop>
-     <namedlink href="http://freecode.com/projects/stack-calculator">freecode</namedlink>
+    <namedlink href="http://freecode.com/projects/stack-calculator">freecode</namedlink>
     <noop> to the stack-calculator project. You will receive an email then a new release has been made. However, I do not plan to release any new versions in the near future. This calculator is obsolet and may be replaced by the </noop>
-     <namedlink href="http://fype.buetow.org">Fype Language</namedlink>
+    <namedlink href="http://fype.buetow.org">Fype Language</namedlink>
     <noop> which can do arithmetic calculations too.</noop>
   </text>
   <textheader>Version 0.6 (Sep 20th 2005)</textheader>
