@@ -2,7 +2,7 @@
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
-# This is free software, you may use it and distribute it under the same 
+# This is free software, you may use it and distribute it under the same
 # terms as Perl itself.
 
 package Xerl::XML::SAXHandler;
@@ -20,39 +20,38 @@ use Xerl::Base;
 use Xerl::XML::Element;
 
 sub start_document {
-  my ($self, $doc) = @_;
+  my ( $self, $doc ) = @_;
 
-  $self->{xerl}{root} = undef;
+  $self->{xerl}{root}    = undef;
   $self->{xerl}{current} = undef;
-  $self->{xerl}{stack} = [];
-
+  $self->{xerl}{stack}   = [];
 
   return undef;
 }
 
 sub start_element {
-  my ($self, $doc) = @_;
+  my ( $self, $doc ) = @_;
   my $x = $self->{xerl};
 
-  if (defined $x->{current}) {
-    push @{$x->{stack}}, $x->{current};
+  if ( defined $x->{current} ) {
+    push @{ $x->{stack} }, $x->{current};
     $x->{root} = $x->{current} unless defined $x->{root};
   }
 
-  my %params = map { $_->{Name} => $_->{Value} } values %{$doc->{Attributes}};
+  my %params = map { $_->{Name} => $_->{Value} } values %{ $doc->{Attributes} };
 
   $x->{current} = Xerl::XML::Element->new();
   $x->{current}->set_text('');
-  $x->{current}->set_name($doc->{Name});
-  $x->{current}->set_params(\%params) if %params;
+  $x->{current}->set_name( $doc->{Name} );
+  $x->{current}->set_params( \%params ) if %params;
 
-  ${$x->{stack}}[-1]->push_array($x->{current}) if @{$x->{stack}};
+  ${ $x->{stack} }[-1]->push_array( $x->{current} ) if @{ $x->{stack} };
 
   return undef;
 }
 
 sub characters {
-  my ($self, $doc) = @_;
+  my ( $self, $doc ) = @_;
   my $x = $self->{xerl};
 
   my $data = $doc->{Data};
@@ -66,10 +65,10 @@ sub characters {
 }
 
 sub end_element {
-  my ($self, $doc) = @_;
+  my ( $self, $doc ) = @_;
   my $x = $self->{xerl};
 
-  $x->{current} = pop @{$x->{stack}};
+  $x->{current} = pop @{ $x->{stack} };
 
   return undef;
 }

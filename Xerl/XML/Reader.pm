@@ -2,7 +2,7 @@
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
-# This is free software, you may use it and distribute it under the same 
+# This is free software, you may use it and distribute it under the same
 # terms as Perl itself.
 
 package Xerl::XML::Reader;
@@ -21,7 +21,8 @@ sub open($) {
 
   if ( -f $self->get_path() ) {
     return 0;
-  } else {
+  }
+  else {
     return 1;
   }
 }
@@ -30,13 +31,11 @@ sub parse() {
   my Xerl::XML::Reader $self = $_[0];
   my $sax_handler = Xerl::XML::SAXHandler->new();
 
-  my $parser = XML::SAX::ParserFactory->parser(
-    Handler => $sax_handler
-  );
+  my $parser = XML::SAX::ParserFactory->parser( Handler => $sax_handler );
 
-  $parser->parse_uri($self->get_path());
+  $parser->parse_uri( $self->get_path() );
 
-  $self->set_root($sax_handler->{xerl}{root});
+  $self->set_root( $sax_handler->{xerl}{root} );
 
   return undef;
 }

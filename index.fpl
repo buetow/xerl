@@ -4,7 +4,7 @@
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
-# This is free software, you may use it and distribute it under the same 
+# This is free software, you may use it and distribute it under the same
 # terms as Perl itself.
 
 use strict;
