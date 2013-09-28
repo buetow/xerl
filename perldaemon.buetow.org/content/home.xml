@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
-  <rimg href="?document=images/perl.png" title="Perl" /> 
+  <rimg href="?document=images/perl.png" title="Perl"/>
   <pagetitle>PerlDaemon</pagetitle>
   <textheader>Writing your own daemon...</textheader>
   <text>PerlDaemon is a minimal linux/unix daemon programmed in Perl. It can be extended to fit any task...</text>
@@ -17,4 +17,3 @@
     <namedlink href="http://freecode.com/projects/perldaemon">subscribe via freecode.</namedlink>
   </text>
 </content>
-

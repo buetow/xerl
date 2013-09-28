@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>License</pagetitle>
   <text>
@@ -12,14 +12,16 @@
       as published by the Free Software Foundation; either version 2
       of the License, or (at your option) any later version.
     </noop>
-    <newline /> <newline />
+    <newline/>
+    <newline/>
     <noop>
       This program is distributed in the hope that it will be useful,
       but WITHOUT ANY WARRANTY; without even the implied warranty of
       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
       GNU General Public License for more details.
     </noop>
-    <newline /> <newline />
+    <newline/>
+    <newline/>
     <noop>
       You should have received a copy of the GNU General Public License
       along with this program; if not, write to the Free Software
@@ -27,4 +29,3 @@
     </noop>
   </text>
 </content>
-

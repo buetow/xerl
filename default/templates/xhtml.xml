@@ -1,34 +1,33 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content type="text/html">
-<tag>!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</tag>
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>%%title%%</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
-    <meta name="author" content="Paul Buetow" />
-    <meta name="publisher" content="Xerl Template Engine (xerl.buetow.org)" />
-    <meta name="distribution" content="global" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="en, english" />
-    <meta name="revisit-after" content="7 days" />
-    <link rel="stylesheet" type="text/css" href="%%stylesurl%%$$style$$" />
-  </head>
-  <body>
-    <div class="header">
-      <type class="bold">A fortune quote: </type>
-      <type class="italic">$$!/usr/games/fortune -s$$</type>
-    </div>
-    <div class="main">
-      <navigation />
-      <noop>%%content%%</noop>
-      <div class="footer">
-        <noop>Generated in !!TIME!!s</noop> 
-        <noop>| Powered by </noop>
-        <namedlink href="http://xerl.buetow.org">Xerl</namedlink>
-        <noop>| Xerl templates managed via Puppet/Git</noop>
+  <tag>!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</tag>
+  <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+      <title>%%title%%</title>
+      <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+      <meta name="author" content="Paul Buetow"/>
+      <meta name="publisher" content="Xerl Template Engine (xerl.buetow.org)"/>
+      <meta name="distribution" content="global"/>
+      <meta name="robots" content="index, follow"/>
+      <meta name="language" content="en, english"/>
+      <meta name="revisit-after" content="7 days"/>
+      <link rel="stylesheet" type="text/css" href="%%stylesurl%%$$style$$"/>
+    </head>
+    <body>
+      <div class="header">
+        <type class="bold">A fortune quote: </type>
+        <type class="italic">$$!/usr/games/fortune -s$$</type>
       </div>
-    </div>
-  </body>
-</html>
+      <div class="main">
+        <navigation/>
+        <noop>%%content%%</noop>
+        <div class="footer">
+          <noop>Generated in !!TIME!!s</noop>
+          <noop>| Powered by </noop>
+          <namedlink href="http://xerl.buetow.org">Xerl</namedlink>
+          <noop>| Xerl templates managed via Puppet/Git</noop>
+        </div>
+      </div>
+    </body>
+  </html>
 </content>
-

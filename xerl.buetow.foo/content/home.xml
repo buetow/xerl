@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>It's just xerl.buetow.foo</pagetitle>
   <important>
     <text>
       <strong>Important notice:</strong>
-      <noop>The domain </noop> <strong>.buetow.foo</strong>
+      <noop>The domain </noop>
+      <strong>.buetow.foo</strong>
       <noop>contains only development, test and PoC stuff. Replace </noop>
-      <strong>$shomething.buetow.foo</strong> <noop> with </noop> 
-      <strong>$something.buetow.org</strong> <noop> (if exists) to get the stable stuff.</noop>
+      <strong>$shomething.buetow.foo</strong>
+      <noop> with </noop>
+      <strong>$something.buetow.org</strong>
+      <noop> (if exists) to get the stable stuff.</noop>
     </text>
   </important>
   <text>Welcome to my small humble website. My real name is Paul Buetow and I am a full time Linux System Administrator managing more than 1500 servers at work (in a team). In my spare time I drive buetow.org and also spend my time in system programming tasks.</text>

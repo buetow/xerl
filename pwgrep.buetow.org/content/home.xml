@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>pwgrep</pagetitle>
   <textheader>Managing passwords...</textheader>
   <text>
-    <rimg href="?document=images/gnupg.png" title="GnuPG" /> 
+    <rimg href="?document=images/gnupg.png" title="GnuPG"/>
     <noop>In order to manage my passwords I wrote myself a small bash/awk script which manages a database file using encryption of GnuPG. Those are the benefits of pwgrep:</noop>
   </text>
   <enumeration>
@@ -23,4 +23,3 @@
     <namedlink href="http://freecode.com/projects/pwgrep">subscribe via freecode.</namedlink>
   </text>
 </content>
-

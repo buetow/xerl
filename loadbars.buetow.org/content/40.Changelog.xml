@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Changelog</pagetitle>
   <text>This is the changelog file of the current master branch:</text>
   <pretext>
-  <perl>
+    <perl>
  	use LWP::Simple;
 	get("http://web.buetow.org/git/?p=loadbars.git;a=blob_plain;f=debian/changelog;hb=HEAD");
   </perl>
   </pretext>
 </content>
-

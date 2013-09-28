@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Screenshots</pagetitle>
   <text>
     <noop>Here some Screenshots of Calculator running on a Microsoft Windows box:</noop>
-    <newline /> <newline />
+    <newline/>
+    <newline/>
     <namedlink href="%%imagesurl%%v0.1.png">v0.1.png</namedlink>
-    <newline /> <newline />
+    <newline/>
+    <newline/>
     <namedlink href="%%imagesurl%%v0.2.png">v0.2.png</namedlink>
-    <newline /> <newline />
+    <newline/>
+    <newline/>
     <namedlink href="%%imagesurl%%v0.4.png">v0.4.png</namedlink>
-  </text>  
+  </text>
 </content>

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <textheader>My computer stuff weblog</textheader>
   <text>
-	<namedlink href="http://comp.buetow.org">http://comp.buetow.org</namedlink>
+    <namedlink href="http://comp.buetow.org">http://comp.buetow.org</namedlink>
   </text>
   <textheader>My normal stuff weblog</textheader>
   <text>
-	<namedlink href="http://blog.buetow.org">http://blog.buetow.org</namedlink>
+    <namedlink href="http://blog.buetow.org">http://blog.buetow.org</namedlink>
   </text>
 </content>

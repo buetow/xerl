@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <config>
   <!-- Static variables are written like %%varname%% -->
   <!-- Dynamic variables are written like $$varname$$ -->
@@ -22,7 +22,7 @@
       <pagetitle>[h1]</pagetitle>
       <textheader>[h2]</textheader>
       <textsubheader>[h3]</textsubheader>
-      <news start="yes"></news>
+      <news start="yes"/>
       <important>[div class="important"]</important>
       <text>[p]</text>
       <type>[span class="@@class@@"]</type>
@@ -59,7 +59,7 @@
       <enumitem>[li]</enumitem>
       <enumitemna>[li]</enumitemna>
       <code>[pre]</code>
-      <quote></quote>
+      <quote/>
     </rss2.feed>
-  </rules> 
+  </rules>
 </config>

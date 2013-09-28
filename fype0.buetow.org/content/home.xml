@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>The Fype0 Language</pagetitle>
   <textheader>Free, small, simple...</textheader>
@@ -6,22 +6,21 @@
     <text>
       <strong>Important notice:</strong>
       <noop>The development of this project has been stalled. There will be no further development on this project. This project always was a proof of concept only. Bugs are not gonna be fixed. For current programming projects please visit </noop>
-      <hyperlink>http://dev.buetow.org</hyperlink>  
+      <hyperlink>http://dev.buetow.org</hyperlink>
       <noop> and enjoy :)</noop>
     </text>
   </important>
   <text>
-    <limg href="?document=images/fype.png" title="Fype" /> 
-	<noop>... is an attempt to build an open source scripting language from scratch (just for fun) using C99 on the FreeBSD operating system. Fypes focus is to use as few dependencies on 3rd party libraries as possible and to use as less code as possible and a very small execution binary! Fype should be portable to many different operating systems as well.  The first release will be also available at least for Linux and maybe other UNIX alike operating systems. Fype itself is using the BSD license. For more infos please consult the</noop>
-   <namedlink href="https://ssl.buetow.org/repos/fype/trunk/README">README</namedlink>
+    <limg href="?document=images/fype.png" title="Fype"/>
+    <noop>... is an attempt to build an open source scripting language from scratch (just for fun) using C99 on the FreeBSD operating system. Fypes focus is to use as few dependencies on 3rd party libraries as possible and to use as less code as possible and a very small execution binary! Fype should be portable to many different operating systems as well.  The first release will be also available at least for Linux and maybe other UNIX alike operating systems. Fype itself is using the BSD license. For more infos please consult the</noop>
+    <namedlink href="https://ssl.buetow.org/repos/fype/trunk/README">README</namedlink>
     <noop> file! And also see the </noop>
-   <namedlink href="https://ssl.buetow.org/repos/fype/trunk/TODO">TODO</namedlink>
-	<noop> file so you can see whats coming up next :). The latest development version (trunk) is </noop>
-	<perl>
+    <namedlink href="https://ssl.buetow.org/repos/fype/trunk/TODO">TODO</namedlink>
+    <noop> file so you can see whats coming up next :). The latest development version (trunk) is </noop>
+    <perl>
 		use LWP::Simple;
 		get('https://ssl.buetow.org/repos/fype/trunk/docs/version.txt');
 	</perl>
-	<noop> and there is no stable branch available yet.</noop>
+    <noop> and there is no stable branch available yet.</noop>
   </text>
 </content>
-

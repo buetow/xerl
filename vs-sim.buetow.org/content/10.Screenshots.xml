@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
-	<pagetitle>Screenshots</pagetitle>
-	<text>This section contains a few obligatory screenshots of the distributed systems simulator. Click on one of them in order to enlarge.</text>
-		<picture desc="Screenshot 1" href="?document=images/vs-ss1.jpg" src="?document=images/vs-ss1-small.jpg" title="VS" />
-	<picture desc="Screenshot 2" href="?document=images/vs-ss2.jpg" src="?document=images/vs-ss2-small.jpg" title="VS" />
-	<picture desc="Screenshot 3" href="?document=images/vs-ss3.jpg" src="?document=images/vs-ss3-small.jpg" title="VS" />
-	<picture desc="Screenshot 4" href="?document=images/vs-ss4.jpg" src="?document=images/vs-ss4-small.jpg" title="VS" />
+  <pagetitle>Screenshots</pagetitle>
+  <text>This section contains a few obligatory screenshots of the distributed systems simulator. Click on one of them in order to enlarge.</text>
+  <picture desc="Screenshot 1" href="?document=images/vs-ss1.jpg" src="?document=images/vs-ss1-small.jpg" title="VS"/>
+  <picture desc="Screenshot 2" href="?document=images/vs-ss2.jpg" src="?document=images/vs-ss2-small.jpg" title="VS"/>
+  <picture desc="Screenshot 3" href="?document=images/vs-ss3.jpg" src="?document=images/vs-ss3-small.jpg" title="VS"/>
+  <picture desc="Screenshot 4" href="?document=images/vs-ss4.jpg" src="?document=images/vs-ss4-small.jpg" title="VS"/>
 </content>
-

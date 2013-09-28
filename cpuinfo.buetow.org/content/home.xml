@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
-  <rimg href="?document=images/cpuinfo.png" title="CPUInfo" alt="CPUInfo" /> 
+  <rimg href="?document=images/cpuinfo.png" title="CPUInfo" alt="CPUInfo"/>
   <pagetitle>CPUInfo</pagetitle>
   <textheader>CPU, who are you?...</textheader>
   <text>
@@ -9,4 +9,3 @@
     <namedlink href="http://freecode.com/projects/gawk-cpuinfo">subscribe on freecode.</namedlink>
   </text>
 </content>
-

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Easy Stack Calculator</pagetitle>
   <important>
     <text>
       <strong>Important notice:</strong>
       <noop>The development of the Easy Stack Calculator has been stalled. There will be no further development on this project. This project always was a proof of concept only. Bugs are not gonna be fixed. For current programming projects please visit </noop>
-      <hyperlink>http://dev.buetow.org</hyperlink> 
+      <hyperlink>http://dev.buetow.org</hyperlink>
       <noop> and enjoy :)</noop>
     </text>
   </important>
@@ -30,7 +30,7 @@
   <enumeration>
     <enumitem>
       <noop>Equations like (...)op... can be solved now. Here, op is an operator. Before, ...op(...) only worked.</noop>
-      <newline />
+      <newline/>
       <noop>Example: (4\+3)^(8*7)!</noop>
     </enumitem>
     <enumitem>The ^ operator now only uses whole numbers as an exponent.</enumitem>

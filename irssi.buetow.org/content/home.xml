@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Irssi plugins written in Perl</pagetitle>
   <text>
     <noop>Here are a "few" plugins for the </noop>
-	<namedlink href="http://www.irssi.org">Irssi</namedlink>
-	<noop> IRC client written in the </noop>
-	<namedlink href="http://www.perl.org">Perl</namedlink>
-	<noop> programming language. Use the Plugins link above to see the descriptions or select SVN in order to fetch them from the subversion repository.</noop>
+    <namedlink href="http://www.irssi.org">Irssi</namedlink>
+    <noop> IRC client written in the </noop>
+    <namedlink href="http://www.perl.org">Perl</namedlink>
+    <noop> programming language. Use the Plugins link above to see the descriptions or select SVN in order to fetch them from the subversion repository.</noop>
   </text>
 </content>

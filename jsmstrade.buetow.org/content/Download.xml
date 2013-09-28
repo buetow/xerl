@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Download</pagetitle>
   <textheader>FTP</textheader>
   <text>
-   <namedlink href="ftp://ftp.buetow.org/pub/JSMSTrade">ftp://ftp.buetow.org/pub/JSMSTrade</namedlink>
+    <namedlink href="ftp://ftp.buetow.org/pub/JSMSTrade">ftp://ftp.buetow.org/pub/JSMSTrade</namedlink>
   </text>
   <textheader>Git</textheader>
   <text>JSMSTrade can also be downloaded from Git. Use the following steps to do so:</text>
-  <pretext>git clone git://git.buetow.org/jsmstrade.git</pretext> 
+  <pretext>git clone git://git.buetow.org/jsmstrade.git</pretext>
 </content>
-
