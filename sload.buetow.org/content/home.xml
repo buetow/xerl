@@ -8,5 +8,10 @@
     <namedlink href="http://www.haskell.org">Haskell!</namedlink>
     <noop>SLoad is an abbreviation for serverload. SLoad uses basic parameters (current CPU peak, current requests per second) for approximating the need of additional servers.</noop> 
   </text>
+  <text>In order to get started check it out from the Subversion repository. You also need to install GHC (the Haskell compiler).</noop>
+  <code>
+    pbuetow@earth:~/svn/sload/trunk$ make
+    ghc SLoad.hs -o sload
+  </code> 
 </content>
 
