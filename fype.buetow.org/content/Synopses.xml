@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
   <pagetitle>Fype synopses / options</pagetitle>
-  <textheader>Synopses</pagetitle>
+  <textheader>Synopses</textheader>
   <text>This are the Fype synopses of the concurrent svn version:</text>
   <pretext>
     <perl>
