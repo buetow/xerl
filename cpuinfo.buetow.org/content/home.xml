@@ -2,7 +2,7 @@
 <content>
   <rimg href="?document=images/cpuinfo.png" title="CPUInfo" alt="CPUInfo" /> 
   <pagetitle>CPUInfo</pagetitle>
-  <textheader>CPU, who are you?...</pagetitle>
+  <textheader>CPU, who are you?...</textheader>
   <text>
     <noop>CPUInfo is a program written in GNU AWK for Linux that can be used to obtain some infos about your CPU. This program is a very humble one, but enjoy it!</noop>
     <noop>If you wanna stay in touch please </noop>
