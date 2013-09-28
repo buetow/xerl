@@ -13,12 +13,10 @@ use warnings;
 use v5.14.0;
 
 use Xerl::Base;
-
-use Xerl::XML::Reader;
-use Xerl::XML::Element;
-
 use Xerl::Page::Rules;
 use Xerl::Setup::Configure;
+use Xerl::XML::Element;
+use Xerl::XML::Reader;
 
 sub parse($) {
   my Xerl::Page::Content $self     = $_[0];

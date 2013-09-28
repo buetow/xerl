@@ -16,11 +16,9 @@ use Time::HiRes 'tv_interval';
 use Digest::MD5;
 
 use Xerl::Base;
-
-use Xerl::Setup::Configure;
 use Xerl::Page::Content;
 use Xerl::Page::Menu;
-
+use Xerl::Setup::Configure;
 use Xerl::Tools::FileIO;
 
 use constant RECURSIVE => 1;

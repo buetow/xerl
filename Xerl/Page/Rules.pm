@@ -13,8 +13,8 @@ use warnings;
 use v5.14.0;
 
 use Xerl::Base;
-use Xerl::XML::Element;
 use Xerl::Setup::Configure;
+use Xerl::XML::Element;
 
 sub parse($) {
   my Xerl::Page::Rules $self       = $_[0];

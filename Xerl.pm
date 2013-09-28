@@ -15,11 +15,11 @@ use Time::HiRes 'gettimeofday';
 
 use Xerl::Base;
 use Xerl::Main::Global;
-use Xerl::Setup::Configure;
 use Xerl::Page::Document;
+use Xerl::Page::Templates;
+use Xerl::Setup::Configure;
 use Xerl::Setup::Parameter;
 use Xerl::Setup::Request;
-use Xerl::Page::Templates;
 
 sub run($) {
   my Xerl $self = $_[0];

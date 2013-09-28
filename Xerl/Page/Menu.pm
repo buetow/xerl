@@ -12,6 +12,7 @@ use warnings;
 
 use v5.14.0;
 
+use Xerl::Base;
 use Xerl::Setup::Configure;
 use Xerl::Tools::FileIO;
 use Xerl::XML::Element;

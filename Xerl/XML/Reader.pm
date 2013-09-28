@@ -10,6 +10,8 @@ package Xerl::XML::Reader;
 use strict;
 use warnings;
 
+use v5.14.0;
+
 use XML::SAX;
 
 use Xerl::Base;
