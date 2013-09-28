@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
 <content>
-    <pagetitle>Examples</pagetitle>
-     <noop>Go to </noop>
-     <namedlink href="http://web.buetow.org/git/?p=fype.git;a=tree;f=examples;h=ee051fd647807523887213aae68e060403041319;hb=refs/heads/build-009669">gitweb</namedlink>
-     <noop> to browse the all the code examples.</noop>
-    </text>
+  <pagetitle>Examples</pagetitle>
+  <text>
+    <noop>Go to </noop>
+    <namedlink href="http://web.buetow.org/git/?p=fype.git;a=tree;f=examples;h=ee051fd647807523887213aae68e060403041319;hb=refs/heads/build-009669">gitweb</namedlink>
+    <noop> to browse the all the code examples.</noop>
+  </text>
 </content>
 
 
