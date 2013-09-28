@@ -8,47 +8,5 @@
     <namedlink href="http://www.haskell.org">Haskell!</namedlink>
     <noop>SLoad is an abbreviation for serverload. SLoad uses basic parameters (current CPU peak, current requests per second) for approximating the need of additional servers.</noop> 
   </text>
-  <text>In order to get started check it out from the Subversion repository. You also need to install GHC (the Haskell compiler).</noop>
-  <code>
-    pbuetow@earth:~/svn/sload/trunk$ make
-    ghc SLoad.hs -o sload
-  </code> 
-  <text>Lets imagine you own an apache server cluster which consists of 12 physical servers. The current maximum CPU usage (CPU peak) is 70%. A single server of the cluster handles at the moment 323 requests per seconds (request peak). And you want to know "does my farm handle 5000000 more requests per day?":</text>
-  <code>
-    pbuetow@earth:~/svn/sload/trunk$ ./sload --name=serverfarm.example.net --servers=12 \
-    --cpuPeak=70 --peak=323 --requests=5000000
-    Requests : 5000000.0
-    Percentage of req. to use: 100.0
-    Approximated peak: 277.77777 requests per second (Peak =  2 * (5000000.0/(60 * 60 * 10)))
-    serverfarm.example.net (12.0 Servers):
-    currentPeakPerServer: 323.0
-    currentCpuPeakPerServer: 70.0
-    currentPeakPerFarm: 3876.0
-    possiblePeakPerFarm: 5038.8
-    possibleAddPeak (possiblePeakPerFarm - currentPeakPerFarm): 1162.7998
-    addPeakPerServer: 23.148148
-    addPeakPerFarm: 277.77777
-    leftPeak (possibleAddPeak - addPeakPerFarm): 885.02203
-    currentCpuPerPeak (currentCpuPeakPerServer / currentPeakPerServer): 0.21671827
-    neededCpuPeakPerServer (currentCpuPeakPerServer + addPeakPerServer * currentCpuPerPeak): \
-    75.016624
-  </code>
-  <text>The approximated peak is being calculated using 2 * (requestsPerDay/10h). This formular has been well-tried and tested. It is not proven that this formular is always right, but it is more a 'worst case' approach. Which is ok for calculating server loads as long as you don't do a 'best case' calculation which may lead to a server overload. The value of neededCpuPeakPerServer shows if the cluster will handle the additional amount of requests. If neededCpuPeakPerSerer is less than 85 it should be ok. A value between 85 and 100 may be critical. A value more than 100 shows that there is definitive not enough power behind your cluster.</text>
-  <text>
-    <enumeration>
-      <enumitem>Requests: Requests per day your server should handle additionally to the current server load. You want to find out if your server cluster will handle this.</enumitem>
-      <enumitem>Percentage of req. to use: If you use 50, only half of "Requests" will be used in the following calculations.</enumitem>.
-      <enumitem>currentPeakPerServer: Requests per seconds a single server of the cluster handles (peak)</enumitem>
-      <enumitem>currentCpuPeakPerServer: The maximum (peak) CPU load of one of your servers.</enumitem>
-      <enumitem>currentPeakPerFarm: currentPeakPerServer * number of servers in the cluster.</enumitem>
-      <enumitem>possiblePeakPerFarm: How many requests per seconds your farm may handle (depending on the CPU % which is left)</enumitem>
-      <enumitem>possibleAddPeak: How many requests per seconds your farm may handle additionally to the CPU usage (depending on the CPU % which is left)</enumitem>
-      <enumitem>addPeakPerServer: How many requests per seconds a single server of your cluster may handle additionally.</enumitem>
-      <enumitem>addPeakPerFarm: addPeakPerServer * number of servers in the cluster.</enumitem>
-      <enumitem>leftPeak: How many requests per second can be handled more even after adding "Requests" to the cluster.</enumitem>
-      <enumitem>currentCpuPerPeak: How many CPU % is needed for a single request.</enumitem>
-      <enumitem>neededCpuPeakPerServer: How many CPU % (peak) is needed for a single server of the cluster after adding "Requests".</enumitem>
-    </enumeration>
-  </text>
 </content>
 
