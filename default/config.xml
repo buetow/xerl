@@ -18,6 +18,34 @@
     <!-- Possible special-vars: -->
     <!--  @@text@@ = The content text of the current content-tag -->
     <!--  @@paramname@@ = The value of the specified tag parameter -->
+    <html5>
+      <pagetitle>[h1]</pagetitle>
+      <textheader>[h2]</textheader>
+      <textsubheader>[h3]</textsubheader>
+      <important>[div class="important"]</important>
+      <text>[p]</text>
+      <type>[span class="@@class@@"]</type>
+      <quote>[pre class="quote"]</quote>
+      <pretext>[p][pre]</pretext>
+      <hyperlink>[a href="@@text@@"]</hyperlink>
+      <namedlink>[a href="@@href@@"]</namedlink>
+      <picture>[a href="@@href@@"][img align="center" border="1" alt="@@desc@@" title="@@desc@@" src="@@src@@"]</picture>
+      <cimg start="yes">[img border="0" alt="@@title@@" title="@@title@@" src="@@href@@" /]</cimg>
+      <cimglink start="yes">[center][a href="@@link@@"][img alt="@@title@@" title="@@title@@" src="@@href@@" /][/a][/center]</cimglink>
+      <rimg start="yes">[img border="0" alt="@@title@@" title="@@title@@" class="rimg" src="@@href@@" align="right" /]</rimg>
+      <rimglink start="yes">[a href="@@link@@"][img border="0" alt="@@title@@" title="@@title@@" class="rimg" src="@@href@@" align="right" /][/a]</rimglink>
+      <limg start="yes">[img border="0" alt="@@title@@" title="@@title@@" class="limg" src="@@href@@" align="left" /]</limg>
+      <newline start="yes">[br /]</newline>
+      <menu>[div class="menu"]</menu>
+      <menuitem>[a class="menuitem" href="@@link@@$$params$$"]</menuitem>
+      <activemenuitem>[a class="activemenuitem" href="@@link@@$$params$$"]</activemenuitem>
+      <enumeration>[ul]</enumeration>
+      <enumitem>[li]</enumitem>
+      <enumitemna>[li class="na"]</enumitemna>
+      <incsep>[div class="incsep"]</incsep>
+      <code>[pre class="code"]</code>
+      <javascript>[script type="text/javascript" language="JavaScript"]</javascript>
+    </html5>
     <xhtml>
       <pagetitle>[h1]</pagetitle>
       <textheader>[h2]</textheader>
