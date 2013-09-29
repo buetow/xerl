@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Imprint</pagetitle>
-  <noop>In case you have work for me or have any other comments to pass, please choose your contact method...</noop>
+  <text>In case you have work for me or have any other comments to pass, please choose your contact method...</text>
   <enumeration>
     <enumitem>
       <noop>
