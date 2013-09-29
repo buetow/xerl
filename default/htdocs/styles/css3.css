@@ -51,6 +51,7 @@ html {
 
 p {
   padding: 1px 0;
+  text-align: justify;
 }
 
 span.italic {
