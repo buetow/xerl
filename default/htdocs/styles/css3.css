@@ -62,17 +62,15 @@ span.bold {
 }
 
 h1 {
-  font-family: Georgia, Serif;
+  font-family: 'Conv_VarelaRound-Regular', Georgia, Serif;
   padding-left: 10px;
   font-size: 30px;
-  text-shadow: 3px 3px 3px #BBBBBB;
 }
 
 h2, h3 {
-  font-family: Georgia, Serif;
+  font-family: 'Conv_VarelaRound-Regular', Georgia, Serif;
   padding-left: 10px;
   padding-right: 10px;
-  text-shadow: 3px 3px 3px #BBBBBB;
 }
 
 p {
