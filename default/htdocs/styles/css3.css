@@ -1,5 +1,6 @@
 body {
-  font-family: Georgia, Serif;
+  font-family: Varela Round, Georgia, Serif;
+  src: url(?document=fonts/VarelaRound-Regular.ttf);
   background-color: #19495f;
   height: 100%;
   max-width: 900px;
@@ -54,12 +55,20 @@ span.bold {
 }
 
 h1 {
+  font-family: Georgia, Serif;
   padding-left: 10px;
   font-size: 30px;
   text-shadow: 3px 3px 3px #BBBBBB;
 }
 
-h2, h3, p {
+h2, h3 {
+  font-family: Georgia, Serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-shadow: 3px 3px 3px #BBBBBB;
+}
+
+p {
   padding-left: 10px;
   padding-right: 10px;
 }
