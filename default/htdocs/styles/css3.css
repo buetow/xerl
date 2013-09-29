@@ -1,6 +1,7 @@
 body {
-  font-family: Varela Round, Georgia, Serif;
-  src: url(?document=fonts/VarelaRound-Regular.ttf);
+  font-family: 'Conv_VarelaRound-Regular', Georgia, Serif;
+  src: url('?document=fonts/VarelaRound-Regular.eot');
+  src: local('☺'), url('?document=fonts/VarelaRound-Regular.woff') format('woff'), url('?document=fonts/VarelaRound-Regular.ttf') format('truetype'), url('?document=fonts/VarelaRound-Regular.svg') format('svg');
   background-color: #19495f;
   height: 100%;
   max-width: 900px;
