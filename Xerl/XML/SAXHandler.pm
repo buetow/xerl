@@ -40,9 +40,13 @@ sub start_element {
 
   my %params = map { $_->{Name} => $_->{Value} } values %{ $doc->{Attributes} };
 
+  # Extract name and flags from a tag such as: <NAME.xerl.FLAG1.FLAG2.FLAGN...>.. 
+  my ($name, @flags) = _GET_NAME_N_FLAG($doc->{Name});
+
   $x->{current} = Xerl::XML::Element->new();
   $x->{current}->set_text('');
-  $x->{current}->set_name( $doc->{Name} );
+  $x->{current}->set_name( $name );
+  $x->{current}->set( "flag_$_", 1 ) for @flags;
   $x->{current}->set_params( \%params ) if %params;
 
   ${ $x->{stack} }[-1]->push_array( $x->{current} ) if @{ $x->{stack} };
@@ -71,6 +75,18 @@ sub end_element {
   $x->{current} = pop @{ $x->{stack} };
 
   return undef;
+}
+
+sub _GET_NAME_N_FLAG ($) {
+  my $string = shift;
+
+  my ($name, $flags) = $string =~ /^(.+)\.xerl\.(.*)$/;
+
+  if (defined $flags) {
+    return ($name, split(/\./, $flags));
+  } else {
+    return ($string);
+  }
 }
 
 1;

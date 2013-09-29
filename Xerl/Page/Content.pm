@@ -12,6 +12,8 @@ use warnings;
 
 use v5.14.0;
 
+use Data::Dumper;
+
 use Xerl::Base;
 use Xerl::Page::Rules;
 use Xerl::Setup::Configure;
@@ -36,7 +38,7 @@ sub parse($) {
 
   my Xerl::Page::Rules $rules = Xerl::Page::Rules->new( config => $config );
   $rules->parse( $config->get_xmlconfigrootobj() )
-    unless $config->exists('noparse');
+  unless $config->exists('noparse');
 
   $config->insertxmlvars( $config->get_xmlconfigrootobj() );
   $self->insertrules( $rules, $xmlcontent->get_root() );
@@ -59,12 +61,12 @@ sub insertrules($$$$) {
   my $params = $element->get_params();
 
   unshift @content, "Content-Type: $params->{type}\n\n"
-    if ref $params eq 'HASH' and exists $params->{type};
+  if ref $params eq 'HASH' and exists $params->{type};
 
   push @content, $self->_insertrules( $rules, $element );
   $self->set_content( \@content );
 
-  return undef;
+return undef;
 }
 
 sub _insertrules($$$) {
@@ -115,15 +117,19 @@ sub _insertrules($$$) {
       else {
 
         # No rule available, use the tag unmodified!
-        $name =~ s/^=//o;    # Remove the leading =
         if ( $succ->get_single() ) {
           push @content, "<$name" . ( $succ->params_str() || '' ) . " />\n"
 
         }
         else {
-          push @content,
+          if ($succ->get_flag_noendtag() == 1) {
+            push @content,
+            "<$name" . ( $succ->params_str() || '' ) . ">\n";
+          } else {
+            push @content, 
             "<$name" . ( $succ->params_str() || '' ) . '>',
             $self->_insertrules( $rules, $succ ), $text, "</$name>\n";
+          }
         }
       }
 
@@ -140,38 +146,38 @@ sub _insertrules($$$) {
       my ( $orule, $crule ) = ( $rule->[0], $rule->[1] );
 
       $self->_insert_special_vars( $rules, $succ, \$orule );
-      $self->_insert_special_vars( $rules, $succ, \$crule );
-      chomp $orule;
+    $self->_insert_special_vars( $rules, $succ, \$crule );
+  chomp $orule;
 
-      # Parse for known tag params.
-      if ( ref $params eq 'HASH' ) {
-        Xerl::Page::Templates::PARSELINE( $config, '%%', \$text );
+  # Parse for known tag params.
+  if ( ref $params eq 'HASH' ) {
+    Xerl::Page::Templates::PARSELINE( $config, '%%', \$text );
 
-        # <tag basename='yes'>path/to/file.bla</tag> => <tag>file.bla</tag>
-        $text =~ s#.*/(.*)$#$1# if lc $params->{basename} eq 'yes';
+  # <tag basename='yes'>path/to/file.bla</tag> => <tag>file.bla</tag>
+  $text =~ s#.*/(.*)$#$1# if lc $params->{basename} eq 'yes';
 
-        # <tag cut='?'>foo.bar.tld?options</tag> => <tag>?options</tag>
-        if ( exists $params->{cut} ) {
-          my $cut = quotemeta $params->{cut};
-          $text =~ s/.*$cut(.*)$/$1/o;
-        }
+  # <tag cut='?'>foo.bar.tld?options</tag> => <tag>?options</tag>
+  if ( exists $params->{cut} ) {
+    my $cut = quotemeta $params->{cut};
+    $text =~ s/.*$cut(.*)$/$1/o;
+  }
 
-        $text .= $params->{addback}
-          if exists $params->{addback};
-        $text = $params->{addfront} . $text
-          if exists $params->{addfront};
-      }
+  $text .= $params->{addback}
+  if exists $params->{addback};
+  $text = $params->{addfront} . $text
+  if exists $params->{addfront};
+}
 
-      my $oadd =
-        exists $ruleparams->{addfront}
-        ? '<' . $ruleparams->{addfront}
-        : '';
+my $oadd =
+exists $ruleparams->{addfront}
+? '<' . $ruleparams->{addfront}
+: '';
 
-      my $cadd =
-        exists $ruleparams->{addback} ? $ruleparams->{addback} . '>' : '';
+my $cadd =
+exists $ruleparams->{addback} ? $ruleparams->{addback} . '>' : '';
 
-      push @content, $orule, $oadd, $self->_insertrules( $rules, $succ ),
-        $text, $cadd, $crule;
+push @content, $orule, $oadd, $self->_insertrules( $rules, $succ ),
+$text, $cadd, $crule;
     }
   }
 

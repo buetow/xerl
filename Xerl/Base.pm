@@ -50,6 +50,10 @@ sub AUTOLOAD {
     $self->{$1} = $_[1];
 
   }
+  elsif ( $auto =~ /.*::set$/ ) {
+    $self->{$_[1]} = $_[2];
+
+  }
   elsif ( $auto =~ /.*::get_(.+)_ref$/ ) {
     return defined $self->{$1} ? \$self->{$1} : [''];
 
