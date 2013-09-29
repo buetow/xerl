@@ -4,12 +4,10 @@
   <html>
     <head>
       <title>%%title%%</title>
-      <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
       <meta name="author" content="Paul Buetow"/>
       <meta name="publisher" content="Xerl Template Engine (xerl.buetow.org)"/>
-      <meta name="distribution" content="global"/>
       <meta name="robots" content="index, follow"/>
-      <meta name="language" content="en, english"/>
       <meta name="revisit-after" content="7 days"/>
       <link rel="stylesheet" type="text/css" href="%%stylesurl%%$$style$$"/>
     </head>
