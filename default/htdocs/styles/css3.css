@@ -1,16 +1,8 @@
-html {  
-  height: 100%; 
-}
-
 body {
   font-family: Georgia, Serif;
   background-color: #19495f;
   height: 100%;
   max-width: 900px;
-}
-
-p {
-  padding: 1px 0;
 }
 
 div.header {
@@ -21,10 +13,36 @@ div.header {
   color: #FFFFFF;
   padding: 20px;
   margin: 0px;  
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   text-align: center;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
+  border-radius:10px;
+  box-shadow: 10px 10px 5px #000000;
+}
+
+div.main {
+  background-color: #FFFFFA;
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px;
+  border-radius:10px;
+  box-shadow: 10px 10px 5px #000000;
+}
+
+div.important {
+  background-color: #FF8181;
+  border-width: 1px;
+  border-style: solid;
+  border-radius:10px;
+  margin-right: 10px;
+  box-shadow: 10px 10px 5px #000000;
+}
+
+html {  
+  height: 100%; 
+}
+
+p {
+  padding: 1px 0;
 }
 
 span.italic {
@@ -35,24 +53,10 @@ span.bold {
   font-weight: bold;
 }
 
-div.main {
-  background-color: #FFFFFA;
-  border-width: 1px;
-  border-style: solid;
-  padding: 5px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-}
-
-div.important {
-  background-color: #FF8181;
-  border-width: 1px;
-  border-style: solid;
-}
-
 h1 {
   padding-left: 10px;
   font-size: 30px;
+  text-shadow: 3px 3px 3px #BBBBBB;
 }
 
 h2, h3, p {
@@ -70,8 +74,9 @@ pre, .quote, .code {
   padding-right: 10px;
   padding: 10px;
   margin-bottom: 30px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
+  margin-right: 15px;
+  border-radius:10px;
+  box-shadow: 10px 10px 5px #000000;
 }
 
 .footer {
@@ -82,8 +87,7 @@ pre, .quote, .code {
   font-size: 12px;
   margin-top: 10px;
   padding: 10px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
+  border-radius:10px;
 }
 
 a {
