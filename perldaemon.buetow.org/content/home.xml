@@ -3,7 +3,7 @@
   <rimg href="?document=images/perl.png" title="Perl"/>
   <pagetitle>PerlDaemon</pagetitle>
   <textheader>Writing your own daemon...</textheader>
-  <text>PerlDaemon is a minimal linux/unix daemon programmed in Perl. It can be extended to fit any task...</text>
+  <text>PerlDaemon is a minimal linux/unix daemon programmed in Perl 5. It can be extended to fit any task...</text>
   <enumeration>
     <enumitem>Automatic daemonizing</enumitem>
     <enumitem>Logging and logrotate support (SIGHUP)</enumitem>
