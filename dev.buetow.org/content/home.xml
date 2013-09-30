@@ -39,8 +39,7 @@
       my $ret = '';
 
 
-      for my $found (@found) {
-      next if $found =~ /\.foo$/;
+      for my $found (grep !/\.foo$/, @found) {
       $found =~ /.*hosts.(.*?).$tag/;   
       my $host = $1;
 
