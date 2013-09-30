@@ -38,6 +38,7 @@
 
 
       for my $found (@found) {
+      next if $found =~ /\.foo$/;
       $found =~ /.*hosts.(.*?).$tag/;   
       my $host = $1;
 
