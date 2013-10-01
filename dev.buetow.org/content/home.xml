@@ -21,7 +21,7 @@
   <textheader>Project list</textheader>
   <information>
     <text>
-      <noop>All host's ending with </noop>
+      <noop>All hosts ending with </noop>
       <strong>.foo</strong>
       <noop> are most likely dev, test or PoCs. Don't expect to find anything usefull there.</noop>
     </text>
