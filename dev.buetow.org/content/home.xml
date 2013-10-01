@@ -19,6 +19,11 @@
   <text>To trust it please run: </text>
   <code>curl http://deb.buetow.org/apt/pubkey.gpg | apt-key add -</code>
   <textheader>Project list</textheader>
+  <info>
+    <noop>All host's ending with </noop>
+    <strong>.foo</strong>
+    <noop> are most likely dev, test or PoCs. Don't expect to find anything usefull there.</noop>
+  </info>
   <text>
     <perl>
       # Ugly but works for now

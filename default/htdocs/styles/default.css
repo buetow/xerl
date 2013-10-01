@@ -50,6 +50,12 @@ div.important {
   border-style: solid;
 }
 
+div.info {
+  background-color: #99FF66
+  border-width: 1px;
+  border-style: solid;
+}
+
 h1 {
   padding-left: 10px;
   font-size: 30px;
