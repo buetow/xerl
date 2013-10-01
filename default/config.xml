@@ -23,7 +23,7 @@
       <textheader>[h2]</textheader>
       <textsubheader>[h3]</textsubheader>
       <important>[div class="important"]</important>
-      <info>[div class="info"]</info>
+      <information>[div class="information"]</information>
       <text>[p]</text>
       <type>[span class="@@class@@"]</type>
       <quote>[pre class="quote"]</quote>
@@ -53,6 +53,7 @@
       <textsubheader>[h3]</textsubheader>
       <news start="yes"/>
       <important>[div class="important"]</important>
+      <information>[div class="information"]</information>
       <text>[p]</text>
       <type>[span class="@@class@@"]</type>
       <quote>[pre class="quote"]</quote>
