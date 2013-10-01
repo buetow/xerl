@@ -46,7 +46,7 @@ div.important {
 }
 
 div.information {
-  background-color: #99FF66
+  background-color: #99FF66;
   border-width: 1px;
   border-style: solid;
   border-radius:10px;
