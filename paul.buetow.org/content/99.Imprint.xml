@@ -63,23 +63,5 @@
       <newline/>
       <newline/>
     </enumitem>
-    <enumitem>
-      <noop>
-        <strong>Mailing Lists:</strong>
-      </noop>
-      <newline/>
-      <hyperlink>http://lists.buetow.org</hyperlink>
-      <newline/>
-      <newline/>
-    </enumitem>
-    <enumitem>
-      <noop>
-        <strong>IRC:</strong>
-      </noop>
-      <newline/>
-      <noop>On request</noop>
-      <newline/>
-      <newline/>
-    </enumitem>
   </enumeration>
 </content>
