@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>License</pagetitle>
   <text>
@@ -6,13 +6,13 @@
   </text>
   <text>
     <noop>All rights reserved. </noop>
-    <newline />
-    <newline />
+    <newline/>
+    <newline/>
     <noop>
       foo
     </noop>
-    <newline />
-    <newline />
+    <newline/>
+    <newline/>
     <noop>
       * Bar
     </noop>
@@ -21,4 +21,3 @@
     sdf
     sdfsdf</code>
 </content>
-

@@ -12,6 +12,6 @@
   </important>
   <text>
     <limg href="?document=images/fype.png" title="Fype"/>
-    <noop>... is an attempt to build an open source scripting language from scratch (just for fun) using C99 on the FreeBSD operating system. Fypes focus is to use as few dependencies on 3rd party libraries as possible and to use as less code as possible and a very small execution binary! Fype should be portable to many different operating systems as well.  The first release will be also available at least for Linux and maybe other UNIX alike operating systems. Fype itself is using the BSD license.</noop> 
+    <noop>... is an attempt to build an open source scripting language from scratch (just for fun) using C99 on the FreeBSD operating system. Fypes focus is to use as few dependencies on 3rd party libraries as possible and to use as less code as possible and a very small execution binary! Fype should be portable to many different operating systems as well.  The first release will be also available at least for Linux and maybe other UNIX alike operating systems. Fype itself is using the BSD license.</noop>
   </text>
 </content>
