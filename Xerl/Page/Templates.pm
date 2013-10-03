@@ -24,7 +24,7 @@ use Xerl::Tools::FileIO;
 use constant RECURSIVE => 1;
 
 sub parse($) {
-  my Xerl::Page::Templates $self   = $_[0];
+  my Xerl::Page::Templates $self    = $_[0];
   my Xerl::Setup::Configure $config = $self->get_config();
 
   my $site = $config->get_site();
@@ -144,7 +144,7 @@ sub parse($) {
 }
 
 sub parsetemplate($$;$) {
-  my Xerl::Page::Templates $self   = $_[0];
+  my Xerl::Page::Templates $self    = $_[0];
   my Xerl::Setup::Configure $config = $self->get_config();
   my $deepnesslevel = $_[2] || 0;
 
@@ -161,7 +161,7 @@ sub parsetemplate($$;$) {
 }
 
 sub print($;$) {
-  my Xerl::Page::Templates $self   = $_[0];
+  my Xerl::Page::Templates $self    = $_[0];
   my Xerl::Setup::Configure $config = $self->get_config();
 
   my ( $code, $flag ) = ( '', 0 );

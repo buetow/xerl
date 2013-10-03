@@ -134,7 +134,7 @@ sub eval($$) {
 
 sub insertxmlvars($$) {
   my Xerl::Setup::Configure $self = $_[0];
-  my Xerl::XML::Element $element = $_[1];
+  my Xerl::XML::Element $element  = $_[1];
 
   $element = $element->starttag('variables');
 

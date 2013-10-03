@@ -51,7 +51,7 @@ sub AUTOLOAD {
 
   }
   elsif ( $auto =~ /.*::set$/ ) {
-    $self->{$_[1]} = $_[2];
+    $self->{ $_[1] } = $_[2];
 
   }
   elsif ( $auto =~ /.*::get_(.+)_ref$/ ) {

@@ -18,7 +18,7 @@ use Xerl::Tools::FileIO;
 use Xerl::XML::Element;
 
 sub generate($;$) {
-  my Xerl::Page::Menu $self        = $_[0];
+  my Xerl::Page::Menu $self         = $_[0];
   my Xerl::Setup::Configure $config = $self->get_config();
 
   my @site    = split /\//, $config->get_site();
@@ -46,7 +46,7 @@ sub generate($;$) {
 }
 
 sub get_menu($$$$) {
-  my Xerl::Page::Menu $self        = $_[0];
+  my Xerl::Page::Menu $self         = $_[0];
   my Xerl::Setup::Configure $config = $self->get_config();
 
   my ( $content, $siteadd, $compare ) = ( @_[ 1 ... 2 ], lc $_[3] );

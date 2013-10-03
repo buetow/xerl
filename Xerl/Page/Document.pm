@@ -18,7 +18,7 @@ use Xerl::Setup::Configure;
 use Xerl::Tools::FileIO;
 
 sub parse($) {
-  my Xerl::Page::Document $self    = $_[0];
+  my Xerl::Page::Document $self     = $_[0];
   my Xerl::Setup::Configure $config = $self->get_config();
 
   return undef unless $config->document_exists();

@@ -1,4 +1,4 @@
-all:	
+all: perltidy
 perltidy:
 	find . -name \*.fpl | xargs perltidy -i=2 -b 
 	find . -name \*.pl | xargs perltidy -i=2 -b 

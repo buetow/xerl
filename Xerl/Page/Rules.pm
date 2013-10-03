@@ -17,8 +17,8 @@ use Xerl::Setup::Configure;
 use Xerl::XML::Element;
 
 sub parse($) {
-  my Xerl::Page::Rules $self       = $_[0];
-  my Xerl::XML::Element $element   = $_[1];
+  my Xerl::Page::Rules $self        = $_[0];
+  my Xerl::XML::Element $element    = $_[1];
   my Xerl::Setup::Configure $config = $self->get_config();
 
   $element = $element->starttag2( 'rules', $config->get_outputformat() );
