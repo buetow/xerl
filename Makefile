@@ -1,4 +1,4 @@
-all: check format git
+all: check format push
 check:
 	@echo Checking for valid XML
 	find . -name \*.xml -type f | while read xml; do \
@@ -10,6 +10,6 @@ format:
 		xmllint --format "$$xml" >"$$xml.tmp" && \
 		mv "$$xml.tmp" "$$xml"; \
 		done
-git:
-	git commit -a -m 'Reformatted XML' && \
-		git push origin hosts
+	git commit -a -m 'Reformatted XML' || exit 0
+push:
+	git push origin hosts
