@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<content>
-  <pagetitle>Imprint</pagetitle>
+<content> <pagetitle>Imprint</pagetitle>
   <text>In case you have work for me or have any other comments to pass, please choose your contact method...</text>
   <enumeration>
     <enumitem>
@@ -60,15 +59,6 @@
         }
       </javascript>
       <noop> (GPG/PGP public key ID: 0x37EC5C1D)</noop>
-      <newline/>
-      <newline/>
-    </enumitem>
-    <enumitem>
-      <noop>
-        <strong>Xing:</strong>
-      </noop>
-      <newline/>
-      <hyperlink>https://www.xing.com/profiles/Paul_Buetow</hyperlink>
       <newline/>
       <newline/>
     </enumitem>
