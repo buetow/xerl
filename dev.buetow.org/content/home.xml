@@ -13,6 +13,12 @@
     <namedlink href="http://git.buetow.org/">gitweb</namedlink>
     <noop> for browsing some of the repositories. Please check out each individual project site how to clone a git repository.</noop>
   </text>
+  <textheader>Github</textheader>
+  <text>
+    <noop>Only a selected projects are mirrored to my github account which is</noop>
+    <namedlink href="http://github.com/rantanplan/">github.com/rantanplan</namedlink>
+    <noop> which can be seen as a 'social backup'.</noop>
+  </text>
   <textheader>Deb repository</textheader>
   <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via</text>
   <code>[deb|deb-src] [http|ftp]://deb.buetow.org/apt REPLACEWITHDISTNAME main</code>
