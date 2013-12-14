@@ -8,5 +8,13 @@
       <noop>My development site: </noop>
       <hyperlink>http://dev.buetow.org</hyperlink>
     </enumitem>
+    <enumitem>
+      <noop>My profile on Xing: </noop>
+      <hyperlink>https://www.xing.com/profiles/Paul_Buetow</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>My profile on LinkedIn: </noop>
+      <hyperlink>http://www.linkedin.com/profile/view?id=252217064</hyperlink>
+    </enumitem>
   </enumeration>
 </content>
