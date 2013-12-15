@@ -5,7 +5,7 @@
   <textheader>Install from deb repository</textheader>
   <text>If you have Debian GNU/Linux Squeeze you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install cbars:</text>
   <code>deb ftp://deb.buetow.org/apt wheezy main
-deb-src ftp://deb.buetow.org/apt wheezy main</code>
+deb-src http://deb.buetow.org/apt wheezy main</code>
   <text>Or if you prefer http:</text>
   <code>deb http://deb.buetow.org/apt wheezy main
 deb-src http://deb.buetow.org/apt wheezy main</code>
