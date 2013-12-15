@@ -21,7 +21,7 @@
   </text>
   <textheader>Deb repository</textheader>
   <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via</text>
-  <code>[deb|deb-src] [http|ftp]://deb.buetow.org/apt REPLACEWITHDISTNAME main</code>
+  <code>[deb|deb-src] http://deb.buetow.org/apt REPLACEWITHDISTNAME main</code>
   <text>To trust it please run: </text>
   <code>curl http://deb.buetow.org/apt/pubkey.gpg | apt-key add -</code>
   <textheader>Project list</textheader>
