@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Download</pagetitle>
-  <textheader>Binaries</textheader>
-  <text>Calculator binaries are available for the following platforms. But may compile on lots more. Check out the CVS Download to do so.</text>
+  <textheader>Source packages and Binaries</textheader>
   <text>
-    <noop>Look at</noop>
-    <hyperlink>ftp://ftp.buetow.org/pub/Calculator/binaries</hyperlink>
-    <noop>for all available binaries!</noop>
-  </text>
-  <textheader>Source packages</textheader>
-  <text>
-    <noop>Calculator source packages are available at</noop>
-    <hyperlink>ftp://ftp.buetow.org/pub/Calculator/</hyperlink>
-    <noop>.</noop>
-  </text>
-  <textheader>Git</textheader>
-  <text>
-    <noop>The source is also available in git</noop>
+    <noop>The source and the binaries are available in git</noop>
     <pretext>git clone git://git.buetow.org/playground.git
 cd playground/Cpp/StackCalculator</pretext>
   </text>
