@@ -9,7 +9,7 @@
     <imagesurl>%%documentsurl%%images/</imagesurl>
     <stylesurl>%%documentsurl%%styles/</stylesurl>
     <whitespace> </whitespace>
-    <pubftp>ftp://ftp.buetow.org/pub</pubftp>
+    <pubftp>FTP HAS BEEN DISABLED</pubftp>
   </variables>
   <rules>
     <!-- Possible rules-params: -->

@@ -3,14 +3,14 @@
   <pagetitle>Download</pagetitle>
   <textheader>Bytecode compiled Jar archives</textheader>
   <text>Here you can download the latest bytecode compiled Jar archives. You need a Java 5 runtime environment. Just unpack the zip-file and double click on the .jar file! The calendar comes with a sample database. You may delete all the events first.</text>
-  <text>
-    <noop>Look at</noop>
-    <hyperlink>ftp://ftp.buetow.org/pub/NetCalendar</hyperlink>
-    <noop>for all available binaries!</noop>
-  </text>
   <textheader>Source code</textheader>
   <text>
     <noop>The sourcecode can be obtained from git as follows</noop>
     <pretext>git clone git://git.buetow.org/netcalendar.git</pretext>
+  </text>
+  <textheader>Zip Files</textheader>
+  <text>
+    <noop>The zip files can be obtained from git as well:</noop>
+    <pretext>git clone -b packages git://git.buetow.org/netcalendar.git netcalendar-packages</pretext>
   </text>
 </content>
