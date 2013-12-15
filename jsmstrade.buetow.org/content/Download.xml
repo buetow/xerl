@@ -4,9 +4,4 @@
   <textheader>Git</textheader>
   <text>JSMSTrade can also be downloaded from Git. Use the following steps to do so:</text>
   <pretext>git clone git://git.buetow.org/jsmstrade.git</pretext>
-  <textheader>Zip Files</textheader>
-  <text>
-    <noop>The zip files can be obtained from git as well:</noop>
-    <pretext>git clone -b packages git://git.buetow.org/jsmstrade.git jsmstrade-packages</pretext>
-  </text>
 </content>
