@@ -3,11 +3,7 @@
   <pagetitle>References</pagetitle>
   <text>The following references are used for VS developing:</text>
   <textheader>Notes of the Distributed Systems lecture</textheader>
-  <text>
-    <noop>The script of the german distributed systems lecture at the FH Aachen. </noop>
-    <namedlink href="ftp://ftp.buetow.org/pub/studium/FHAC_VS-SS07/Mitschrift/verteilte-systeme.pdf">Here</namedlink>
-    <noop> is a direct link to the FTP directory ;-) </noop>
-  </text>
+  <text>The script of the german distributed systems lecture at the FH Aachen.</text>
   <textheader>Distributed Systems: Principles And Paradigms </textheader>
   <text>
     <rimg href="?document=images/tanenbaum.jpg" title="Tanenbaum"/>
