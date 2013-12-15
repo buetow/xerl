@@ -14,7 +14,7 @@
     <noop> for browsing some of the repositories. Please check out each individual project site how to clone a git repository.</noop>
   </text>
   <textheader>Deb repository</textheader>
-  <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via '[deb|deb-src] [http|ftp]://deb.buetow.org/apt REPLACEWITHDISTNAME main'.</text>
+  <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via '[deb|deb-src] http://deb.buetow.org/apt REPLACEWITHDISTNAME main'.</text>
   <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | apt-key add -"</text>
   <textheader>Project list</textheader>
   <text>
