@@ -6,9 +6,6 @@
   <text>If you have Debian GNU/Linux Squeeze you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install pwgrep:</text>
   <code>deb http://deb.buetow.org/apt wheezy main
 deb-src http://deb.buetow.org/apt wheezy main</code>
-  <text>Or if you prefer http:</text>
-  <code>deb http://deb.buetow.org/apt wheezy main
-deb-src http://deb.buetow.org/apt wheezy main</code>
   <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | apt-key add -".</text>
   <textheader>Download from Git repository</textheader>
   <text>For git just type "git clone git://git.buetow.org/pwgrep".</text>
