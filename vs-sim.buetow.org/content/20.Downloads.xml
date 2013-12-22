@@ -7,7 +7,7 @@
   <pretext>git clone -b packages git://git.buetow.org/vs-sim.git vs-sim-packages</pretext>
   <text>
     <noop>Or go to </noop>
-    <namedlink href="http://web.buetow.org/git/?p=loadbars.git">gitweb</namedlink>
+    <namedlink href="http://web.buetow.org/git/?p=vs-sim.git">gitweb</namedlink>
     <noop> to browse the online repository in order to download individual files.</noop>
   </text>
 </content>
