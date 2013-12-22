@@ -2,5 +2,5 @@
 <content>
   <pagetitle>Photoalbum</pagetitle>
   <textheader>A simple photoalbum script.</textheader>
-  <text>This is a bash script using ImageMagick to generate a set of static HTML pages which outlines a photo album. The script only needs one flat input directory containing pictures and the result will be one static ./dist directory containing static HTML pages including thumbs to be distributed on a static webserver. </text>
+  <text>This is a bash script using ImageMagick to generate a set of static HTML pages which outlines a photo album. The script only needs one input directory (which can contain multiple sub-directories) containing pictures and the result will be one static ./dist directory containing static HTML pages including thumbs to be distributed on a static webserver. </text>
 </content>
