@@ -3,6 +3,8 @@
   <pagetitle>Downloads</pagetitle>
   <text>VS-Sim can also be downloaded from Git. Use the following steps to do so:</text>
   <pretext>git clone git://git.buetow.org/vs-sim.git</pretext>
+  <text>Or to gather the zip-Files (separate releases) then checkout the packages branch:</text>
+  <pretext>git clone -b packages git://git.buetow.org/vs-sim.git vs-sim-packages</pretext>
   <text>
     <noop>Or go to </noop>
     <namedlink href="http://web.buetow.org/git/?p=loadbars.git">gitweb</namedlink>
