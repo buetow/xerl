@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Download</pagetitle>
-  <text>Photoalbum can be downloaded from git.</text>
+  <text>Loadbars can be downloaded from a deb repo or from git.</text>
+  <textheader>Install from deb repository</textheader>
+  <text>If you have Debian GNU/Linux Squeeze you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install photoalbum:</text>
+  <code>deb http://deb.buetow.org/apt wheezy main
+deb-src http://deb.buetow.org/apt wheezy main</code>
+  <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -".</text>
   <textheader>Download from Git repository</textheader>
   <text>For git just type "git clone git://git.buetow.org/photoalbum".</text>
   <text>To update to the latest stable version just type "cd ./photoalbum; git pull".</text>
