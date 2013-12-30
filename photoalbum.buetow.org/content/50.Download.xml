@@ -3,7 +3,7 @@
   <pagetitle>Download</pagetitle>
   <text>Loadbars can be downloaded from a deb repo or from git.</text>
   <textheader>Install from deb repository</textheader>
-  <text>If you have Debian GNU/Linux Squeeze you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install photoalbum:</text>
+  <text>If you have Debian GNU/Linux Wheezy you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install photoalbum:</text>
   <code>deb http://deb.buetow.org/apt wheezy main
 deb-src http://deb.buetow.org/apt wheezy main</code>
   <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -".</text>
