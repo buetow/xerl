@@ -7,7 +7,7 @@
   <code>deb http://deb.buetow.org/apt wheezy main
 deb-src http://deb.buetow.org/apt wheezy main</code>
   <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -".</text>
-  <textheader>Download from Git repository</textheader>
+  <textheader>Download from git repository</textheader>
   <text>For git just type "git clone git://git.buetow.org/cbars".</text>
   <text>To update to the latest stable version just type "cd ./cbars; git pull".</text>
   <text>
