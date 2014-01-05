@@ -22,7 +22,7 @@
   <textheader>Deb repository</textheader>
   <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via</text>
   <code>[deb|deb-src] http://deb.buetow.org/apt DISTRIBUTION main</code>
-  <text>Where DISTRIBUTION may be squeeze, wheezy.... To the repo please run: </text>
+  <text>Where DISTRIBUTION may be squeeze, wheezy.... To trust the repo please run: </text>
   <code>curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -</code>
   <textheader>Project list</textheader>
   <information>
