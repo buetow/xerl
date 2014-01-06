@@ -5,16 +5,16 @@
   <text>If you don't like this website design: I am not a web designer and sometimes less is more.</text>
   <enumeration>
     <enumitem>
-      <noop>My Photostream on Flickr:</noop>
-      <hyperlink>http://www.flickr.com/photos/buetow/</hyperlink>
-    </enumitem>
-    <enumitem>
       <noop>My profile on Xing: </noop>
       <hyperlink>https://www.xing.com/profiles/Paul_Buetow</hyperlink>
     </enumitem>
     <enumitem>
       <noop>My profile on LinkedIn: </noop>
       <hyperlink>http://www.linkedin.com/profile/view?id=252217064</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>My Photostream on Flickr:</noop>
+      <hyperlink>http://www.flickr.com/photos/buetow/</hyperlink>
     </enumitem>
     <enumitem>
       <noop>Follow me at Twitter if you want:</noop>
@@ -25,8 +25,12 @@
       <hyperlink>irc://irc.german-elite.net</hyperlink>
     </enumitem>
     <enumitem>
-      <noop>My development site: </noop>
+      <noop>My development site:</noop>
       <hyperlink>http://dev.buetow.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>My Github site (a "social" backup of git.buetow.org):</noop>
+      <hyperlink>http://github.com/rantanplan</hyperlink>
     </enumitem>
   </enumeration>
 </content>
