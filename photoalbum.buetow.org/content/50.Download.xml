@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Download</pagetitle>
-  <text>Loadbars can be downloaded from a deb repo or from git.</text>
+  <text>Photoalbum can be downloaded from a deb repo or from git.</text>
   <textheader>Install from deb repository</textheader>
   <text>If you have Debian GNU/Linux Wheezy you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install photoalbum:</text>
   <code>deb http://deb.buetow.org/apt wheezy main
