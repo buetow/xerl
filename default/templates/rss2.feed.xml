@@ -5,7 +5,7 @@
     <channel>
       <title>buetow.org Newsfeed</title>
       <hyperlink>http://%%host%%</hyperlink>
-      <description>buetow.org - Paul Buetows Tech Newsfeed</description>
+      <description>buetow.org - Paul C. Buetows Tech Newsfeed</description>
       <pubDate>$$!/bin/date$$</pubDate>
       <generator>Xerl Web Engine (http://xerl.buetow.org)</generator>
       <language>en</language>
