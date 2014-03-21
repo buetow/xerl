@@ -7,23 +7,26 @@
     <namedlink href="http://web.buetow.org/listinfo/dev">Development Mailing List</namedlink>
     <noop> for any considerations.</noop>
   </text>
-  <textheader>Git repository</textheader>
+
+  <textheader>Github</textheader>
+  <text>
+    <noop>My Github page is</noop>
+    <namedlink href="http://github.com/rantanplan/">github.com/rantanplan</namedlink>
+  </text>
+
+  <textheader>Git (backup) repository</textheader>
   <text>
     <noop>You may go to </noop>
     <namedlink href="http://git.buetow.org/">gitweb</namedlink>
-    <noop> for browsing some of the repositories. Please check out each individual project site how to clone a git repository.</noop>
+    <noop> for browsing some of the repositories. It is a mirror of all the repositories on github. Due to legacy issues some projects are not on Github yet but only on git.buetow.org.</noop>
   </text>
-  <textheader>Github</textheader>
-  <text>
-    <noop>Only a selected projects are mirrored to my github account which is</noop>
-    <namedlink href="http://github.com/rantanplan/">github.com/rantanplan</namedlink>
-    <noop> which can be seen as a 'social backup'.</noop>
-  </text>
+
   <textheader>Deb repository</textheader>
   <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via</text>
   <code>[deb|deb-src] http://deb.buetow.org/apt DISTRIBUTION main</code>
   <text>Where DISTRIBUTION may be squeeze, wheezy.... To trust the repo please run: </text>
   <code>curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -</code>
+
   <textheader>Project list</textheader>
   <information>
     <text>
