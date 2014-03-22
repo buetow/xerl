@@ -6,6 +6,7 @@ Pragmatic modules ALWAYS to use in ALL packages:
 
 use strict;
 use warnings;
+use v5.14;
 
 Only for packages for including package UNIVERSAL definitions
 
