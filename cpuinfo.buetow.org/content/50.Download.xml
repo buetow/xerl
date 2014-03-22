@@ -10,6 +10,6 @@ deb-src http://deb.buetow.org/apt wheezy main</code>
   <textheader>Download from git repository</textheader>
   <text>
     <noop>Go to </noop>
-    <link href="http://github.com/rantanplan/!!HOSTNAME!!" />
+    <namedlink href="http://github.com/rantanplan/!!HOSTNAME!!">http://github.com/rantanplan/!!HOSTNAME!!</namedlink>
   </text>
 </content>
