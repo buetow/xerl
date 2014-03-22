@@ -61,6 +61,11 @@ sub defaults($) {
   $self->set_host( lc $ENV{HTTP_HOST} )
     unless $self->host_exists();
 
+  my ($hostname) = $ENV{HTTP_HOST} =~ /^(.*)\./;
+
+  $self->set_hostname( lc $hostname )
+    unless $self->hostname_exists();
+
   unless ( -d $self->get_hostroot() . $self->get_host() ) {
     my $redirect = $self->get_hostroot() . 'redirect:' . $self->get_host();
 
