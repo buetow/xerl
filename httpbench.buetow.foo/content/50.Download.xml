@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Download</pagetitle>
-  <text>HTTP Bench can be downloaded from a deb repo or from git.</text>
+  <text>!!HOSTNAME!! can be downloaded from a deb repo or from git.</text>
   <textheader>Install from deb repository</textheader>
-  <text>If you have Debian GNU/Linux Squeeze amd64 you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install httpbench:</text>
-  <code>deb http://deb.buetow.org/apt squeeze main
-deb-src http://deb.buetow.org/apt squeeze main</code>
-  <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -"</text>
+  <text>If you have Debian GNU/Linux Wheezy you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install cpuinfo:</text>
+  <code>deb http://deb.buetow.org/apt wheezy main
+deb-src http://deb.buetow.org/apt wheezy main</code>
+  <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -".</text>
   <textheader>Download from git repository</textheader>
-  <text>For git just type "git clone git://git.buetow.org/httpbench".</text>
-  <text>To update to the latest stable version just type "cd ./httpbench; git pull".</text>
   <text>
     <noop>Go to </noop>
-    <namedlink href="http://web.buetow.org/git/?p=httpbench.git">gitweb</namedlink>
-    <noop> to browse the online repository. The master branch always keeps the current stable version. The develop branch always keeps the current develop version. For releases there are tags and for screenshots check out the screenshots branch.</noop>
+    <namedlink href="http://github.com/rantanplan/!!HOSTNAME!!">http://github.com/rantanplan/!!HOSTNAME!!</namedlink>
   </text>
-  <text>For bleeding edge you can fetch the develop branch with "git clone -b develop git://git.buetow.org/httpbench httpbench-develop". But be warned, this one might be broken! It will be merged to master when it's done.</text>
 </content>
