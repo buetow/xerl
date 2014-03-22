@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 Dipl.-Inform. (FH) Paul C. Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -61,7 +61,7 @@ sub defaults($) {
   $self->set_host( lc $ENV{HTTP_HOST} )
     unless $self->host_exists();
 
-  my ($hostname) = $ENV{HTTP_HOST} =~ /^(.*)\./;
+  my ($hostname) = $ENV{HTTP_HOST} =~ /^([^\.]*)\./;
 
   $self->set_hostname( lc $hostname )
     unless $self->hostname_exists();
