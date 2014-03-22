@@ -195,6 +195,7 @@ sub print($;$) {
 
     my $time = defined $time ? sprintf '%1.4f', tv_interval($time) : '';
 
+    $line =~ s/!!HOSTNAME!!/$config->get_hostname()/ge;
     $line =~ s/!!TIME!!/$time/ge;
     $line =~ s/!!LT!!/</g;
     $line =~ s/!!GT!!/>/g;
