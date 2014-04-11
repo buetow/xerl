@@ -16,24 +16,12 @@
   <text>More:</text>
   <enumeration>
     <enumitem>
-      <noop>My profile on Xing: </noop>
-      <hyperlink>https://www.xing.com/profiles/PaulC_Buetow</hyperlink>
-    </enumitem>
-    <enumitem>
       <noop>My profile on LinkedIn: </noop>
       <hyperlink>http://www.linkedin.com/profile/view?id=252217064</hyperlink>
     </enumitem>
     <enumitem>
-      <noop>My Photostream on Flickr:</noop>
-      <hyperlink>http://www.flickr.com/photos/buetow/</hyperlink>
-    </enumitem>
-    <enumitem>
       <noop>Follow me at Twitter if you want:</noop>
       <hyperlink>https://twitter.com/plantanran</hyperlink>
-    </enumitem>
-    <enumitem>
-      <noop>Write with me if you want (I am rantanplan):</noop>
-      <hyperlink>irc://irc.german-elite.net</hyperlink>
     </enumitem>
   </enumeration>
 </content>
