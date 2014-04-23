@@ -8,27 +8,28 @@
 
 body {
   font-family: 'Conv_VarelaRound-Regular', Georgia, Serif;
-  background-color: #19495f;
+  background-color: #EEEEEE;
   height: 100%;
-  max-width: 900px;
+  max-width: 1200px;
+  margin-left: auto; margin-right: auto
 }
 
 div.header {
-  background-color: #01768f;
+  background-color: #EEEEEE;
+  color: #000000;
   border-color: #000000;
   border-width: 2px;
   border-style: solid;
-  color: #FFFFFF;
   padding: 20px;
   margin: 0px;  
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   text-align: center;
   border-radius:10px;
   box-shadow: 10px 10px 5px #000000;
 }
 
 div.main {
-  background-color: #FFFFFA;
+  background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
   padding: 5px;
@@ -92,15 +93,16 @@ p {
 pre, .quote, .code {
   border:1px #000000 solid;
   font-family: "Courier New", courier;
-  background: #FFFFFF;
-  color: #000000;
+  background-color: #000000;
+  color: #99FF66;
   padding-top: -10px;
   padding-right: 10px;
   padding: 10px;
   margin-bottom: 30px;
-  margin-right: 15px;
+  margin-left: auto; margin-right: auto;
   border-radius:10px;
   box-shadow: 10px 10px 5px #000000;
+  max-width: 1000px;
 }
 
 .footer {
