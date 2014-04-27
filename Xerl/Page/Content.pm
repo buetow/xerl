@@ -118,8 +118,7 @@ sub _insertrules($$$) {
       }
       elsif ( lc $name eq 'includerun' ) {
         my $scriptpath = $config->get_contentpath() . $text;
-
-        push @content, $scriptpath;
+        push @content, eval $scriptpath;
 
       }
       elsif ( lc $name eq 'navigation' ) {
