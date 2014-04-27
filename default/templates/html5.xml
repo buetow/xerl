@@ -23,7 +23,8 @@
           <noop>Generated in !!TIME!!s</noop>
           <noop>| Powered by </noop>
           <namedlink href="http://xerl.buetow.org">Xerl</namedlink>
-          <noop>| Xerl templates managed with Puppet/Git | Served by Debian GNU/Linux</noop>
+          <noop>| Xerl templates managed with Puppet/Git | Served by Debian GNU/Linux | </noop>
+          <namedlink href="http://sitemap.buetow.org">Sitemap</namedlink>
         </div>
       </div>
     </body>
