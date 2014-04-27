@@ -116,6 +116,10 @@ sub _insertrules($$$) {
         push @content, $got;
 
       }
+      elsif ( lc $name eq 'includerun' ) {
+        push @content, $text;
+
+      }
       elsif ( lc $name eq 'navigation' ) {
         my $menus = $config->get_menuobj()->get_array();
 
