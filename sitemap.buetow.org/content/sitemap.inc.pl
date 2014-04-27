@@ -1,36 +1,33 @@
 my $hostroot = $config->get_hostroot();
 
-sub getf ($) {
-  open my $f, $_[0] or die "$!: $_[0]\n";
-  my @slurp = <$f>;
-  close $f; 
-  @slurp;
-}
-
+sub space () { "&nbsp;" x 10 }
 sub nl () { "<br />\n" }
 
 sub list (*) {
   my $tag = shift;
-  my @found = sort `find $hostroot -name $tag`;
-  my $ret = '';
+  my @homepages = sort `find $hostroot -name $tag`;
+  my @ret = ();
 
+  for my $homepage (sort @homepages) {
+    my ($host) = $homepage =~ /.*hosts.(.*?).$tag/;
+    push @ret, "<b><a href='http://$host'>$host</a></b>", nl;
 
-  for my $found (@found) {
-    $found =~ /.*hosts.(.*?).$tag/;
-    my $host = $1;
+    my $sitepath = "$hostroot/$host";
 
-    my @content = getf $found;
-
-    $ret .= "<b><a href=http://$host>$host</a></b>" . nl;;
-
-    if (@content) {
-      $ret .= join " ", @content;
-      $ret .= nl;
+    my @pages = sort `find $sitepath -name \*.xml`;
+    for my $page (sort @pages) {
+      my ($site) = $page =~ m#$host/content/(.*)\.xml$#;
+      $site =~ s#\.sub/#/#g;
+      $site =~ s#\d\d\.##g;
+      next if $site eq 'home';
+      my $sitelink = "http://$host?site=$site";
+      push @ret, space, "<a href='$sitelink'>$site</a>", nl;
     }
-    $ret .= nl; 
+
+    push @ret, nl;
   }
 
-  $ret;
+  join '', @ret;
 }
 
 list SITEMAP;
