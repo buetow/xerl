@@ -195,11 +195,15 @@ sub print($;$) {
 
     my $time = defined $time ? sprintf '%1.4f', tv_interval($time) : '';
 
+    $line =~ s/</&lt;/g;
+    $line =~ s/>/&gt;/g;
+
     $line =~ s/!!HOSTNAME!!/$config->get_hostname()/ge;
     $line =~ s/!!TIME!!/$time/ge;
     $line =~ s/!!LT!!/</g;
     $line =~ s/!!GT!!/>/g;
     $line =~ s#!!URL\((.+?)\)!!#<a href="$1">$1</a>#g;
+
 
     print $line;
   }
