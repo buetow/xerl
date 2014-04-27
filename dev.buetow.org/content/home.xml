@@ -35,50 +35,6 @@
     </text>
   </information>
   <text>
-    <perl>
-      # Ugly but works for now
-      my $hostroot = $config-&gt;get_hostroot();
-
-      sub getf ($) { 
-      open my $f, $_[0] or die "$!: $_[0]\n";
-      my @slurp = !!LT!!$f!!GT!!; 
-      close $f; 
-      @slurp;
-      }
-
-      sub nl () { "!!LT!!br /!!GT!!\n" }
-
-      sub list (*) {
-      my $tag = shift;
-      my @found = sort `find $hostroot -name $tag`;
-      my $ret = '';
-
-
-      for my $found (@found) {
-      $found =~ /.*hosts.(.*?).$tag/;   
-      my $host = $1;
-
-      my @content = getf $found;
-
-      $ret .= "!!LT!!b!!GT!!!!LT!!a href=http://$host!!GT!!$host!!LT!!/a!!GT!!!!LT!!/b!!GT!!" . nl;;
-      if (@content) {
-      $ret .= join " ", @content;
-      $ret .= nl;
-      }
-      $ret .= nl; 
-      }
-
-      $ret;
-      }
-
-      my $ret = list PROJECT;
-
-      $ret .= "!!LT!!b!!GT!!!!LT!!i!!GT!!Older projects (not active at the moment):!!LT!!/i!!GT!!!!LT!!/b!!GT!!" . nl x 2;
-      $ret .= list OLDPROJECT;
-      $ret .= "!!LT!!b!!GT!!!!LT!!i!!GT!!Obsolete projects (no work will be done anymore and the software may be broken):!!LT!!/i!!GT!!!!LT!!/b!!GT!!" . nl x 2;
-      $ret .= list OBSOLETEPROJECT;
-
-      $ret;
-    </perl>
+    <includerun>projectlist.inc.pl</includerun>
   </text>
 </content>
