@@ -20,6 +20,8 @@ use Xerl::Setup::Configure;
 use Xerl::XML::Element;
 use Xerl::XML::Reader;
 
+use LWP::Simple;
+
 sub parse($) {
   my Xerl::Page::Content $self      = $_[0];
   my Xerl::Setup::Configure $config = $self->get_config();
@@ -104,6 +106,12 @@ sub _insertrules($$$) {
       }
       elsif ( lc $name eq 'perl' ) {
         push @content, '<perl>', $text, '</perl>';
+
+      }
+      elsif ( lc $name eq 'inject' ) {
+        # Fetch via LWP::Simple
+        my $got = get($text);
+        push @content, $got;
 
       }
       elsif ( lc $name eq 'navigation' ) {
