@@ -119,7 +119,8 @@ sub _insertrules($$$) {
       elsif ( lc $name eq 'includerun' ) {
         my $scriptpath = $config->get_contentpath() . $text;
         my $io = Xerl::Tools::FileIO->new( path => $scriptpath );
-        push @content, eval $io->fslurp();
+        $io->fslurp();
+        push @content, eval $io->str();
 
       }
       elsif ( lc $name eq 'navigation' ) {

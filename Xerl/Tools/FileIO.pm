@@ -121,6 +121,11 @@ sub pop($) {
   return $pop;
 }
 
+sub str($) {
+  my Xerl::Tools::FileIO $self = $_[0];
+  return join '', @{ $self->get_array() };
+}
+
 sub _fwrite($;$) {
   my Xerl::Tools::FileIO $self = $_[0];
   my $append = $_[1];
