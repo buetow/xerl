@@ -15,6 +15,6 @@
     </text>
   </information>
   <text>
-    <run>sitemap.inc.pl</run>
+    <includerun>sitemap.inc.pl</includerun>
   </text>
 </content>
