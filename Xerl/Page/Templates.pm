@@ -168,14 +168,6 @@ sub print($;$) {
   my $time  = $_[1];
   my $hflag = 1;
 
-  my $eval = sub {
-    my $perl = shift;
-    my $str = eval $perl;
-    #$str =~ s/</&lt;/g;
-    #$str =~ s/>/&gt;/g;
-    return $str;
-  };
-
   for my $line ( @{ $self->get_array() } ) {
     if ( $hflag == 1 && $config->exists('noparse') ) {
       $line =~ s#^Content-Type.*#Content-Type: text/plain#i;
@@ -183,14 +175,14 @@ sub print($;$) {
     }
 
     $line =~ s/  +/ /g;
-    redo if !$flag and $line =~ s/<perl>((?:.|\n)*?)<\/perl>/$eval->($1)/ego;
+    redo if !$flag and $line =~ s/<perl>((?:.|\n)*?)<\/perl>/eval $1/ego;
 
     if ( !$flag and $line =~ s/<perl>(.*)$//o ) {
       $code .= $1;
       $flag = 1;
 
     }
-    elsif ( $line =~ s/^(.*?)<\/perl>/$eval->($code.$1)/eo ) {
+    elsif ( $line =~ s/^(.*?)<\/perl>/eval $code.$1/eo ) {
       ( $code, $flag ) = ( '', 0 );
       redo;
 
