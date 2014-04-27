@@ -2,9 +2,6 @@
 <content>
   <pagetitle>License</pagetitle>
   <code>
-    <perl>
-      use LWP::Simple;
-      get 'http://web.buetow.org/git/?p=xerl.git;a=blob_plain;f=COPYING;hb=HEAD';
-    </perl>
+    <inject>http://web.buetow.org/git/?p=xerl.git;a=blob_plain;f=COPYING;hb=HEAD</inject>
   </code>
 </content>

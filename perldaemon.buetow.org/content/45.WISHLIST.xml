@@ -3,9 +3,6 @@
   <pagetitle>WISHLIST</pagetitle>
   <text>This is the WHISHLIST file of the current master branch:</text>
   <pretext>
-    <perl>
- 	use LWP::Simple;
-	get("http://web.buetow.org/git/?p=perldaemon.git;a=blob_plain;f=WISHLIST;hb=HEAD");
-  </perl>
+    <inject>http://web.buetow.org/git/?p=perldaemon.git;a=blob_plain;f=WISHLIST;hb=HEAD</inject>
   </pretext>
 </content>

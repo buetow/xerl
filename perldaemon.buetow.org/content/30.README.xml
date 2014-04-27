@@ -3,9 +3,6 @@
   <pagetitle>README</pagetitle>
   <text>This is the README file of the current master branch:</text>
   <pretext>
-    <perl>
- 	use LWP::Simple;
-	get("http://web.buetow.org/git/?p=perldaemon.git;a=blob_plain;f=README;hb=HEAD");
-  </perl>
+    <inject>http://web.buetow.org/git/?p=perldaemon.git;a=blob_plain;f=README;hb=HEAD</inject>
   </pretext>
 </content>
