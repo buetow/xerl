@@ -171,8 +171,8 @@ sub print($;$) {
   my $eval = sub {
     my $perl = shift;
     my $str = eval $perl;
-    $str =~ s/</&lt;/g;
-    $str =~ s/>/&gt;/g;
+    #$str =~ s/</&lt;/g;
+    #$str =~ s/>/&gt;/g;
     return $str;
   };
 
