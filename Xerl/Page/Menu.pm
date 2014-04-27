@@ -75,6 +75,7 @@ sub get_menu($$$$) {
          $_ !~ /^home\.xml$/i
       && $_ !~ /\.feed\.xml$/i
       && $_ !~ /\.hide\.xml$/i
+      && $_ !~ /\.inc\.pl$/i
     } @$dir;
 
   my Xerl::XML::Element $root = Xerl::XML::Element->new();
