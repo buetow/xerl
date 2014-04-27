@@ -110,7 +110,8 @@ sub _insertrules($$$) {
       }
       elsif ( lc $name eq 'inject' ) {
         # Fetch via LWP::Simple
-        push @content, '<noop>', get($text), '</noop>';
+        my $str = = get($text);
+        push @content, '<noop>', $str, '</noop>';
 
       }
       elsif ( lc $name eq 'navigation' ) {
