@@ -3,10 +3,14 @@
   <pagetitle>Download</pagetitle>
   <text>!!HOSTNAME!! can be downloaded from a deb repo or from git.</text>
   <textheader>Install from deb repository</textheader>
-  <text>If you have Debian GNU/Linux Wheezy you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install cpuinfo:</text>
+  <text>If you have Debian GNU/Linux Wheezy you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list:</text>
   <code>deb http://deb.buetow.org/apt wheezy main
 deb-src http://deb.buetow.org/apt wheezy main</code>
-  <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -".</text>
+  <text>(Please replace wheezy with jessie if you are debian GNU/Linux Jessie) and run afterwards:</text>
+  <code>curl http://deb.buetow.org/apt/pubkey.gpg | 
+sudo apt-key add -
+apt-get update
+apt-get install cpuinfo</code>
   <textheader>Download from git repository</textheader>
   <text>
     <noop>Go to </noop>
