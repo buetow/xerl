@@ -3,4 +3,5 @@
   <pagetitle>NetDiff</pagetitle>
   <textheader>Diff files via the network.</textheader>
   <text>..between two hosts</text>
+  <cimg href="?document=images/netdiff.png" title="NetDiff" alt="NetDiff"/>
 </content>
