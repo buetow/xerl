@@ -33,8 +33,4 @@
     <enumitem>Works with Linux, UNIX and a like</enumitem>
   </enumeration>
   <text>To get started fetch httpbench from the deb repository (see Download section) or fetch it from git and compile it.</text>
-  <text>
-    <noop>If you wanna stay in touch please </noop>
-    <namedlink href="http://freecode.com/projects/httpbench">subscribe on freecode.</namedlink>
-  </text>
 </content>

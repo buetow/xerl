@@ -9,13 +9,7 @@
       <noop> and enjoy :)</noop>
     </text>
   </important>
-  <text>
-    <noop>Calculator is a very portable text based calculator program written in C++. If you wanna stay informed, please subscibe at </noop>
-    <namedlink href="http://freecode.com/projects/stack-calculator">freecode</namedlink>
-    <noop> to the stack-calculator project. You will receive an email then a new release has been made. However, I do not plan to release any new versions in the near future. This calculator is obsolet and may be replaced by the </noop>
-    <namedlink href="http://fype.buetow.org">Fype Language</namedlink>
-    <noop> which can do arithmetic calculations too.</noop>
-  </text>
+  <text>Calculator is a very portable text based calculator program written in C++.</text>
   <textheader>Version 0.6 (Sep 20th 2005)</textheader>
   <enumeration>
     <enumitem>Changed the source tree structure. Normal non-digits will now be treated with their ASCII values. Digits will be treated with ASCII values too if mode ascii has been activated.</enumitem>

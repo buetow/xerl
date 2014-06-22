@@ -13,9 +13,7 @@
   <text>
     <noop>Its initial motivaion was a programming project at the </noop>
     <namedlink href="http://www.fh-aachen.de">Aachen University of Applied Sciences</namedlink>
-    <noop> for the object oriented programming class. But it became much more than just that! If you want to stay informed, please subscibe at </noop>
-    <namedlink href="http://freecode.com/projects/netcalendar">freecode</namedlink>
-    <noop> to the netcalendar project. You will receive an email then a new release has been made.</noop>
+    <noop> for the object oriented programming class. But it became much more than just that!</noop>
   </text>
   <textheader>Sun Feb 08th 2009 - NetCalendar 1.0 released</textheader>
   <text>The "NetCalendar 1.0" has been finally released. It has been almost 3 years since 1.0 RC5. However, only a few things have changed. NetCalendar now supports secure sockets using SSL. And the documentation is now completely in english (a part of it used to be in german). I've also managed to include a few cosmetic fixes as well (e.g. new splash screen). </text>

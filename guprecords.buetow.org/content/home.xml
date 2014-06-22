@@ -4,8 +4,4 @@
   <textheader>Global uptime records.</textheader>
   <text>Shows uprecord stats of several hosts at once.</text>
   <cimg href="?document=images/guprecords.png" title="Guprecords" alt="Guprecords"/>
-  <text>
-    <noop>If you wanna stay in touch please </noop>
-    <namedlink href="http://freecode.com/projects/guprecords">subscribe on freecode.</namedlink>
-  </text>
 </content>

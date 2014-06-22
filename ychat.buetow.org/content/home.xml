@@ -10,10 +10,5 @@
     </text>
   </important>
   <text>What is yChat? yChat is an experimental, XML-configurable, fast, very portable, multi-platform Web-based chat server written in C++ and a little subset of C which supports secure SSL sockets using OpenSSL, MySQL databases and is compatible with almost all browsers that support frames and JavaScript. It runs on all servers which are POSIX.4a compatible and use the GNU GCC C++ compiler from 3.1 and up with pthreads enabled. Its developed under the GNU General Public License.</text>
-  <text>
-    <noop>If you wanna stay informed, please subscibe at </noop>
-    <namedlink href="http://freecode.com/projects/yChat">freecode</namedlink>
-    <noop> to the yChat project. You will receive an email then a new release has been made.</noop>
-  </text>
   <text>PLEASE NOTICE THAT yChat IS NOT Ychat! Ychat is a Yahoo Chat Client while yChat is a web based chat server. So they both handle chatting but are very different and are totally different projects!</text>
 </content>

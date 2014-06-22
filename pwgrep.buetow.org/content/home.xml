@@ -26,8 +26,4 @@
     <enumitem>Using only open source software</enumitem>
     <enumitem>Running on all *NIX and alike systems</enumitem>
   </enumeration>
-  <text>
-    <noop>If you wanna stay in touch please </noop>
-    <namedlink href="http://freecode.com/projects/pwgrep">subscribe via freecode.</namedlink>
-  </text>
 </content>
