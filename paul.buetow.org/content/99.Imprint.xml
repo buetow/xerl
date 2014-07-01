@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Imprint</pagetitle>
+  <text>In case you have work for me or have any other comments to pass, please choose your contact method...</text>
+  <enumeration>
+    <enumitem>
+      <noop>
+        <strong>Snail Mail:</strong>
+      </noop>
+      <newline/>
+      <noop>Paul C. B!!N!!uuml;tow</noop>
+      <newline/>
+      <noop>Schneidem!!N!!uuml;hler Str. 12c</noop>
+      <newline/>
+      <noop>76139 Karlsruhe</noop>
+      <newline/>
+      <noop>Germany</noop>
+      <newline/>
+      <newline/>
+    </enumitem>
+    <enumitem>
+      <noop>
+        <strong>Jabber/XMPP:</strong>
+      </noop>
+      <newline/>
+      <javascript>
+        // Anti-Spam
+        function strrev(str) {
+        if (!str) return '';
+        var revstr = '';
+        for (var i = str.length-1; i&gt;=0; i--)
+        revstr += str.charAt(i)
+        return revstr;
+        }
+        var array = new Array('gro', '.', 'woteub', '@', 'luap');
+        for (var i = array.length - 1; i &gt;= 0; --i)  {
+        document.write(strrev(array[i]));
+        }
+      </javascript>
+      <newline/>
+      <newline/>
+    </enumitem>
+    <enumitem>
+      <noop>
+        <strong>E-Mail:</strong>
+      </noop>
+      <newline/>
+      <javascript>
+        // Anti-Spam
+        function strrev(str) {
+        if (!str) return '';
+        var revstr = '';
+        for (var i = str.length-1; i&gt;=0; i--)
+        revstr += str.charAt(i)
+        return revstr;
+        }
+        var array = new Array('gro', '.', 'woteub', '@', 'luap');
+        for (var i = array.length - 1; i &gt;= 0; --i)  {
+        document.write(strrev(array[i]));
+        }
+      </javascript>
+      <noop> (GPG/PGP public key ID: 0x37EC5C1D)</noop>
+      <newline/>
+      <newline/>
+    </enumitem>
+  </enumeration>
+</content>

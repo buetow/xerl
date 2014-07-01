@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Extended eynopsis</pagetitle>
+  <text>This is the extended synopsis of the current master branch:</text>
+  <pretext>
+    <inject>http://web.buetow.org/git/?p=fapi.git;a=blob_plain;f=docs/extended-synopsis.txt;hb=HEAD</inject>
+  </pretext>
+</content>

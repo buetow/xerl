@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Manpage</pagetitle>
+  <text>This is the manpage  of the current master branch:</text>
+  <pretext>
+    <inject>http://web.buetow.org/git/?p=fype.git;a=blob_plain;f=docs/pod/fype.txt;hb=HEAD</inject>
+  </pretext>
+</content>

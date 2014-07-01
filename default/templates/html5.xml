@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content type="text/html">
+  <tag>!DOCTYPE html</tag>
+  <html>
+    <head>
+      <title>%%title%%</title>
+      <tag>meta http-equiv="Content-Type" content="text/html;charset=UTF-8"</tag>
+      <tag>meta name="author" content="Paul C. Buetow"</tag>
+      <tag>meta name="publisher" content="Xerl Template Engine (xerl.buetow.org)"</tag>
+      <tag>meta name="robots" content="index, follow"</tag>
+      <tag>meta name="revisit-after" content="7 days"</tag>
+      <tag>link rel="stylesheet" type="text/css" href="%%stylesurl%%$$style$$"</tag>
+    </head>
+    <body>
+      <div class="header">
+        <type class="bold">A fortune quote: </type>
+        <type class="italic">$$!/usr/games/fortune -s$$</type>
+      </div>
+      <div class="main">
+        <navigation/>
+        <noop>%%content%%</noop>
+        <div class="footer">
+          <noop>Generated in !!TIME!!s</noop>
+          <noop>| Powered by </noop>
+          <namedlink href="http://xerl.buetow.org">Xerl</namedlink>
+          <noop>| Xerl templates managed with Puppet/Git | Served by Debian GNU/Linux | </noop>
+          <namedlink href="http://sitemap.buetow.org">Sitemap</namedlink>
+        </div>
+      </div>
+    </body>
+  </html>
+</content>

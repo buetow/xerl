@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>License</pagetitle>
+  <code>
+    <inject>http://web.buetow.org/git/?p=xerl.git;a=blob_plain;f=COPYING;hb=HEAD</inject>
+  </code>
+</content>

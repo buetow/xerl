@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Changelog</pagetitle>
+  <text>This is the changelog file of the current master branch:</text>
+  <pretext>
+    <inject>http://web.buetow.org/git/?p=guprecords.git;a=blob_plain;f=debian/changelog;hb=HEAD</inject>
+  </pretext>
+</content>

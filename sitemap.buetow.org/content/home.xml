@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Sitemap</pagetitle>
+  <textheader>All sites hosted</textheader>
+  <text>
+    <noop>Here are all sites hosted within this instance of </noop>
+    <namedlink href="http://xerl.buetow.org">Xerl</namedlink>
+    <noop>.</noop>
+  </text>
+  <information>
+    <text>
+      <noop>All hosts ending with </noop>
+      <strong>.foo</strong>
+      <noop> are most likely dev, test or PoCs. Don't expect to find anything usefull there. Also, generally here is lots of crap listed.</noop>
+    </text>
+  </information>
+  <text>
+    <includerun>sitemap.inc.pl</includerun>
+  </text>
+</content>
