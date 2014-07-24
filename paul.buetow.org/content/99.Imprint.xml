@@ -20,28 +20,6 @@
     </enumitem>
     <enumitem>
       <noop>
-        <strong>Jabber/XMPP:</strong>
-      </noop>
-      <newline/>
-      <javascript>
-        // Anti-Spam
-        function strrev(str) {
-        if (!str) return '';
-        var revstr = '';
-        for (var i = str.length-1; i&gt;=0; i--)
-        revstr += str.charAt(i)
-        return revstr;
-        }
-        var array = new Array('gro', '.', 'woteub', '@', 'luap');
-        for (var i = array.length - 1; i &gt;= 0; --i)  {
-        document.write(strrev(array[i]));
-        }
-      </javascript>
-      <newline/>
-      <newline/>
-    </enumitem>
-    <enumitem>
-      <noop>
         <strong>E-Mail:</strong>
       </noop>
       <newline/>
