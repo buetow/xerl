@@ -15,12 +15,6 @@
     <noop> and my open source report card is</noop>
     <namedlink href="http://osrc.dfm.io/rantanplan">http://osrc.dfm.io/rantanplan</namedlink>
   </text>
-  <textheader>Git (backup) repository</textheader>
-  <text>
-    <noop>You may go to </noop>
-    <namedlink href="http://git.buetow.org/">gitweb</namedlink>
-    <noop> for browsing some of the repositories. It is a mirror of all the repositories on github. Due to legacy issues some projects are not on Github yet but only on git.buetow.org.</noop>
-  </text>
   <textheader>Deb repository</textheader>
   <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via</text>
   <code>[deb|deb-src] http://deb.buetow.org/apt DISTRIBUTION main</code>
