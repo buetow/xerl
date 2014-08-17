@@ -3,6 +3,6 @@
   <pagetitle>Wishlist</pagetitle>
   <text>This is the Wishlist file of the current master branch:</text>
   <pretext>
-    <inject>http://web.buetow.org/git/?p=cbars.git;a=blob_plain;f=docs/wishlist;hb=HEAD</inject>
+    <inject>http://web.buetow.org/cgit/cbars.git/plain/docs/wishlist</inject>
   </pretext>
 </content>

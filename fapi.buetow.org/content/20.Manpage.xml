@@ -3,6 +3,6 @@
   <pagetitle>Manpage</pagetitle>
   <text>This is the manpage of the current master branch:</text>
   <pretext>
-    <inject>http://web.buetow.org/git/?p=fapi.git;a=blob_plain;f=docs/fapi.txt;hb=HEAD</inject>
+    <inject>http://web.buetow.org/cgit/fapi.git/plain/docs/fapi.txt</inject>
   </pretext>
 </content>

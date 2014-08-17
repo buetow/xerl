@@ -2,6 +2,6 @@
 <content>
   <pagetitle>License</pagetitle>
   <code>
-    <inject>http://web.buetow.org/git/?p=xerl.git;a=blob_plain;f=COPYING;hb=HEAD</inject>
+    <inject>http://web.buetow.org/cgit/xerl.git/plain/COPYING</inject>
   </code>
 </content>

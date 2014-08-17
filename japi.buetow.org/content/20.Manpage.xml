@@ -3,6 +3,6 @@
   <pagetitle>Manpage</pagetitle>
   <text>This is the manpage of the current master branch:</text>
   <pretext>
-    <inject>http://web.buetow.org/git/?p=japi.git;a=blob_plain;f=docs/japi.txt;hb=HEAD</inject>
+    <inject>http://web.buetow.org/cgit/japi.git/plain/docs/japi.txt</inject>
   </pretext>
 </content>

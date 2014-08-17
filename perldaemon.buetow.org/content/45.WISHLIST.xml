@@ -3,6 +3,6 @@
   <pagetitle>WISHLIST</pagetitle>
   <text>This is the WHISHLIST file of the current master branch:</text>
   <pretext>
-    <inject>http://web.buetow.org/git/?p=perldaemon.git;a=blob_plain;f=WISHLIST;hb=HEAD</inject>
+    <inject>http://web.buetow.org/cgit/perldaemon.git/plain/WISHLIST</inject>
   </pretext>
 </content>

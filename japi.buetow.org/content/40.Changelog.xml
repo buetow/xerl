@@ -3,6 +3,6 @@
   <pagetitle>Changelog</pagetitle>
   <text>This is the changelog file of the current master branch:</text>
   <pretext>
-    <inject>http://web.buetow.org/git/?p=japi.git;a=blob_plain;f=debian/changelog;hb=HEAD</inject>
+    <inject>http://web.buetow.org/cgit/japi.git/plain/debian/changelog</inject>
   </pretext>
 </content>
