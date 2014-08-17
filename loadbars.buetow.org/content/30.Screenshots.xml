@@ -3,6 +3,6 @@
   <pagetitle>Screenshots</pagetitle>
   <text>
     <noop>Screenshots can be downloaded from git. Just type </noop>
-    <code>git clone -b screenshots git://git.buetow.org/loadbars loadbars-screenshots</code>
+    <code>git clone -b screenshots git://git.buetow.org/loadbars.git loadbars-screenshots</code>
   </text>
 </content>
