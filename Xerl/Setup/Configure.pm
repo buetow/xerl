@@ -36,12 +36,6 @@ sub parse($) {
     $self->setval( $1, $self->eval($2) ) if $_ =~ $re;
   }
 
-  my $hostroot = $self->get_hostroot();
-  $self->set_hostroot("$hostroot/") unless $hostroot !~ m#/$#;
-
-  my $cacheroot = $self->get_cacheroot();
-  $self->set_cacheroot("$cacheroot/") unless $cacheroot !~ m#/$#;
-
   return $self;
 }
 
