@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -23,5 +23,5 @@ my $config =
   ? "xerldev.conf"
   : ( -e "xerl-$host.conf" ? "xerl-$host.conf" : 'config.conf' );
 
-my Xerl $xerl = Xerl->new( config => $config );
+my $xerl = Xerl->new( config => $config );
 $xerl->run();

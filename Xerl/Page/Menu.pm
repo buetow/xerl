@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -17,9 +17,9 @@ use Xerl::Setup::Configure;
 use Xerl::Tools::FileIO;
 use Xerl::XML::Element;
 
-sub generate($;$) {
-  my Xerl::Page::Menu $self         = $_[0];
-  my Xerl::Setup::Configure $config = $self->get_config();
+sub generate {
+  my $self   = $_[0];
+  my $config = $self->get_config();
 
   my @site    = split /\//, $config->get_site();
   my @compare = @site;
@@ -27,8 +27,7 @@ sub generate($;$) {
 
   my ( $content, $siteadd ) = ( 'content/', '' );
 
-  my Xerl::XML::Element $menuelem =
-    $self->get_menu( $content, $siteadd, shift @compare );
+  my $menuelem = $self->get_menu( $content, $siteadd, shift @compare );
 
   $self->push_array($menuelem)
     if $menuelem->first_array()->array_length() > 1;
@@ -45,15 +44,15 @@ sub generate($;$) {
   return undef;
 }
 
-sub get_menu($$$$) {
-  my Xerl::Page::Menu $self         = $_[0];
-  my Xerl::Setup::Configure $config = $self->get_config();
+sub get_menu {
+  my $self   = $_[0];
+  my $config = $self->get_config();
 
   my ( $content, $siteadd, $compare ) = ( @_[ 1 ... 2 ], lc $_[3] );
   my $issubsection = $content =~ m{\.sub/$};
   my $pattern = qr/\.(?:xml)|(?:sub)$/;
 
-  my Xerl::Tools::FileIO $io = Xerl::Tools::FileIO->new(
+  my $io = Xerl::Tools::FileIO->new(
     path     => $config->get_hostpath() . $content,
     basename => 1,
   );
@@ -78,8 +77,8 @@ sub get_menu($$$$) {
       && $_ !~ /\.inc\.pl$/i
     } @$dir;
 
-  my Xerl::XML::Element $root = Xerl::XML::Element->new();
-  my Xerl::XML::Element $menu = Xerl::XML::Element->new();
+  my $root = Xerl::XML::Element->new();
+  my $menu = Xerl::XML::Element->new();
 
   $menu->set_name('menu');
 
@@ -93,7 +92,7 @@ sub get_menu($$$$) {
     $linkname =~ s/(?:\d+\.)?(.)/\U$1/o;
     $compare .= '/' if $linkname =~ s#(.*/)[^/]+$#$1#;
 
-    my Xerl::XML::Element $item = Xerl::XML::Element->new(
+    my $item = Xerl::XML::Element->new(
       params => { link => "?site=$siteadd$site" },
       text   => $linkname
     );

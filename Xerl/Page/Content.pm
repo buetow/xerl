@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -22,11 +22,11 @@ use Xerl::XML::Reader;
 
 use LWP::Simple;
 
-sub parse($) {
-  my Xerl::Page::Content $self      = $_[0];
-  my Xerl::Setup::Configure $config = $self->get_config();
+sub parse {
+  my $self   = $_[0];
+  my $config = $self->get_config();
 
-  my Xerl::XML::Reader $xmlcontent = Xerl::XML::Reader->new(
+  my $xmlcontent = Xerl::XML::Reader->new(
     path   => $config->get_templatepath(),
     config => $config
   );
@@ -38,7 +38,7 @@ sub parse($) {
 
   $xmlcontent->parse();
 
-  my Xerl::Page::Rules $rules = Xerl::Page::Rules->new( config => $config );
+  my $rules = Xerl::Page::Rules->new( config => $config );
   $rules->parse( $config->get_xmlconfigrootobj() )
     unless $config->exists('noparse');
 
@@ -48,10 +48,10 @@ sub parse($) {
   return undef;
 }
 
-sub insertrules($$$$) {
-  my Xerl::Page::Content $self   = $_[0];
-  my Xerl::Page::Rules $rules    = $_[1];
-  my Xerl::XML::Element $element = $_[2];
+sub insertrules {
+  my $self    = $_[0];
+  my $rules   = $_[1];
+  my $element = $_[2];
 
   # Start inserting rules at <content>
   $element = $element->starttag('content');
@@ -71,12 +71,12 @@ sub insertrules($$$$) {
   return undef;
 }
 
-sub _insertrules($$$) {
-  my Xerl::Page::Content $self      = $_[0];
-  my Xerl::Page::Rules $rules       = $_[1];
-  my Xerl::XML::Element $element    = $_[2];
-  my Xerl::Setup::Configure $config = $self->get_config();
-  my $nonewlines                    = 0;
+sub _insertrules {
+  my $self    = $_[0];
+  my $rules   = $_[1];
+  my $element = $_[2];
+  my $config  = $self->get_config();
+  my $nonewlines = 0;
 
   # Don't interate through the XML childs if we have a leaf node.
   return () unless ref $element->get_array() eq 'ARRAY';
@@ -201,12 +201,12 @@ sub _insertrules($$$) {
   return $nonewlines ? map { s/\n/ /go; $_ } @content : @content;
 }
 
-sub _insert_special_vars($$$$) {
-  my Xerl::Page::Content $self      = $_[0];
-  my Xerl::Page::Rules $rules       = $_[1];
-  my Xerl::XML::Element $element    = $_[2];
-  my Xerl::Setup::Configure $config = $self->get_config();
-  my $rtext                         = $_[3];
+sub _insert_special_vars {
+  my $self    = $_[0];
+  my $rules   = $_[1];
+  my $element = $_[2];
+  my $rtext   = $_[3];
+  my $config  = $self->get_config();
 
   $$rtext =~ s/@\@text\@\@/$_=$element->get_text();chomp;$_/geo;
   $$rtext =~ s/@\@ln\@\@//go;

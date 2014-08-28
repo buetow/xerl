@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013, 2014 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -23,9 +23,9 @@ use Xerl::Tools::FileIO;
 
 use constant RECURSIVE => 1;
 
-sub parse($) {
-  my Xerl::Page::Templates $self    = $_[0];
-  my Xerl::Setup::Configure $config = $self->get_config();
+sub parse {
+  my $self    = $_[0];
+  my  $config = $self->get_config();
 
   my $site = $config->get_site();
 
@@ -52,8 +52,7 @@ sub parse($) {
     && ( $config->usecache_exists() or not $config->nocache_exists() ) )
   {
 
-    my Xerl::Tools::FileIO $io =
-      Xerl::Tools::FileIO->new( path => $cachepath . $cachefile );
+    my $io = Xerl::Tools::FileIO->new( path => $cachepath . $cachefile );
 
     if ( -1 == $io->fslurp() ) {
       $config->set_finish_request(1);
@@ -69,7 +68,7 @@ sub parse($) {
     $xmlconfigpath = $config->get_defaulthostpath() . 'config.xml'
       unless -f $xmlconfigpath;
 
-    my Xerl::XML::Reader $xmlconfigreader =
+    my $xmlconfigreader =
       Xerl::XML::Reader->new( path => $xmlconfigpath, config => $config );
 
     if ( -1 == $xmlconfigreader->open() ) {
@@ -80,8 +79,7 @@ sub parse($) {
     $xmlconfigreader->parse();
     $config->set_xmlconfigrootobj( $xmlconfigreader->get_root() );
 
-    my Xerl::Page::Menu $menu = Xerl::Page::Menu->new( config => $config );
-
+    my $menu = Xerl::Page::Menu->new( config => $config );
     $menu->generate();
     $config->set_menuobj($menu);
 
@@ -105,9 +103,7 @@ sub parse($) {
       $config->set_templatepath($glob);
     }
 
-    my Xerl::Page::Content $bodycontent =
-      Xerl::Page::Content->new( config => $config );
-
+    my $bodycontent = Xerl::Page::Content->new( config => $config );
     $bodycontent->parse();
 
     my $templatepath =
@@ -121,16 +117,14 @@ sub parse($) {
 
     $config->set_templatepath($templatepath);
 
-    my Xerl::Page::Content $templatecontent =
-      Xerl::Page::Content->new( config => $config );
-
+    my $templatecontent = Xerl::Page::Content->new( config => $config );
     $templatecontent->parse();
 
     $self->set_array( $templatecontent->get_content() );
     $config->set_content( $bodycontent->get_content() );
     $self->parsetemplate( '%%', RECURSIVE );
 
-    my Xerl::Tools::FileIO $io = Xerl::Tools::FileIO->new(
+    my $io = Xerl::Tools::FileIO->new(
       path     => $cachepath,
       filename => $cachefile,
       array    => $self->get_array(),
@@ -143,9 +137,9 @@ sub parse($) {
   return undef;
 }
 
-sub parsetemplate($$;$) {
-  my Xerl::Page::Templates $self    = $_[0];
-  my Xerl::Setup::Configure $config = $self->get_config();
+sub parsetemplate {
+  my $self   = $_[0];
+  my $config = $self->get_config();
   my $deepnesslevel = $_[2] || 0;
 
   return $self if $deepnesslevel == 100;
@@ -160,9 +154,9 @@ sub parsetemplate($$;$) {
   return undef;
 }
 
-sub print($;$) {
-  my Xerl::Page::Templates $self    = $_[0];
-  my Xerl::Setup::Configure $config = $self->get_config();
+sub print {
+  my $self   = $_[0];
+  my $config = $self->get_config();
 
   my ( $code, $flag ) = ( '', 0 );
   my $time  = $_[1];
@@ -210,7 +204,7 @@ sub print($;$) {
 
 # Static sub
 sub PARSELINE($$$;$) {
-  my Xerl::Setup::Configure $config = $_[0];
+  my $config = $_[0];
   my ( $sep, $line, $foundflag ) = @_[ 1 .. 3 ];
 
   $$line =~ s/$sep(!)?(.+?)$sep/

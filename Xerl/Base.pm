@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -14,13 +14,13 @@ use 5.14.0;
 
 use Data::Dumper;
 
-sub new ($;) {
+sub new {
   my $self = shift;
 
   bless {@_} => $self;
 }
 
-sub setval($$$) {
+sub setval {
   my UNIVERSAL $self = $_[0];
 
   $self->{ $_[1] } = $_[2];
@@ -28,13 +28,13 @@ sub setval($$$) {
   return undef;
 }
 
-sub getval($$) {
+sub getval {
   my UNIVERSAL $self = $_[0];
 
   return defined $self->{ $_[1] } ? $self->{ $_[1] } : '';
 }
 
-sub exists($$) {
+sub exists {
   my UNIVERSAL $self = $_[0];
 
   return exists $self->{ $_[1] } ? 1 : 0;

@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -17,9 +17,9 @@ use Xerl::Main::Global;
 use Xerl::Setup::Configure;
 use Xerl::Tools::FileIO;
 
-sub parse($) {
-  my Xerl::Setup::Parameter $self   = $_[0];
-  my Xerl::Setup::Configure $config = $self->get_config();
+sub parse {
+  my $self   = $_[0];
+  my $config = $self->get_config();
 
   print "Content-Type: text/plain\n\n"
     if $config->plain_exists();

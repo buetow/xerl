@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -16,10 +16,10 @@ use Xerl::Base;
 use Xerl::Setup::Configure;
 use Xerl::XML::Element;
 
-sub parse($) {
-  my Xerl::Page::Rules $self        = $_[0];
-  my Xerl::XML::Element $element    = $_[1];
-  my Xerl::Setup::Configure $config = $self->get_config();
+sub parse {
+  my $self    = $_[0];
+  my $element = $_[1];
+  my $config  = $self->get_config();
 
   $element = $element->starttag2( 'rules', $config->get_outputformat() );
   return unless defined $element;

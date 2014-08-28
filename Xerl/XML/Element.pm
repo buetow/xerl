@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -12,8 +12,8 @@ use warnings;
 
 use Xerl::Base;
 
-sub starttag($$) {
-  my Xerl::XML::Element $self = $_[0];
+sub starttag {
+  my $self = $_[0];
   my ( $name, $temp ) = ( $_[1], undef );
 
   return $self if $self->get_name() eq $name;
@@ -27,22 +27,21 @@ sub starttag($$) {
   return undef;
 }
 
-sub starttag2($$$) {
-  my Xerl::XML::Element $self = $_[0];
+sub starttag2 {
+  my $self = $_[0];
   my ( $name, $after ) = @_[ 1 ... 2 ];
 
-  my Xerl::XML::Element $element = $self->starttag($name);
+  my $element = $self->starttag($name);
   return $element->starttag($after) if defined $element;
 
   return undef;
 }
 
-sub params_str($) {
-  my Xerl::XML::Element $self = $_[0];
+sub params_str {
+  my $self = $_[0];
   my $params = $self->get_params();
 
   return undef if $params eq '';
-
   return join '', map { " $_=\"" . $params->{$_} . '"' } keys %$params;
 }
 

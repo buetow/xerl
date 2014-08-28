@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -23,40 +23,34 @@ use Xerl::Setup::Configure;
 use Xerl::Setup::Parameter;
 use Xerl::Setup::Request;
 
-sub run($) {
+sub run {
   my Xerl $self = $_[0];
   my $time = [gettimeofday];
 
-  my Xerl::Setup::Request $request =
-    Xerl::Setup::Request->new( request => $ENV{REQUEST_URI} );
-
+  my $request = Xerl::Setup::Request->new( request => $ENV{REQUEST_URI} );
   $request->parse();
-  my Xerl::Setup::Configure $config =
-    Xerl::Setup::Configure->new( config => $self->get_config(), %$request );
 
+  my $config = Xerl::Setup::Configure->new(
+    config => $self->get_config(), %$request
+  );
   $config->parse();
+
   return undef if $config->finish_request_exists();
 
   $config->defaults();
 
-  my Xerl::Setup::Parameter $parameter =
-    Xerl::Setup::Parameter->new( config => $config );
-
+  my $parameter = Xerl::Setup::Parameter->new( config => $config );
   $parameter->parse();
   return undef if $config->finish_request_exists();
 
   if ( $config->document_exists() ) {
-    my Xerl::Page::Document $document =
-      Xerl::Page::Document->new( config => $config );
-
+    my $document = Xerl::Page::Document->new( config => $config );
     $document->parse();
     return undef if $config->finish_request_exists();
 
   }
   else {
-    my Xerl::Page::Templates $templates =
-      Xerl::Page::Templates->new( config => $config );
-
+    my $templates = Xerl::Page::Templates->new( config => $config );
     $templates->parse();
     return undef if $config->finish_request_exists();
     $templates->print($time);

@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013, 2014 Dipl.-Inform. (FH) Paul C. Buetow
+# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -16,11 +16,9 @@ use Xerl::Base;
 use Xerl::Tools::FileIO;
 use Xerl::XML::Element;
 
-sub parse($) {
-  my Xerl::Setup::Configure $self = $_[0];
-
-  my Xerl::Tools::FileIO $file =
-    Xerl::Tools::FileIO->new( 'path' => $self->get_config() );
+sub parse {
+  my $self = $_[0];
+  my $file = Xerl::Tools::FileIO->new( 'path' => $self->get_config() );
 
   if ( -1 == $file->fslurp() ) {
     $self->set_finish_request(1);
@@ -39,8 +37,8 @@ sub parse($) {
   return $self;
 }
 
-sub defaults($) {
-  my Xerl::Setup::Configure $self = $_[0];
+sub defaults {
+  my $self = $_[0];
 
   $self->set_proto('https') if exists $ENV{HTTPS};
 
@@ -70,8 +68,7 @@ sub defaults($) {
     my $redirect = $self->get_hostroot() . 'redirect:' . $self->get_host();
 
     if ( -f $redirect ) {
-      my Xerl::Tools::FileIO $file =
-        Xerl::Tools::FileIO->new( 'path' => $redirect );
+      my $file = Xerl::Tools::FileIO->new( 'path' => $redirect );
       $file->fslurp();
 
       my $location = $file->shift();
@@ -82,8 +79,7 @@ sub defaults($) {
     my $alias = $self->get_hostroot() . 'alias:' . $self->get_host();
 
     if ( -f $alias ) {
-      my Xerl::Tools::FileIO $file =
-        Xerl::Tools::FileIO->new( 'path' => $alias );
+      my $file = Xerl::Tools::FileIO->new( 'path' => $alias );
 
       $file->fslurp();
       $self->set_host( $file->shift() );
@@ -128,8 +124,8 @@ sub defaults($) {
   return undef;
 }
 
-sub eval($$) {
-  my Xerl::Setup::Configure $self = $_[0];
+sub eval {
+  my $self = $_[0];
   my $val = $_[1];
 
   $val =~ s/^!(.+)/`$1`/eo;
@@ -137,9 +133,9 @@ sub eval($$) {
   return $val;
 }
 
-sub insertxmlvars($$) {
-  my Xerl::Setup::Configure $self = $_[0];
-  my Xerl::XML::Element $element  = $_[1];
+sub insertxmlvars {
+  my $self = $_[0];
+  my $element = $_[1];
 
   $element = $element->starttag('variables');
 
