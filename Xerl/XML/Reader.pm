@@ -30,7 +30,7 @@ sub open {
 }
 
 sub parse {
-  my $self = shift;
+  my $self        = shift;
   my $sax_handler = Xerl::XML::SAXHandler->new();
 
   my $parser = XML::SAX::ParserFactory->parser( Handler => $sax_handler );

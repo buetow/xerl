@@ -31,7 +31,8 @@ sub run {
   $request->parse();
 
   my $config = Xerl::Setup::Configure->new(
-    config => $self->get_config(), %$request
+    config => $self->get_config(),
+    %$request
   );
   $config->parse();
 

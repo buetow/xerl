@@ -24,8 +24,8 @@ use Xerl::Tools::FileIO;
 use constant RECURSIVE => 1;
 
 sub parse {
-  my $self    = $_[0];
-  my  $config = $self->get_config();
+  my $self   = $_[0];
+  my $config = $self->get_config();
 
   my $site = $config->get_site();
 
@@ -138,8 +138,8 @@ sub parse {
 }
 
 sub parsetemplate {
-  my $self   = $_[0];
-  my $config = $self->get_config();
+  my $self          = $_[0];
+  my $config        = $self->get_config();
   my $deepnesslevel = $_[2] || 0;
 
   return $self if $deepnesslevel == 100;
@@ -194,7 +194,6 @@ sub print {
     $line =~ s/!!LT!!/</g;
     $line =~ s/!!GT!!/>/g;
     $line =~ s#!!URL\((.+?)\)!!#<a href="$1">$1</a>#g;
-
 
     print $line;
   }

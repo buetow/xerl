@@ -95,7 +95,7 @@ sub reverse_array {
 }
 
 sub merge {
-  my ($self, $other) = @_;
+  my ( $self, $other ) = @_;
 
   my @merged = ( @{ $self->get_array() }, @{ $other->get_array() } );
   my $fio = Xerl::Tools::FileIO->new();
@@ -124,7 +124,7 @@ sub str {
 }
 
 sub _fwrite {
-  my $self = $_[0];
+  my $self   = $_[0];
   my $append = $_[1];
 
   my ( $path, $filename ) =

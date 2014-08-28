@@ -15,7 +15,7 @@ use v5.14.0;
 use Xerl::Base;
 
 sub parse {
-  my $self = $_[0];
+  my $self    = $_[0];
   my $request = $self->get_request();
 
   # Secure it!

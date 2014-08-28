@@ -126,7 +126,7 @@ sub defaults {
 
 sub eval {
   my $self = $_[0];
-  my $val = $_[1];
+  my $val  = $_[1];
 
   $val =~ s/^!(.+)/`$1`/eo;
 
@@ -134,7 +134,7 @@ sub eval {
 }
 
 sub insertxmlvars {
-  my $self = $_[0];
+  my $self    = $_[0];
   my $element = $_[1];
 
   $element = $element->starttag('variables');

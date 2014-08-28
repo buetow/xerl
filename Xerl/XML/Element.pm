@@ -38,7 +38,7 @@ sub starttag2 {
 }
 
 sub params_str {
-  my $self = $_[0];
+  my $self   = $_[0];
   my $params = $self->get_params();
 
   return undef if $params eq '';

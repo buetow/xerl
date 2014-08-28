@@ -72,10 +72,10 @@ sub insertrules {
 }
 
 sub _insertrules {
-  my $self    = $_[0];
-  my $rules   = $_[1];
-  my $element = $_[2];
-  my $config  = $self->get_config();
+  my $self       = $_[0];
+  my $rules      = $_[1];
+  my $element    = $_[2];
+  my $config     = $self->get_config();
   my $nonewlines = 0;
 
   # Don't interate through the XML childs if we have a leaf node.
@@ -109,6 +109,7 @@ sub _insertrules {
 
       }
       elsif ( lc $name eq 'inject' ) {
+
         # Fetch via LWP::Simple
         my $got = get($text);
         $got =~ s/</&lt;/g;
