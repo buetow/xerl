@@ -1,9 +1,11 @@
 @font-face {
-  font-family: 'Conv_VarelaRound-Regular';
-  src: url('?document=fonts/VarelaRound-Regular.eot');
-  src: url('?document=fonts/VarelaRound-Regular.woff') format('woff'), url('?document=fonts/VarelaRound-Regular.ttf') format('truetype'), url('?document=fonts/VarelaRound-Regular.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Anonymous';
+  src: url('?document=fonts/Anonymous.ttf') format('truetype'); 
+# font-family: 'Conv_VarelaRound-Regular';
+# src: url('?document=fonts/VarelaRound-Regular.eot');
+# src: url('?document=fonts/VarelaRound-Regular.woff') format('woff'), url('?document=fonts/VarelaRound-Regular.ttf') format('truetype'), url('?document=fonts/VarelaRound-Regular.svg') format('svg');
+# font-weight: normal;
+# font-style: normal;
 } 
 
 body {
