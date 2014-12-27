@@ -24,7 +24,7 @@
     <text>
       <noop>All hosts ending with </noop>
       <strong>.ninja</strong>
-      <noop> are most likely dev, test or PoCs. Don't expect to find anything usefull there (There are no valid DNS entries yet).</noop>
+      <noop> are most likely dev, test or PoCs. Don't expect to find anything usefull there.</noop>
     </text>
   </information>
   <text>
