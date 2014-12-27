@@ -23,6 +23,7 @@
       <textheader>[h2]</textheader>
       <textsubheader>[h3]</textsubheader>
       <important>[div class="important"]</important>
+      <important2>[div class="important2"]</important2>
       <information>[div class="information"]</information>
       <text>[p]</text>
       <type>[span class="@@class@@"]</type>
