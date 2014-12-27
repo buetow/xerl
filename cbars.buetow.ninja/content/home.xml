@@ -5,9 +5,9 @@
     <text>
       <strong>Important notice:</strong>
       <noop>The domain </noop>
-      <strong>.buetow.foo</strong>
+      <strong>.buetow.ninja</strong>
       <noop>contains only development, test and PoC stuff. Replace </noop>
-      <strong>$shomething.buetow.FOO</strong>
+      <strong>$shomething.buetow.NINJA</strong>
       <noop> with </noop>
       <strong>$something.buetow.ORG</strong>
       <noop> (if exists) to get the stable stuff.</noop>
