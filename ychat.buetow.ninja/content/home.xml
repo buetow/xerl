@@ -13,14 +13,14 @@
       <noop> (if exists) to get the stable stuff.</noop>
     </text>
   </important>
-  <important>
+  <important2>
     <text>
-      <strong>Important notice 2:</strong>
+      <strong>Important notice:</strong>
       <noop>The development of the yChat has been stalled. In near future, there will be no further development on this project. This project always was a proof of concept only. For current programming projects please visit </noop>
       <hyperlink>http://dev.buetow.org</hyperlink>
       <noop> and enjoy :)</noop>
     </text>
-  </important>
+  </important2>
   <text>What is yChat? yChat is an experimental, XML-configurable, fast, very portable, multi-platform Web-based chat server written in C++ and a little subset of C which supports secure SSL sockets using OpenSSL, MySQL databases and is compatible with almost all browsers that support frames and JavaScript. It runs on all servers which are POSIX.4a compatible and use the GNU GCC C++ compiler from 3.1 and up with pthreads enabled. Its developed under the GNU General Public License.</text>
   <text>PLEASE NOTICE THAT yChat IS NOT Ychat! Ychat is a Yahoo Chat Client while yChat is a web based chat server. So they both handle chatting but are very different and are totally different projects!</text>
 </content>

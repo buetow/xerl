@@ -46,6 +46,15 @@ div.important {
   box-shadow: 10px 10px 5px #000000;
 }
 
+div.important2 {
+  background-color: #FFA500;
+  border-width: 1px;
+  border-style: solid;
+  border-radius:10px;
+  margin-right: 10px;
+  box-shadow: 10px 10px 5px #000000;
+}
+
 div.information {
   background-color: #99FF66;
   border-width: 1px;
