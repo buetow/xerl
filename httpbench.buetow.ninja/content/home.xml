@@ -13,12 +13,12 @@
     </text>
   </important>
   <pagetitle>httpbench</pagetitle>
-  <important>
+  <important2>
     <text>
       <strong>Important notice:</strong>
       <noop>This is beta software!!!</noop>
     </text>
-  </important>
+  </important2>
   <text>
     <noop>httpbench is a small program for Linux, UNIX and a like written in C which can be used to benchmark HTTP servers. So why implementing a new benchmarking tool? Because I want a specific benchmark featureset which I could not find in another tools such as Apache Benchmarker or Siege and it's more fun to implement my own tool instead of extending the existing tools although other tools are in its most features much more advanced than httpbench! This is the current feature set:</noop>
   </text>
