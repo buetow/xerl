@@ -4,7 +4,7 @@
   <textheader>Mailing List</textheader>
   <text>
     <noop>Here are some programming projects listed which I programmed in my spare time. Some may be usefull and others may not. Please use the </noop>
-    <namedlink href="http://web.buetow.org/listinfo/dev">Development Mailing List</namedlink>
+    <namedlink href="http://pluto.buetow.org/listinfo/dev">Development Mailing List</namedlink>
     <noop> for any considerations.</noop>
   </text>
   <textheader>Github</textheader>
