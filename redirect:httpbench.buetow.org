@@ -1,1 +1,1 @@
-http://httpbench.buetow.ninja/
+http://httpbench.alpha.buetow.org/

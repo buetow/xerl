@@ -5,12 +5,12 @@
   <important>
     <text>
       <strong>Important notice:</strong>
-      <noop>The domain </noop>
-      <strong>.buetow.ninja</strong>
+      <noop>The host </noop>
+      <strong>alpha.buetow.org</strong>
       <noop>contains only development, test and PoC stuff. Replace </noop>
-      <strong>$shomething.buetow.NINJA</strong>
+      <strong>$shomething.alpha.buetow.org</strong>
       <noop> with </noop>
-      <strong>$something.buetow.ORG</strong>
+      <strong>$something.buetow.org</strong>
       <noop> (if exists) to get the stable stuff.</noop>
     </text>
   </important>

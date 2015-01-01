@@ -22,8 +22,8 @@
   <textheader>Project list</textheader>
   <information>
     <text>
-      <noop>All hosts ending with </noop>
-      <strong>.ninja</strong>
+      <noop>All hosts containing </noop>
+      <strong>.alpha.buetow.org</strong>
       <noop> are most likely dev, test or PoCs. Don't expect to find anything usefull there.</noop>
     </text>
   </information>

@@ -7,13 +7,18 @@
     <namedlink href="http://xerl.buetow.org">Xerl</namedlink>
     <noop>.</noop>
   </text>
-  <information>
+  <important>
     <text>
-      <noop>All hosts ending with </noop>
-      <strong>.ninja</strong>
-      <noop> are most likely dev, test or PoCs. Don't expect to find anything usefull there. Also, generally here is lots of crap listed.</noop>
+      <strong>Important notice:</strong>
+      <noop>The host </noop>
+      <strong>.alpha.buetow.org</strong>
+      <noop>contains only development, test and PoC stuff. Replace </noop>
+      <strong>$shomething.alpha.buetow.org</strong>
+      <noop> with </noop>
+      <strong>$something.buetow.org</strong>
+      <noop> (if exists) to get the stable stuff.</noop>
     </text>
-  </information>
+  </important>
   <text>
     <includerun>sitemap.inc.pl</includerun>
   </text>
