@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Pingdomfetch</pagetitle>
+  <textheader>A simple Command Line Tool for Pingdom</textheader>
+  <text>
+    <noop>This tool can be used together with </noop>
+    <link>http://www.pingdom.com</link>
+    <noop> to fetch the results and notify them via email.</noop>
+  </text>
+</content>
