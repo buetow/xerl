@@ -6,11 +6,7 @@
       <strong>Important notice:</strong>
       <noop>The domain </noop>
       <strong>.alpha.buetow.org</strong>
-      <noop>contains only development, test and PoC stuff. Replace </noop>
-      <strong>$shomething.alpha.buetow.org</strong>
-      <noop> with </noop>
-      <strong>$something.buetow.org</strong>
-      <noop> (if exists) to get the stable stuff.</noop>
+      <noop>contains only development, test and PoC stuff.</noop> 
     </text>
   </important>
   <textheader>Get the current clue...</textheader>
