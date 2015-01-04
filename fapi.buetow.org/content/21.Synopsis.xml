@@ -3,6 +3,6 @@
   <pagetitle>Synopsis</pagetitle>
   <text>This is the Synopsis of the current master branch:</text>
   <pretext>
-    <inject>http://web.buetow.org/cgit/fapi.git/plain/docs/synopsis.txt</inject>
+    <inject>https://web.buetow.org/cgit/fapi.git/plain/docs/synopsis.txt</inject>
   </pretext>
 </content>

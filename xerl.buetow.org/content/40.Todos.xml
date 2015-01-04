@@ -3,6 +3,6 @@
   <pagetitle>Todos</pagetitle>
   <text>This is the TODO file of the current master branch:</text>
   <pretext>
-    <inject>http://web.buetow.org/cgit/xerl.git/plain/TODO</inject>
+    <inject>https://web.buetow.org/cgit/xerl.git/plain/TODO</inject>
   </pretext>
 </content>
