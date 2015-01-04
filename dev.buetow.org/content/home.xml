@@ -4,7 +4,7 @@
   <textheader>Mailing List</textheader>
   <text>
     <noop>Here are some programming projects listed which I programmed in my spare time. Some may be usefull and others may not. Please use the </noop>
-    <namedlink href="http://pluto.buetow.org/listinfo/dev">Development Mailing List</namedlink>
+    <namedlink href="https://pluto.buetow.org/listinfo/dev">Development Mailing List</namedlink>
     <noop> for any considerations.</noop>
   </text>
   <textheader>Github</textheader>
@@ -16,9 +16,9 @@
   </text>
   <textheader>Deb repository</textheader>
   <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via</text>
-  <code>[deb|deb-src] http://deb.buetow.org/apt DISTRIBUTION main</code>
+  <code>[deb|deb-src] https://deb.buetow.org/apt DISTRIBUTION main</code>
   <text>Where DISTRIBUTION may be squeeze, wheezy.... To trust the repo please run: </text>
-  <code>curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -</code>
+  <code>curl https://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -</code>
   <textheader>Project list</textheader>
   <information>
     <text>

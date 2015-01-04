@@ -6,7 +6,7 @@
     <text>
       <strong>Important notice:</strong>
       <noop>The development of pwgrep has been stalled. You may use another password manager like Keepass with kpcli. Go to </noop>
-      <hyperlink>http://dev.buetow.org</hyperlink>
+      <hyperlink>https://dev.buetow.org</hyperlink>
       <noop> for other projects of mine.</noop>
     </text>
   </important>

@@ -3,6 +3,6 @@
   <pagetitle>Manpage</pagetitle>
   <text>This is the manpage of the current master branch:</text>
   <pretext>
-    <inject>http://web.buetow.org/cgit/photoalbum.git/plain/docs/photoalbum.txt</inject>
+    <inject>https://web.buetow.org/cgit/photoalbum.git/plain/docs/photoalbum.txt</inject>
   </pretext>
 </content>
