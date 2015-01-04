@@ -109,13 +109,17 @@ sub _insertrules {
 
       }
       elsif ( lc $name eq 'inject' ) {
-
         # Fetch via LWP::Simple
-        my $got = get($text);
-        $got =~ s/</&lt;/g;
-        $got =~ s/>/&gt;/g;
-        push @content, $got;
-
+        #my $got = get($text);
+        # Bug in FreeBSD Perl and LWP Module
+        my $got = `curl "$text"`;
+        if ($!) {
+          push @content, "$text: $!";
+        } else {
+          $got =~ s/</&lt;/g;
+          $got =~ s/>/&gt;/g;
+          push @content, $got;
+        }
       }
       elsif ( lc $name eq 'includerun' ) {
         my $scriptpath = $config->get_contentpath() . $text;
@@ -145,8 +149,8 @@ sub _insertrules {
           }
           else {
             push @content,
-              "<$name" . ( $succ->params_str() || '' ) . '>',
-              $self->_insertrules( $rules, $succ ), $text, "</$name>\n";
+            "<$name" . ( $succ->params_str() || '' ) . '>',
+            $self->_insertrules( $rules, $succ ), $text, "</$name>\n";
           }
         }
       }
@@ -181,21 +185,21 @@ sub _insertrules {
         }
 
         $text .= $params->{addback}
-          if exists $params->{addback};
+        if exists $params->{addback};
         $text = $params->{addfront} . $text
-          if exists $params->{addfront};
+        if exists $params->{addfront};
       }
 
       my $oadd =
-        exists $ruleparams->{addfront}
-        ? '<' . $ruleparams->{addfront}
-        : '';
+      exists $ruleparams->{addfront}
+      ? '<' . $ruleparams->{addfront}
+      : '';
 
       my $cadd =
-        exists $ruleparams->{addback} ? $ruleparams->{addback} . '>' : '';
+      exists $ruleparams->{addback} ? $ruleparams->{addback} . '>' : '';
 
       push @content, $orule, $oadd, $self->_insertrules( $rules, $succ ),
-        $text, $cadd, $crule;
+      $text, $cadd, $crule;
     }
   }
 
