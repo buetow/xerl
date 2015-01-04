@@ -3,6 +3,6 @@
   <pagetitle>Changelog</pagetitle>
   <text>This is the changelog file of the current master branch:</text>
   <pretext>
-    <inject>https://web.buetow.org/cgit/cbars.git/plain/debian/changelog</inject>
+    <inject>http://web.buetow.org/cgit/cbars.git/plain/debian/changelog</inject>
   </pretext>
 </content>

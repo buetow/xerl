@@ -3,6 +3,6 @@
   <pagetitle>README</pagetitle>
   <text>This is the README file of the current master branch:</text>
   <pretext>
-    <inject>https://web.buetow.org/cgit/perldaemon.git/plain/README</inject>
+    <inject>http://web.buetow.org/cgit/perldaemon.git/plain/README</inject>
   </pretext>
 </content>
