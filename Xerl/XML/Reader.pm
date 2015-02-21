@@ -30,7 +30,9 @@ sub open {
 }
 
 sub parse {
-  my $self        = shift;
+  my $self = shift;
+
+  XML::SAX->add_parser(q(XML::SAX::PurePerl));
   my $sax_handler = Xerl::XML::SAXHandler->new();
 
   my $parser = XML::SAX::ParserFactory->parser( Handler => $sax_handler );
