@@ -112,7 +112,8 @@ sub _insertrules {
         # Fetch via LWP::Simple
         #my $got = get($text);
         # Bug in FreeBSD Perl and LWP Module
-        my $got = `curl "$text"`;
+        my $curl = $config->get_curlpath();
+        my $got = `$curl "$text"`;
         if ($!) {
           push @content, "$text: $!";
         } else {
