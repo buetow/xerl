@@ -2,14 +2,6 @@
 <content>
   <pagetitle>pwgrep</pagetitle>
   <textheader>Managing passwords...</textheader>
-  <important>
-    <text>
-      <strong>Important notice:</strong>
-      <noop>The development of pwgrep has been stalled. You may use another password manager like pass or Keepass with kpcli. Go to </noop>
-      <hyperlink>https://dev.buetow.org</hyperlink>
-      <noop> for other projects of mine.</noop>
-    </text>
-  </important>
   <text>
     <rimg href="?document=images/gnupg.png" title="GnuPG"/>
     <noop>In order to manage my passwords I wrote myself a small bash/awk script which manages a database file using encryption of GnuPG. Those are the benefits of pwgrep:</noop>
