@@ -4,6 +4,6 @@
   <textheader>Download from git repository</textheader>
   <text>
     <noop>Go to </noop>
-    <namedlink href="http://github.com/rantanplan/!!HOSTNAME!!">http://github.com/rantanplan/!!HOSTNAME!!</namedlink>
+    <namedlink href="http://github.com/buetow/!!HOSTNAME!!">http://github.com/buetow/!!HOSTNAME!!</namedlink>
   </text>
 </content>

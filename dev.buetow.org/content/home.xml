@@ -10,7 +10,7 @@
   <textheader>Github</textheader>
   <text>
     <noop>My Github page is</noop>
-    <namedlink href="http://github.com/rantanplan">github.com/rantanplan</namedlink>
+    <namedlink href="http://github.com/buetow">github.com/buetow</namedlink>
     <noop> and my open source report card is</noop>
     <namedlink href="http://osrc.dfm.io/rantanplan">http://osrc.dfm.io/rantanplan</namedlink>
   </text>
