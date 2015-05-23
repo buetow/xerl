@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Guprecords</pagetitle>
+  <textheader>Global uptime records.</textheader>
+  <text>Shows uprecord stats of several hosts at once.</text>
+  <cimg href="?document=images/guprecords.png" title="Guprecords" alt="Guprecords"/>
+</content>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>References</pagetitle>
+  <text>The following references are used for VS developing:</text>
+  <textheader>Notes of the Distributed Systems lecture</textheader>
+  <text>The script of the german distributed systems lecture at the FH Aachen.</text>
+  <textheader>Distributed Systems: Principles And Paradigms </textheader>
+  <text>
+    <rimg href="?document=images/tanenbaum.jpg" title="Tanenbaum"/>
+    <noop>For courses on Distributed Systems, Distributed Operating Systems, and Advanced Operating Systems focusing on distributed systems, found in departments of Computer Science, Computer Engineering and Electrical Engineering. Very few textbooks today explore distributed systems in a manner appropriate for university students. In this unique text, esteemed authors Tanenbaum and van Steen provide full coverage of the field in a systematic way that can be readily used for teaching. No other text examines the underlying principles ? and their applications to a wide variety of practical distributed systems ? with this level of depth and clarity. I'm using a german version of this book "Verteilte Systeme. Grundlagen und Paradigmen"!</noop>
+  </text>
+  <textheader>Developing Games in Java</textheader>
+  <text>
+    <rimg href="?document=images/javagames.jpg" title="Developing Games in Java"/>
+    <noop>Well, VS is not and will not be a game! However, this book contains lots of usefull stuff about Java 2D graphics programming which can be used in VS :) </noop>
+    <noop>If you already have Java programming experience and are looking to program games, this book is for you. David Brackeen, along with co-authors Bret Barker and Lawrence Vanhelsuwe, show you how to make fast, full-screen action games such as side scrollers and 3D shooters. Key features covered in this book include Java 2 game programming techniques, including latest 2D graphics and sound technologies, 3D graphics and scene management, path-finding and artificial intelligence, collision detection, game scripting using BeanShell, and multi-player game engine creation.</noop>
+  </text>
+  <textheader>Lots more</textheader>
+  <text>Lots of more references have been used. Take a look at the "Literaturverzeichnis" of the in german written diploma thesis.</text>
+</content>
