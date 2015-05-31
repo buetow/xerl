@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>gstats</pagetitle>
+  <textheader>Get the current clue...</textheader>
+  <text>gstats is a program written in Go to observe disk IO stats. It currently runs on Linux only. FreeBSD support may be added too (but only through linprocfs)</text>
+  <textheader>Screen shot</textheader>
+  <img href="?document=images/gstats.png" title="gstats" alt="gstats"/>
+  <textheader>Command line flags</textheader>
+  <inject>https://buetow.org/cgit/gstat.git/plain/help.txt</inject>
+</content>
