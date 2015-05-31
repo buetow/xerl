@@ -5,6 +5,18 @@
   <text>If you don't like this website design: I am not a web designer and sometimes less is more.</text>
   <enumeration>
     <enumitem>
+      <noop>Degree</noop>
+      <strong>(It's not as if important)</strong>
+      <noop>:</noop>
+      <newline/>
+      <newline/>
+      <noop>Diplom-Informatiker (FH) from Germany</noop>
+      <newline/>
+      <noop>Equivalent: British Bachelor (Honours)</noop>
+      <newline/>
+      <newline/>
+    </enumitem>
+    <enumitem>
       <noop>My development site:</noop>
       <hyperlink>https://dev.buetow.org</hyperlink>
     </enumitem>
