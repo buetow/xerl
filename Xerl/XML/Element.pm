@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013, 2014 by Paul Buetow
+# Xerl (c) 2005-2011, 2013-2015 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: https://xerl.buetow.org
 #
