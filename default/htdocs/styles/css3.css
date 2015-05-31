@@ -8,14 +8,14 @@
 
 body {
   font-family: 'Conv_VarelaRound-Regular', Georgia, Serif;
-  background-color: #BCC6CC;
+  background-color: #666666;
   height: 100%;
   max-width: 1100px;
   margin-left: auto; margin-right: auto
 }
 
 div.header {
-  background-color: #EEEEEE;
+  background-color: #FFFFEF;
   color: #000000;
   border-color: #000000;
   border-width: 2px;
@@ -29,7 +29,7 @@ div.header {
 }
 
 div.main {
-  background-color: #FFFFFF;
+  background-color: #FFFFEF;
   border-width: 1px;
   border-style: solid;
   padding: 5px;
@@ -116,7 +116,7 @@ pre, .quote, .code {
 }
 
 .footer {
-  background-color: #EEEEEE;
+  background-color: #FFA500;
   color: #000000;
   text-align: center;
   font-style: italic;
