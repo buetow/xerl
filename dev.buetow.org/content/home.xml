@@ -9,7 +9,7 @@
   <textheader>Github</textheader>
   <text>
     <noop>In parallel to Cgit I keep copies of my stuff at Github. My Github page is</noop>
-    <namedlink href="http://github.com/buetow">github.com/buetow</namedlink>
+    <hyperlink>"https://github.com/buetow</hyperlink>
   </text>
   <textheader>Project list</textheader>
   <information>
