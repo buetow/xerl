@@ -1,5 +1,5 @@
 Hint: Run 'make todo' to see everything in every file what is to do!
 
+TODO: - Migrate to Perl6 after Perl6 stable is available as a FreeBSD package
 TODO: - Evaluate Template Toolkit, maybe use it
-TODO: - Create a Debian package and put it to deb.buetow.org
-TODO: - Documentation of all features/options (manpage)
+TODO: - Documentation of all features/options 
