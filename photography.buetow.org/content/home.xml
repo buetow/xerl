@@ -4,22 +4,29 @@
   <text>This is a list of photography tools which I use</text>
   <enumeration>
     <enumitem>
-      <noop>Fedora Linux</noop>
+      <noop>Canon PowerShot S95</noop>
+    </enumitem>
+    <enumitem>
+      <noop>Fedora Linux as the Operating System</noop>
       <hyperlink>http://getfedora.org</hyperlink>
     </enumitem>
     <enumitem>
-      <noop>DikiKam</noop>
+      <noop>DigiKam to import and sort/order Photos. As well as batch processing non-RAW images.</noop>
       <hyperlink>http://www.digikam.org</hyperlink>
     </enumitem>
     <enumitem>
-      <noop>Dark Table</noop>
+      <noop>Dark Table for processing RAW images.</noop>
       <hyperlink>http://www.darktable.org</hyperlink>
     </enumitem>
     <enumitem>
-      <noop>Qiv (Quick picture viewer)</noop>
+      <noop>The GIMP for manual processing JPEG images.</noop>
+      <hyperlink>http://www.gimp.org</hyperlink>
     </enumitem>
     <enumitem>
-      <noop>ImageMagick / Perl</noop>
+      <noop>Qiv (Quick picture viewer) for quick image viewing.</noop>
+    </enumitem>
+    <enumitem>
+      <noop>ImageMagick / Perl / ZSH</noop>
     </enumitem>
     <enumitem>
       <noop>Flickr / 500px</noop>
