@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Photography</pagetitle>
+  <text>This is a list of photography tools which I use</text>
+  <enumeration>
+    <enumitem>
+      <noop>Fedora Linux</noop>
+      <hyperlink>http://getfedora.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>DikiKam</noop>
+      <hyperlink>http://www.digikam.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>Dark Table</noop>
+      <hyperlink>http://www.darktable.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>Qiv (Quick picture viewer)</noop>
+    </enumitem>
+    <enumitem>
+      <noop>ImageMagick / Perl</noop>
+    </enumitem>
+    <enumitem>
+      <noop>Flickr / 500px</noop>
+    </enumitem>
+  </enumeration>
+</content>
