@@ -7,8 +7,12 @@
       <noop>Canon PowerShot S95</noop>
     </enumitem>
     <enumitem>
-      <noop>Fedora Linux as the Operating System</noop>
+      <noop>Fedora Linux as the Desktop Operating System</noop>
       <hyperlink>http://getfedora.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>FreeBSD as NAS system (rsync, Samba share)</noop>
+      <hyperlink>http://www.freebsd.org</hyperlink>
     </enumitem>
     <enumitem>
       <noop>DigiKam to import and sort/order Photos. As well as batch processing non-RAW images.</noop>
@@ -26,7 +30,11 @@
       <noop>Qiv (Quick picture viewer) for quick image viewing.</noop>
     </enumitem>
     <enumitem>
-      <noop>ImageMagick / Perl / ZSH</noop>
+      <noop>Photoalbum for simple and fast web albums.</noop>
+      <hyperlink>https://photoalbum.buetow.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>ImageMagick / Perl / ZSH for various custom scripts.</noop>
     </enumitem>
     <enumitem>
       <noop>Flickr / 500px</noop>
