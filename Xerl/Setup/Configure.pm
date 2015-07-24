@@ -89,9 +89,9 @@ sub defaults {
 
     if ( -f $alias ) {
       my $file = Xerl::Tools::FileIO->new( 'path' => $alias );
+      $file->fslurp();
       $alias_host .= $file->shift();
 
-      $file->fslurp();
       $self->set_host( $alias_host );
     }
   }
