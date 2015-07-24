@@ -64,8 +64,9 @@ sub defaults {
   $self->set_hostname( lc $hostname )
     unless $self->hostname_exists();
 
-  unless ( -d $self->get_hostroot() . $self->get_host() ) {
-    my $redirect = $self->get_hostroot() . 'redirect:' . $self->get_host();
+  my $host = $self->get_host();
+  unless ( -d $self->get_hostroot() . $host ) {
+    my $redirect = $self->get_hostroot() . 'redirect:' . $host;
 
     if ( -f $redirect ) {
       my $file = Xerl::Tools::FileIO->new( 'path' => $redirect );
@@ -76,13 +77,22 @@ sub defaults {
       $self->set_finish_request(1);
     }
 
-    my $alias = $self->get_hostroot() . 'alias:' . $self->get_host();
+    my $alias = $self->get_hostroot() . 'alias:' . $host;
+    my $alias_host = '';
+
+    unless ( -f $alias ) {
+      my ($hostname, @domain) = split /\./, $host;
+      my $domain = join '.', @domain;
+      $alias = $self->get_hostroot() . 'alias:' . $domain;
+      $alias_host = "$hostname.";
+    }
 
     if ( -f $alias ) {
       my $file = Xerl::Tools::FileIO->new( 'path' => $alias );
+      $alias_host .= $file->shift();
 
       $file->fslurp();
-      $self->set_host( $file->shift() );
+      $self->set_host( $alias_host );
     }
   }
 
