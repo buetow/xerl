@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <content>
   <pagetitle>Imprint</pagetitle>
+  <rimg href="?document=images/croxleyrd.jpg" title="Croxley Road"/>
   <text>In case you want to pass any comments, please choose your contact method...</text>
   <enumeration>
     <enumitem>
