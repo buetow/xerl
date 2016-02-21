@@ -2,7 +2,7 @@
 <content>
   <pagetitle>gotop</pagetitle>
   <textheader>Get the current clue...</textheader>
-  <text>gotop is a program written in Go to observe disk IO stats. It currently runs on Linux only.</text>
+  <text>gotop is a program written in Go to observe disk IO stats for Linux.</text>
   <textheader>Screenshot</textheader>
   <cimg href="?document=images/gotop.png" title="gotop" alt="gotop"/>
   <textheader>Command line flags</textheader>
