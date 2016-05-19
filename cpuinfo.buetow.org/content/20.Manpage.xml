@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<content>
-  <pagetitle>Manpage</pagetitle>
-  <text>This is the manpage of the current master branch:</text>
-  <pretext>
-    <inject>https://web.buetow.org/cgit/cpuinfo.git/plain/docs/cpuinfo.txt</inject>
-  </pretext>
-</content>
