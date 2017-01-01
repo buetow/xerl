@@ -66,17 +66,6 @@ sub defaults {
 
   my $host = $self->get_host();
   unless ( -d $self->get_hostroot() . $host ) {
-    my $redirect = $self->get_hostroot() . 'redirect:' . $host;
-
-    if ( -f $redirect ) {
-      my $file = Xerl::Tools::FileIO->new( 'path' => $redirect );
-      $file->fslurp();
-
-      my $location = $file->shift();
-      Xerl::Main::Global::REDIRECT($location);
-      $self->set_finish_request(1);
-    }
-
     my $alias = $self->get_hostroot() . 'alias:' . $host;
     my $alias_host = '';
 
@@ -93,6 +82,17 @@ sub defaults {
       $alias_host .= $file->shift();
 
       $self->set_host( $alias_host );
+    }
+
+    my $redirect = $self->get_hostroot() . 'redirect:' . $self->get_host();
+
+    if ( -f $redirect ) {
+      my $file = Xerl::Tools::FileIO->new( 'path' => $redirect );
+      $file->fslurp();
+
+      my $location = $file->shift();
+      Xerl::Main::Global::REDIRECT($location);
+      $self->set_finish_request(1);
     }
   }
 
