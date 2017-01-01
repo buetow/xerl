@@ -1,4 +1,4 @@
-# Xerl (c) 2005-2011, 2013-2015 by Paul Buetow
+# Xerl (c) 2005-2011, 2013-2015, 2017 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: https://xerl.buetow.org
 #
@@ -12,7 +12,7 @@ use warnings;
 
 use v5.14.0;
 
-use CGI::Carp 'fatalsToBrowser';
+#use CGI::Carp 'fatalsToBrowser';
 use Time::HiRes 'gettimeofday';
 
 use Xerl::Base;
