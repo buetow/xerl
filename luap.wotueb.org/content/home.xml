@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>It's just my website</pagetitle>
+  <text>Welcome to my small humble website.</text>
+  <enumeration>
+    <enumitem>
+      <noop>My Github page: </noop>
+      <hyperlink>https://github.com/buetow</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>My profile on LinkedIn: </noop>
+      <hyperlink>https://linkedin.buetow.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>Follow me at Twitter if you want:</noop>
+      <hyperlink>https://twitter.buetow.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>Or at my (web)log:</noop>
+      <hyperlink>https://io.buetow.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>At 500px:</noop>
+      <hyperlink>https://500px.buetow.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>Or at Flickr:</noop>
+      <hyperlink>https://flickr.buetow.org</hyperlink>
+    </enumitem>
+    <enumitem>
+      <noop>Test you IPv6 connectivity here:</noop>
+      <hyperlink>https://ipv6.buetow.org</hyperlink>
+    </enumitem>
+  </enumeration>
+</content>
