@@ -1,0 +1,1 @@
+NetCalendar is a network capable calendar application. NetCalendar has a server and a client part which communicate over a TCP/IP network. It also supports secure sockets using SSL. NetCalendar can also be used as a stand-alone application. NetCalendar does not use an SQL database but rather the database of the classic Unix "calendar" program.

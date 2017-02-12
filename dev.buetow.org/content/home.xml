@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Some programming projects</pagetitle>
+  <textheader>Mailing List</textheader>
+  <text>
+    <noop>Here are some programming projects listed which I programmed in my spare time. Some may be usefull and others may not. Please use the </noop>
+    <namedlink href="http://pluto.buetow.org/listinfo/dev">Development Mailing List</namedlink>
+    <noop> for any considerations.</noop>
+  </text>
+  <textheader>Github</textheader>
+  <text>
+    <noop>My Github page is</noop>
+    <namedlink href="http://github.com/rantanplan">github.com/rantanplan</namedlink>
+    <noop> and my open source report card is</noop>
+    <namedlink href="http://osrc.dfm.io/rantanplan">http://osrc.dfm.io/rantanplan</namedlink>
+  </text>
+  <textheader>Deb repository</textheader>
+  <text>Some projects provide packages in .deb format. Please check out each individual project site for available architecture and so on. Basically the debian repository is available via</text>
+  <code>[deb|deb-src] http://deb.buetow.org/apt DISTRIBUTION main</code>
+  <text>Where DISTRIBUTION may be squeeze, wheezy.... To trust the repo please run: </text>
+  <code>curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -</code>
+  <textheader>Project list</textheader>
+  <information>
+    <text>
+      <noop>All hosts containing </noop>
+      <strong>.alpha.buetow.org</strong>
+      <noop> are most likely dev, test or PoCs. Don't expect to find anything usefull there.</noop>
+    </text>
+  </information>
+  <text>
+    <includerun>projectlist.inc.pl</includerun>
+  </text>
+</content>

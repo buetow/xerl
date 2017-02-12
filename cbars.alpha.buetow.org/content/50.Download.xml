@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<content>
+  <pagetitle>Download</pagetitle>
+  <important>
+    <text>
+      <strong>Important notice:</strong>
+      <noop>There is no Debian Package available yet!</noop>
+    </text>
+  </important>
+  <text>!!HOSTNAME!! can be downloaded from a deb repo or from git.</text>
+  <textheader>Install from deb repository</textheader>
+  <text>If you have Debian GNU/Linux Wheezy you can add the following into a new apt source file, e.g. /etc/apt/source.list.d/buetoworg.list, and run apt-get update;apt-get install !!HOSTNAME!!:</text>
+  <code>deb http://deb.buetow.org/apt wheezy main
+deb-src http://deb.buetow.org/apt wheezy main</code>
+  <text>To trust it please run "curl http://deb.buetow.org/apt/pubkey.gpg | sudo apt-key add -".</text>
+  <textheader>Download from git repository</textheader>
+  <text>
+    <noop>Go to </noop>
+    <namedlink href="http://github.com/rantanplan/!!HOSTNAME!!">http://github.com/rantanplan/!!HOSTNAME!!</namedlink>
+  </text>
+</content>
