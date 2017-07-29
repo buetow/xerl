@@ -5,7 +5,7 @@
     <text>
       <strong>Important notice:</strong>
       <noop>The development of NetCalendar has been stalled. In near future, there will be no further development on this project. This project always was a proof of concept only. For current programming projects please visit </noop>
-      <hyperlink>https://dev.buetow.org</hyperlink>
+      <hyperlink>http://dev.buetow.org</hyperlink>
       <noop> and enjoy :)</noop>
     </text>
   </important>
@@ -20,7 +20,7 @@
   <textheader>Thu May 18th 2006 - Website up</textheader>
   <text>
     <noop>The initial website of the NetCalendar application is up an running using the </noop>
-    <namedlink href="https://xerl.buetow.org">Xerl Template Engine</namedlink>
+    <namedlink href="http://xerl.buetow.org">Xerl Template Engine</namedlink>
     <noop> as its base. All new releases will be anounced here. Currently 1.0 Release Candidate 5 is ready for download.</noop>
   </text>
 </content>

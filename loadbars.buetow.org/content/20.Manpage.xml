@@ -3,6 +3,6 @@
   <pagetitle>Manpage</pagetitle>
   <text>This is the manpage of the current master branch:</text>
   <pretext>
-    <inject>https://web.buetow.org/cgit/loadbars.git/plain/docs/loadbars.txt</inject>
+    <inject>http://web.buetow.org/cgit/loadbars.git/plain/docs/loadbars.txt</inject>
   </pretext>
 </content>

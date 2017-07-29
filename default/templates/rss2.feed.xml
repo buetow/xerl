@@ -7,7 +7,7 @@
       <hyperlink>http://%%host%%</hyperlink>
       <description>buetow.org - Paul C. Buetows Tech Newsfeed</description>
       <pubDate>$$!/bin/date$$</pubDate>
-      <generator>Xerl Web Engine (https://xerl.buetow.org)</generator>
+      <generator>Xerl Web Engine (http://xerl.buetow.org)</generator>
       <language>en</language>
       <noop>%%content%%</noop>
     </channel>

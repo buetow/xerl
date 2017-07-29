@@ -3,17 +3,17 @@
   <pagetitle>Contact Me/Us</pagetitle>
   <text>
     <noop>Please use the </noop>
-    <namedlink href="https://pluto.buetow.org/listinfo/dev">Development Mailing List</namedlink>
+    <namedlink href="http://pluto.buetow.org/listinfo/dev">Development Mailing List</namedlink>
     <noop> for any considerations of this humble programming project or any other programming project of mine.</noop>
   </text>
   <text>
     <noop>But you may also use other methods such as listed </noop>
-    <namedlink href="https://contact.buetow.org">on this site</namedlink>
+    <namedlink href="http://contact.buetow.org">on this site</namedlink>
     <noop> for example.</noop>
   </text>
   <text>
     <noop>If you are interested in other projects please visit </noop>
-    <hyperlink>https://dev.buetow.org</hyperlink>
+    <hyperlink>http://dev.buetow.org</hyperlink>
     <noop> :)</noop>
   </text>
 </content>

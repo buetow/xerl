@@ -3,6 +3,6 @@
   <pagetitle>CHANGELOG</pagetitle>
   <text>This is the CHANGELOG file of the current master branch:</text>
   <pretext>
-    <inject>https://web.buetow.org/cgit/perldaemon.git/plain/CHANGELOG</inject>
+    <inject>http://web.buetow.org/cgit/perldaemon.git/plain/CHANGELOG</inject>
   </pretext>
 </content>

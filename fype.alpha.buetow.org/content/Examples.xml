@@ -2,6 +2,6 @@
 <content>
   <pagetitle>Sourcecode Examples</pagetitle>
   <code>
-    <inject>https://web.buetow.org/cgit/fype.git/plain/examples/all-examples.txt</inject>
+    <inject>http://web.buetow.org/cgit/fype.git/plain/examples/all-examples.txt</inject>
   </code>
 </content>

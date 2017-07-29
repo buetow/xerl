@@ -4,12 +4,12 @@
   <textheader>Cgit</textheader>
   <text>
     <noop>My Cgit can be found at</noop>
-    <hyperlink>https://cgit.buetow.org</hyperlink>
+    <hyperlink>http://cgit.buetow.org</hyperlink>
   </text>
   <textheader>Github</textheader>
   <text>
     <noop>In parallel to Cgit I keep copies of my stuff at Github. My Github page is</noop>
-    <hyperlink>https://github.com/snonux</hyperlink>
+    <hyperlink>http://github.com/snonux</hyperlink>
   </text>
   <textheader>Project list</textheader>
   <information>
