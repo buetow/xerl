@@ -1,1 +1,1 @@
-https://dev.buetow.org
+http://dev.buetow.org
