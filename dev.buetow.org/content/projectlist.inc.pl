@@ -21,7 +21,7 @@ sub list (*) {
 
     my @content = getf $found;
 
-    $ret .= "<b><a href=https://$host>$host</a></b>" . nl;
+    $ret .= "<b><a href=http://$host>$host</a></b>" . nl;
     if (@content) {
       $ret .= join " ", @content;
       $ret .= nl;
