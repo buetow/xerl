@@ -1,6 +1,6 @@
 # Xerl (c) 2005-2011, 2013-2015 by Paul Buetow
 #
-# 	E-Mail: xerl@dev.buetow.org 	WWW: https://xerl.buetow.org
+# 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
 # This is free software, you may use it and distribute it under the same
 # terms as Perl itself.
@@ -40,7 +40,7 @@ sub parse {
 sub defaults {
   my $self = $_[0];
 
-  $self->set_proto('https') if exists $ENV{HTTPS};
+  $self->set_proto('http') if exists $ENV{HTTPS};
 
   $self->set_site( $self->get_defaultcontent() )
     unless $self->site_exists();
