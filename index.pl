@@ -1,6 +1,6 @@
 #!/usr/local/bin/perl
 
-# Xerl (c) 2005-2011, 2013-2015, 2017 by Paul Buetow
+# Xerl (c) 2005-2011, 2013-2015, 2017-2018 by Paul Buetow
 #
 # 	E-Mail: xerl@dev.buetow.org 	WWW: http://xerl.buetow.org
 #
@@ -11,6 +11,7 @@ use strict;
 use warnings;
 
 use v5.14.0;
+use lib qw(.);
 
 use Xerl;
 
