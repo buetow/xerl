@@ -5,8 +5,4 @@
   <text>gotop is a program written in Go to observe disk IO stats for Linux.</text>
   <textheader>Screenshot</textheader>
   <cimg href="?document=images/gotop.png" title="gotop" alt="gotop"/>
-  <textheader>Command line flags</textheader>
-  <pretext>
-    <inject>http://web.buetow.org/cgit/gotop.git/plain/help.txt</inject>
-  </pretext>
 </content>

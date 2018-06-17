@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<content>
-  <pagetitle>Synopsis</pagetitle>
-  <text>This is the Synopsis of the current master branch:</text>
-  <pretext>
-    <inject>http://web.buetow.org/cgit/fapi.git/plain/docs/synopsis.txt</inject>
-  </pretext>
-</content>
