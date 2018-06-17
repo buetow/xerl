@@ -20,7 +20,7 @@
         <navigation/>
         <noop>%%content%%</noop>
         <div class="footer">
-          <noop>Generated in !!TIME!!s</noop>
+          <noop>Generated in !!TIME!! seconds</noop>
           <noop>| Powered by </noop>
           <namedlink href="http://xerl.buetow.org">Xerl</namedlink>
           <noop>| Xerl templates managed with Puppet/Git | Running on FreeBSD - The Power to Serve | </noop>
