@@ -16,7 +16,7 @@
     <body>
       <div class="header">
         <type class="bold">A fortune quote: </type>
-        <type class="italic">$$!/usr/games/fortune -s$$</type>
+        <type class="italic">$$!/usr/bin/fortune -s$$</type>
       </div>
       <div class="main">
         <navigation/>
