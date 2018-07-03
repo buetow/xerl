@@ -23,9 +23,5 @@
       <noop>Or at Flickr:</noop>
       <hyperlink>http://flickr.buetow.org</hyperlink>
     </enumitem>
-    <enumitem>
-      <noop>Test you IPv6 connectivity here:</noop>
-      <hyperlink>http://ipv6.buetow.org</hyperlink>
-    </enumitem>
   </enumeration>
 </content>
