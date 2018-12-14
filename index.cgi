@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/perl
 
 # Xerl (c) 2005-2011, 2013-2015, 2017-2018 by Paul Buetow
 #
