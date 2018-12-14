@@ -23,7 +23,7 @@ my $host = hostname();
 my $config =
   -e "xerldev.conf"
   ? "xerldev.conf"
-  : ( -e "xerl-$host.conf" ? "xerl-$host.conf" : 'config.conf' );
+  : ( -e "xerl-$host.conf" ? "xerl-$host.conf" : 'xerl.conf' );
 
 while ( FCGI::accept >= 0 ) {
   my $xerl = Xerl->new( config => $config );
