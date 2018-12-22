@@ -15,7 +15,7 @@ body {
 }
 
 div.header {
-  background-color: #8080EA;
+  background-color: #9999ff;
   color: #000000;
   border-color: #000000;
   border-width: 2px;
@@ -47,7 +47,7 @@ div.important {
 }
 
 div.important2 {
-  background-color: #8080EA;
+  background-color: #9999ff;
   border-width: 1px;
   border-style: solid;
   border-radius:10px;
@@ -116,7 +116,7 @@ pre, .quote, .code {
 }
 
 .footer {
-  background-color: #8080EA;
+  background-color: #9999ff;
   color: #000000;
   text-align: center;
   font-style: italic;
