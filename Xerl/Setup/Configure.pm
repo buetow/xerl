@@ -40,6 +40,8 @@ sub parse {
 sub defaults {
   my $self = $_[0];
 
+  $self->set_is_ipv6( $ENV{REMOTE_ADDR} =~ /:/ ? 1 : 0 );
+
   $self->set_proto('http') if exists $ENV{HTTPS};
 
   $self->set_site( $self->get_defaultcontent() )
@@ -50,8 +52,13 @@ sub defaults {
   $self->set_template( $self->get_defaulttemplate() )
     unless $self->template_exists();
 
-  $self->set_style( $self->get_defaultstyle() )
-    unless $self->style_exists();
+  unless ($self->style_exists()) {
+    if ($self->get_is_ipv6()) {
+        $self->set_style( $self->get_ipv6style() )
+    } else {
+        $self->set_style( $self->get_defaultstyle() )
+    }
+  }
 
   $self->set_proto( $self->get_defaultproto() )
     unless $self->proto_exists();
@@ -128,8 +135,6 @@ sub defaults {
   $self->set_templatespath( $self->get_hostpath() . 'templates/' );
 
   $self->set_contentpath( $self->get_hostpath() . 'content/' );
-
-  $self->set_is_ipv6( $ENV{REMOTE_ADDR} =~ /:/ ? 1 : 0 );
 
   return undef;
 }
