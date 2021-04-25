@@ -14,6 +14,12 @@
       <link rel="stylesheet" type="text/css" href="%%stylesurl%%$$style$$"/>
     </head>
     <body>
+      <div class="noticeheader">
+        <type class="bold">This is my old internet site, the new one is: </type>
+        <hyperlink href="gemini://snonux.de" />
+        <noop> | </noop>
+        <hyperlink href="http://snonux.de" />
+      </div>
       <div class="header">
         <type class="bold">A fortune quote: </type>
         <type class="italic">$$!/usr/bin/fortune -s$$</type>
