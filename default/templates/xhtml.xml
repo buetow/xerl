@@ -16,9 +16,9 @@
     <body>
       <div class="noticeheader">
         <type class="bold">This is my old internet site, the new one is: </type>
-        <hyperlink href="gemini://snonux.de" />
+        <hyperlink>http://snonux.de</hyperlink>
         <noop> | </noop>
-        <hyperlink href="http://snonux.de" />
+        <hyperlink>gemini://snonux.de</hyperlink>
       </div>
       <div class="header">
         <type class="bold">A fortune quote: </type>
