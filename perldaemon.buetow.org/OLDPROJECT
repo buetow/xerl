@@ -1,1 +1,0 @@
-PerlDaemon is a minimal daemon for Linux/UNIX programmed in Perl supporting logrotating, starting, stopping and a minimal configuration file. It can be extended to fit any task.

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<content>
-  <pagetitle>Fapi</pagetitle>
-  <textheader>Simple F5 API Command Line Tool</textheader>
-  <text>This tool is for managing a few basic stuff in a BigIP LTM using its SOAP API. It depends on the bigsuds Python library which can be downloaded from F5 devcentral..</text>
-</content>

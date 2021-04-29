@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
-<content>
-  <pagetitle>Japi</pagetitle>
-  <textheader>Simple Jira Command Line Tool</textheader>
-  <text>This tool shows new open Jira Issues on your terminal. It may be usefull if you don't recieve any mails and want to see a list of Jira Issues printed to your terminal every time you open a new shell.</text>
-</content>
