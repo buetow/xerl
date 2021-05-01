@@ -16,7 +16,7 @@
     <body>
       <div class="noticeheader">
         <type class="bold">This is my old internet site, the new one is: </type>
-        <hyperlink>http://buetow.org</hyperlink>
+        <hyperlink>https://buetow.org</hyperlink>
         <noop> | </noop>
         <hyperlink>gemini://buetow.org</hyperlink>
       </div>
