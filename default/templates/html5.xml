@@ -14,9 +14,9 @@
     <body>
       <div class="noticeheader">
         <type class="bold">This is my old internet site, the new one is: </type>
-        <hyperlink>https://buetow.org</hyperlink>
+        <hyperlink>https://snonux.de</hyperlink>
         <noop> | </noop>
-        <hyperlink>gemini://buetow.org</hyperlink>
+        <hyperlink>gemini://snonux.de</hyperlink>
       </div>
       <div class="header">
         <type class="bold">A fortune quote: </type>
